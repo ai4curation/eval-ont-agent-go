@@ -1,0 +1,59 @@
+{
+  "body": "This entry has no EC/RHEA/MetaCyc/KEGG xref:\n\nid: GO:0008785\nname: alkyl hydroperoxide reductase activity\nnamespace: molecular_function\ndef: \"Catalysis of the reaction: octane hydroperoxide + NADH + H+ = H2O + NAD+ + 1-octanol.\" [GOC:curators]\nis_a: GO:0016668 ! oxidoreductase activity, acting on a sulfur group of donors, NAD(P) as acceptor\nproperty_value: term_tracker_item \"https://github.com/geneontology/go-ontology/issues/28261\" xsd:anyURI\nproperty_value: term_tracker_item \"https://github.com/geneontology/go-ontology/issues/28340\" xsd:anyURI\n\nDespite the generic-sounding name, this is actually a substrate-specific version of the following term (and note that \"alkyl hydroperoxide reductase\" is listed as synonym of EC 1.11.1.26 at Expasy):\n\nid: GO:0102039\nname: NADH-dependent peroxiredoxin activity\nnamespace: molecular_function\ndef: \"Catalysis of the reaction: a hydroperoxide + H+ + NADH = an alcohol + H2O + NAD+.\" [GOC:pz, PMID:12517450, RHEA:62628]\nsynonym: \"alkylhydroperoxide reductase activity\" EXACT []\nxref: EC:1.11.1.26 {source=\"skos:exactMatch\"}\nxref: MetaCyc:R4-RXN\nxref: RHEA:62628 {source=\"skos:exactMatch\"}\nis_a: GO:0051920 ! peroxiredoxin activity\nproperty_value: term_tracker_item \"https://github.com/geneontology/go-ontology/issues/30193\" xsd:anyURI\n\n\nSo, GO:0008785 should be obsoleted and replaced with GO:0102039.\n\nThere are only 3 annotations (2 EXP) to GO:0008785  alkyl hydroperoxide reductase activity:\n- E.coli AhpF from PMID:11717276 by EcoliWiki\n- Pseudomonas PA3529 from PMID:21674802 by PseudoCAP\n\n\n",
+  "comments": [
+    {
+      "id": "IC_kwDOAkAHws8AAAABAyI_4Q",
+      "author": {
+        "login": "raymond91125"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Dear all, \n\nThe proposal has been made to obsolete GO:0008785 alkyl hydroperoxide reductase activity.\n\n* The reason for obsoletion is that it is more specific than the specificity of any known gene product.\n\nExperimental annotations\nEcoliWiki 1\nPseudoCAP 1\n\nNo InterPro2GO/UniRule/UniProtKW mappings.\n\nAnnotations can be viewed here: \nhttps://github.com/geneontology/go-annotation/issues/6396\n\nThis term is being replaced by GO:0102039 NADH-dependent peroxiredoxin activity\n\nAny comments can be  added to the issue: https://github.com/geneontology/go-ontology/issues/31961\n\n\nThanks, \n",
+      "createdAt": "2026-04-29T21:11:56Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/geneontology/go-ontology/issues/31961#issuecomment-4347543521",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOAkAHws8AAAABAyJLkg",
+      "author": {
+        "login": "raymond91125"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "@dragon-ai-agent please obsolete GO:0008785 alkyl hydroperoxide reductase activity.",
+      "createdAt": "2026-04-29T21:12:29Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "EYES",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/geneontology/go-ontology/issues/31961#issuecomment-4347546514",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOAkAHws8AAAABAyJU3g",
+      "author": {
+        "login": "dragon-ai-agent"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "🤖 Working on it...\n\nFollow along: [View workflow run](https://github.com/geneontology/go-ontology/actions/runs/25134164454)\n\n*— @dragon-ai-agent*",
+      "createdAt": "2026-04-29T21:12:54Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/geneontology/go-ontology/issues/31961#issuecomment-4347548894",
+      "viewerDidAuthor": true
+    }
+  ],
+  "title": "obsolete GO:0008785  alkyl hydroperoxide reductase activity",
+  "url": "https://github.com/geneontology/go-ontology/issues/31961"
+}
