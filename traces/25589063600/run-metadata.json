@@ -1,0 +1,23 @@
+{
+  "run_id": 25589063600,
+  "repo": "ai4curation/eval-ont-agent-go",
+  "workflow": "Evaluate an agent on an issue",
+  "inputs": {
+    "issue_repo": "geneontology/go-ontology",
+    "issue_number": "31961",
+    "pr_number": "32015",
+    "model": "gpt-5.4",
+    "agent_config_repo": "ai4curation/go-ontology-agent-config",
+    "agent_config_tag": "v8",
+    "agent_config_directory": ".",
+    "iter_num": "4",
+    "repo_url_prefix": "https://href.li/?",
+    "create_pr": "true",
+    "force_new_branch": "true"
+  },
+  "branch": "scribe-v1-ai4curation-go-ontology-agent-config-v8-.-gpt-5.4-iter4-issue-31961",
+  "created_pr_number": "32",
+  "created_pr_url": "https://github.com/ai4curation/eval-ont-agent-go/pull/32",
+  "original_issue_url": "https://github.com/geneontology/go-ontology/issues/31961",
+  "original_pr_url": "https://github.com/geneontology/go-ontology/pull/32015"
+}
