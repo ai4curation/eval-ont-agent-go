@@ -1,7 +1,9 @@
 # Evaluate an AI agent on a GitHub issue
 # See README.md for full documentation
 #
-# Required secrets: ANTHROPIC_API_KEY or CLAUDE_CODE_OAUTH_TOKEN
+# Required secrets (depending on agent_runtime):
+#   claude: ANTHROPIC_API_KEY or CLAUDE_CODE_OAUTH_TOKEN
+#   codex:  CODEX_AUTH_JSON (from ~/.codex/auth.json after `codex login`)
 # Optional secrets: GH_PAT (for private cross-repo access)
 #
 # ============================================================================
@@ -58,7 +60,7 @@
 #   expt is created from same state → also has install files
 #   Result: diff shows ONLY agent changes = CLEAN & reviewable
 name: Evaluate an agent on an issue
-run-name: "eval-agent: issue #${{ inputs.issue_number }} vs PR #${{ inputs.pr_number }}; model: ${{ inputs.model }}; agent config: ${{ inputs.agent_config_repo || github.repository }}@${{ inputs.agent_config_tag }}:${{ inputs.agent_config_directory }}"
+run-name: "eval-agent[${{ inputs.agent_runtime || 'claude' }}]: issue #${{ inputs.issue_number }} vs PR #${{ inputs.pr_number }}; model: ${{ inputs.model }}; agent config: ${{ inputs.agent_config_repo || github.repository }}@${{ inputs.agent_config_tag }}:${{ inputs.agent_config_directory }}"
 
 on:
   workflow_dispatch:
@@ -85,22 +87,17 @@ on:
         description: "The directory to use as a template for the agent. Defaults to ."
         required: false
         default: "."
-      model:
-        description: "Claude model to use"
-        required: true
+      agent_runtime:
+        description: "Agent runtime to use (claude or codex)"
+        required: false
+        default: "claude"
         type: choice
         options:
-          # Current models (4.5)
-          - claude-sonnet-4-5-20250929
-          - claude-haiku-4-5-20251001
-          - claude-opus-4-5-20251101
-          # Legacy models (4.x)
-          - claude-opus-4-1-20250805
-          - claude-sonnet-4-20250514
-          - claude-opus-4-20250514
-          # Legacy models (3.x)
-          - claude-3-7-sonnet-20250219
-          - claude-3-haiku-20240307
+          - claude
+          - codex
+      model:
+        description: "Model to use (e.g. claude-sonnet-4-5-20250929, gpt-5.4)"
+        required: true
       force_new_branch:
         description: "Whether to force a new branch. Defaults to false."
         required: false
@@ -377,55 +374,107 @@ jobs:
           echo "pr_title=${PR_TITLE}" >> $GITHUB_OUTPUT
           echo "pr_url=${PR_URL}" >> $GITHUB_OUTPUT
 
+      # Write the shared agent prompt to a file so both runtimes use identical instructions
+      - name: Write agent prompt
+        run: |
+          cat > __agent_prompt__.md << 'PROMPT'
+          Your job is to address issue #${{ inputs.issue_number }}.
+          First, read the file __issue_context__.json in the current working directory to get the issue title, body, and comments.
+
+          IMPORTANT: You are working in a local copy of ${{ github.repository }}.
+          The issue context was imported from ${{ inputs.issue_repo || github.repository }} for evaluation purposes.
+          Do NOT attempt to clone, checkout, or interact with any remote repositories.
+          Stay in the current working directory and make all changes here.
+
+          On completion, commit your changes locally. Do NOT push - that will be handled automatically.
+          Don't commit files you did not edit.
+
+          After committing, create two files:
+
+          1. ISSUE_COMMENTS.md: Updates on the issue regarding its status. This will be fed back to the originating issue.
+          2. PR_COMMENTS.md: A description of your changes, and the rationale. This will be fed back to the originating PR.
+
+          I will take care of feeding these back to the GitHub repo, you just need to create them. Don't commit them,
+          and don't attempt to interact with the github repo.
+
+          If the original issue is not clear, ask for clarification in ISSUE_COMMENTS.md, and do not
+          commit any changes. The PR_COMMENTS.md can be empty in this case.
+
+          Your PR_COMMENTS.md should be a human-readable description of your changes, and the rationale. Include any checklists
+          you created for yourself and completed. If you performed validation, background research, etc, be sure to mention this.
+
+          Your ISSUE_COMMENTS.md need not replicate what is in PR_COMMENTS.md, and in many cases can be terse but polite, e.g
+          "changes committed in PR #<NN>" (note: use the literal `<NN>` in the output, I will replace it with the actual PR number).
+
+          If the issue is a complex one, you can create a high level summary of the decisions you made. If things are not clear
+          or if you want particular people in the thread to check particular aspects you can mention them.
+
+          Follow any CODE_OF_CONDUCT.md or other relevant files in the repository.
+          PROMPT
+
+      - name: Install Claude Code
+        if: inputs.agent_runtime == 'claude'
+        run: npm install -g @anthropic-ai/claude-code
+
       - name: Run Claude Code
-        uses: anthropics/claude-code-base-action@beta
-        with:
-          prompt: |
-            Your job is to address issue #${{ inputs.issue_number }}.
-            First, read the file __issue_context__.json in the current working directory to get the issue title, body, and comments.
+        if: inputs.agent_runtime == 'claude'
+        env:
+          CLAUDE_CODE_OAUTH_TOKEN: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+        run: |
+          # Write a runner script to avoid shell quoting issues
+          cat > /tmp/run-claude.sh << 'SCRIPT'
+          #!/bin/bash
+          cd "$1"
+          PROMPT=$(cat __agent_prompt__.md)
+          claude -p "$PROMPT" \
+            --model "$2" \
+            --dangerously-skip-permissions \
+            --output-format stream-json \
+            --verbose \
+            2>&1 | tee /tmp/claude-trace.json
+          SCRIPT
+          chmod +x /tmp/run-claude.sh
 
-            IMPORTANT: You are working in a local copy of ${{ github.repository }}.
-            The issue context was imported from ${{ inputs.issue_repo || github.repository }} for evaluation purposes.
-            Do NOT attempt to clone, checkout, or interact with any remote repositories.
-            Stay in the current working directory and make all changes here.
+          # Run as non-root to avoid --dangerously-skip-permissions root restriction
+          if [ "$(id -u)" = "0" ]; then
+            useradd -m -s /bin/bash claudeuser 2>/dev/null || true
+            chown -R claudeuser:claudeuser . /tmp
+            su claudeuser -c "/tmp/run-claude.sh $(pwd) ${{ inputs.model }}"
+          else
+            /tmp/run-claude.sh "$(pwd)" "${{ inputs.model }}"
+          fi
 
-            On completion, commit your changes locally. Do NOT push - that will be handled automatically.
-            Don't commit files you did not edit.
+      - name: Install and authenticate Codex
+        if: inputs.agent_runtime == 'codex'
+        env:
+          CODEX_AUTH_JSON: ${{ secrets.CODEX_AUTH_JSON }}
+        run: |
+          npm install -g @openai/codex
+          export CODEX_HOME="${HOME}/.codex"
+          mkdir -p "$CODEX_HOME"
+          echo "$CODEX_AUTH_JSON" > "$CODEX_HOME/auth.json"
+          chmod 600 "$CODEX_HOME/auth.json"
+          echo "CODEX_HOME=$CODEX_HOME" >> $GITHUB_ENV
+          # Verify auth.json is valid
+          python3 -c "import json; json.load(open('$CODEX_HOME/auth.json')); print('auth.json valid')"
 
-            After committing, create two files:
-
-            1. ISSUE_COMMENTS.md: Updates on the issue regarding its status. This will be fed back to the originating issue.
-            2. PR_COMMENTS.md: A description of your changes, and the raionale. This will be fed back to the originating PR.
-
-            I will take care of feeding these back to the GitHub repo, you just need to create them. Don't commit them,
-            and don't attempt to interact with the github repo.
-
-            If the original issue is not clear, ask for clarification in ISSUE_COMMENTS.md, and do not
-            commit any changes. The PR_COMMENTS.md can be empty in this case.
-
-            Your PR_COMMENTS.md should be a human-readable description of your changes, and the raionale. Include any checklists
-            you created for yourself and completed. If you performed validation, background research, etc, be sure to mention this.
-
-            Your ISSUE_COMMENTS.md need not replicate what is in PR_COMMENTS.md, and in many cases can be terse but polite, e.g
-            "changes committed in PR #<NN>" (note: use the literal `<NN>` in the output, I will replace it with the actual PR number).
-
-            If the issue is a complex one, you can create a high level summary of the decisions you made. If things are not clear
-            or if you want particular people in the thread to check particular apsects you can mention them.
-
-            Follow any CODE_OF_CONDUCT.md or other relevant files in the repository.
-
-          allowed_tools: "Bash,Read,Write,Edit,Glob,Grep,LS,MultiEdit,NotebookEdit,TodoRead,TodoWrite,WebFetch,WebSearch"
-          model: ${{ inputs.model }}
-          timeout_minutes: ${{ inputs.timeout_minutes }}
-          claude_code_oauth_token: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
-          anthropic_api_key: ${{ secrets.ANTHROPIC_API_KEY }}
+      - name: Run Codex
+        if: inputs.agent_runtime == 'codex'
+        run: |
+          codex exec "$(cat __agent_prompt__.md)" \
+            --model ${{ inputs.model }} \
+            --sandbox danger-full-access \
+            --json \
+            2>&1 | tee /tmp/codex-trace.json
 
       - name: Add signature blocks to comment files
         run: |
           # Metadata signature includes: model, agent config, iteration number, and link to workflow run
           # iter_num allows tracking multiple runs of the same configuration (useful for averaging results)
           SIGNATURE="---
-          🤖 **Generated by Claude Code Agent**
+          🤖 **Generated by ${{ inputs.agent_runtime }} agent**
+          - Runtime: \`${{ inputs.agent_runtime }}\`
           - Model: \`${{ inputs.model }}\`
           - Agent config: \`${{ inputs.agent_config_repo || github.repository }}@${{ inputs.agent_config_tag }}:${{ inputs.agent_config_directory }}\`
           - Iteration: \`${{ inputs.iter_num }}\`
@@ -590,7 +639,7 @@ jobs:
           | URL prefix | \`${REPO_URL_PREFIX_DISPLAY}\` |
           | Base branch | \`${{ env.eval_base_branch }}\` |
 
-          See workflow artifacts for full Claude trace."
+          See workflow artifacts for full agent trace."
 
           # Create the PR with iteration number included in the title
           # This helps track multiple runs of the same configuration (iter_num=1, 2, 3, etc.)
@@ -614,10 +663,11 @@ jobs:
           retention-days: ${{ inputs.artifact_retention_days }}
 
       - name: Upload Claude output
+        if: inputs.agent_runtime == 'claude'
         uses: actions/upload-artifact@v4
         with:
           name: claude-response-${{ github.run_id }}
-          path: /home/runner/work/_temp/claude-execution-output.json
+          path: /tmp/claude-trace.json
           retention-days: ${{ inputs.artifact_retention_days }}
 
       - name: Upload issue comments
@@ -671,3 +721,52 @@ jobs:
           name: run-metadata-${{ github.run_id }}
           path: /tmp/run-metadata.json
           retention-days: ${{ inputs.artifact_retention_days }}
+
+      # Persist traces permanently to the repo (artifacts expire, these don't)
+      # Uses git worktree + push to handle large files (agent traces can be MBs)
+      - name: Persist traces to repo
+        if: always()
+        env:
+          GH_TOKEN: ${{ secrets.GH_PAT || secrets.GITHUB_TOKEN }}
+        run: |
+          TRACE_DIR="traces/${{ github.run_id }}"
+          REPO="${{ github.repository }}"
+          MSG="traces(${{ inputs.issue_number }}/${{ inputs.model }}): run ${{ github.run_id }}"
+
+          # Clone just master (shallow) into a temp dir for the commit
+          WORK="/tmp/trace-push"
+          rm -rf "$WORK"
+          git clone --depth=1 --branch=master "https://x-access-token:${GH_TOKEN}@github.com/${REPO}.git" "$WORK"
+
+          mkdir -p "$WORK/$TRACE_DIR"
+
+          # Copy trace files
+          for src in __issue_context__.json /tmp/run-metadata.json ISSUE_COMMENTS.md PR_COMMENTS.md /tmp/claude-trace.json /tmp/codex-trace.json; do
+            if [ -f "$src" ]; then
+              fname=$(basename "$src")
+              # Rename runtime-specific traces to agent-trace.json
+              [ "$fname" = "claude-trace.json" ] && fname="agent-trace.json"
+              [ "$fname" = "codex-trace.json" ] && fname="agent-trace.json"
+              cp "$src" "$WORK/$TRACE_DIR/$fname"
+              echo "  Added $fname ($(wc -c < "$src") bytes)"
+            fi
+          done
+
+          # Commit and push
+          cd "$WORK"
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add "$TRACE_DIR"
+          git commit -m "$MSG" || echo "No traces to commit"
+          git push origin master || echo "Warning: failed to push traces"
+
+      # Add a comment to the PR linking to the traces folder
+      - name: Comment trace link on PR
+        if: steps.create_pr.outputs.created_pr_number != ''
+        env:
+          GH_TOKEN: ${{ secrets.GH_PAT || secrets.GITHUB_TOKEN }}
+        run: |
+          TRACE_URL="https://github.com/${{ github.repository }}/tree/master/traces/${{ github.run_id }}"
+          gh pr comment "${{ steps.create_pr.outputs.created_pr_number }}" \
+            --repo "${{ github.repository }}" \
+            --body "📋 **Traces**: [traces/${{ github.run_id }}](${TRACE_URL})"
