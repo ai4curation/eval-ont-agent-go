@@ -1,0 +1,44 @@
+{
+  "body": "* **GO term ID and label for which you request a new superclass**\n\nGO:0061852 retrograde transporter complex, Golgi to ER\nTransporter complex that recognises, binds and returns endoplasmic reticulum (ER) resident proteins that have trafficked to Golgi compartments. Targets proteins lacking the HDEL motif recognised by COPI-coated vesicles. PMID:16093310\n\n* **New superclass (parent) suggested**\n\nGO:0062137  cargo receptor complex\n\n* ** refine definiton **\n\nTransporter complex that recognises => Cargo receptor complex that recognizes\n\n* ** Change primary label **\n\nto \nretrograde cargo receptor complex, Golgi to ER \n\nmake GO:0061852 retrograde transporter complex, Golgi to ER | broad (this  label is not restricted to cargo, could include other retrograde complexes)\n\n",
+  "comments": [
+    {
+      "id": "IC_kwDOAkAHws7_92Dr",
+      "author": {
+        "login": "ValWood"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "@dragon-ai-agent  please action this ticket\n",
+      "createdAt": "2026-04-22T07:35:37Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "EYES",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/geneontology/go-ontology/issues/31935#issuecomment-4294402283",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOAkAHws7_92zz",
+      "author": {
+        "login": "dragon-ai-agent"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "🤖 Working on it...\n\nFollow along: [View workflow run](https://github.com/geneontology/go-ontology/actions/runs/24766239490)\n\n*— @dragon-ai-agent*",
+      "createdAt": "2026-04-22T07:36:11Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/geneontology/go-ontology/issues/31935#issuecomment-4294405363",
+      "viewerDidAuthor": true
+    }
+  ],
+  "title": "Missing parent: GO:0061852 retrograde transporter complex, Golgi to ER (plus term label and definition)",
+  "url": "https://github.com/geneontology/go-ontology/issues/31935"
+}
