@@ -1,0 +1,44 @@
+{
+  "body": "**GO:XXX; venom-mediated activation of inflammatory response**\nSyn: Venom-mediated inflammation (BROAD)\nA process by which an organism causes inflammatory response in another organism via the action of a venom. Venom-mediated inflammation is related to edema, leucocyte infiltration and release of inflammatory mediators such as cytokines.\nPMID:32024243, PMID:19000915\n**Gene product name and ID to be annotated to this term**\nMany snake venom metalloproteinases (eg. A0A0K2JNB8, P85420 or P0DRN9)\n**Parent term(s)**\nGO:0035738; venom-mediated perturbation of biological process\n**Children terms**\nGO:0044398; venom-mediated edema\n\n\n\n**GO:XXX; Venom-mediated leukocyte infiltration**\nA process by which an organism causes leucocyte infiltration in another organism via the action of a venom.\nPMID:32024243, PMID:26072684, PMID:19000915\n**Gene product name and ID to be annotated to this term**\nMany snake venom metalloproteinases (eg. A0A0K2JNB8, P85420, P0DRO0)\n**Parent term(s)**\nGO:XXX; Venom-mediated inflammatory response\n\n\n\n**GO:XXX; Venom-mediated release of inflammatory mediator**\nSyn: venom-mediated production of proinflammatory mediator\nA process by which an organism causes release of inflammatory mediator in another organism via the action of a venom. Inflammatory mediator is possibly a cytokines or interleukins, for example.\nPMID:32024243, 26072684\n**Gene product name and ID to be annotated to this term**\nMany snake venom metalloproteinases (eg. A0A0K2JNB8, P0DRO0)\n**Parent term(s)**\nGO:XXX; Venom-mediated inflammatory response\n\n\n\n**GO:0044480; venom-mediated mast cell degranulation**\nTo add:\nPart_of : GO:XXX; Venom-mediated inflammatory response",
+  "comments": [
+    {
+      "id": "IC_kwDOAkAHws8AAAABBfg_CA",
+      "author": {
+        "login": "pgaudet"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "@dragon-ai-agent please add this new term: \n\n- venom-mediated activation of inflammatory response\n- Synonym: venom-mediated inflammation (BROAD)\n- Definition: A process by which an organism causes inflammatory response in another organism via the action of a venom. \n- References: PMID:32024243, PMID:19000915\n- Subclass of: GO:0035738; venom-mediated perturbation of biological process\n",
+      "createdAt": "2026-05-07T07:37:31Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "EYES",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/geneontology/go-ontology/issues/31902#issuecomment-4395122440",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOAkAHws8AAAABBfhJ9A",
+      "author": {
+        "login": "dragon-ai-agent"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "🤖 Working on it...\n\nFollow along: [View workflow run](https://github.com/geneontology/go-ontology/actions/runs/25482614504)\n\n*— @dragon-ai-agent*",
+      "createdAt": "2026-05-07T07:37:59Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/geneontology/go-ontology/issues/31902#issuecomment-4395125236",
+      "viewerDidAuthor": true
+    }
+  ],
+  "title": "NTR: [venom-mediated inflammatory response+... leukocyte infiltration+... release of inflammatory mediator]",
+  "url": "https://github.com/geneontology/go-ontology/issues/31902"
+}
