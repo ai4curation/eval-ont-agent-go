@@ -1,0 +1,59 @@
+{
+  "body": "Based on discussions with @hattrill and @ValWood , and on comments from @raymond91125 in https://github.com/geneontology/go-ontology/issues/30552\n\nit was proposed to update the definitions of protein carrier activity and unfolded protein holdase activity as follows:\n\n- [x] protein carrier activity GO:0140597: \nCurrent definition: Binding to and carrying a protein between two different locations by moving along with the target protein.\nNew definition: Binding to and carrying a protein to an acceptor molecule or to a specific location by moving along with the target protein.\n\n- [x] unfolded protein holdase activity GO:0140309\nCurrent definition: A protein carrier activity that binds to a protein in an unfolded state and escorts it between two different locations. The unfolded protein carrier prevents aggregation of the target protein while it's being delivers to its final destination.\nNew definition: A protein carrier activity that binds to a protein in an unfolded state and escorts it to an acceptor molecule or to a specific location. The unfolded protein carrier prevents aggregation of the target protein while it's being delivers to its final destination.",
+  "comments": [
+    {
+      "id": "IC_kwDOAkAHws8AAAABAoQMZw",
+      "author": {
+        "login": "hattrill"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Sorry to reopen this (then accidently close it then reopen it).\nThe def for 'protein carrier activity' GO:0140597 is still too restrictive, could we make it more similar to the parent term i.e.\n\"Directly binding to a protein and delivering it either to an acceptor molecule or to a specific location.\"",
+      "createdAt": "2026-04-28T16:26:23Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/geneontology/go-ontology/issues/31601#issuecomment-4337175655",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOAkAHws8AAAABAoib9A",
+      "author": {
+        "login": "raymond91125"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "@dragon-ai-agent please revise GO:0140597 definition as commented by hattrill.",
+      "createdAt": "2026-04-28T17:03:32Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "EYES",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/geneontology/go-ontology/issues/31601#issuecomment-4337474548",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOAkAHws8AAAABAoisJg",
+      "author": {
+        "login": "dragon-ai-agent"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "🤖 Working on it...\n\nFollow along: [View workflow run](https://github.com/geneontology/go-ontology/actions/runs/25066706978)\n\n*— @dragon-ai-agent*",
+      "createdAt": "2026-04-28T17:03:54Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/geneontology/go-ontology/issues/31601#issuecomment-4337478694",
+      "viewerDidAuthor": true
+    }
+  ],
+  "title": "Textual definition update:  protein carrier activity  and unfolded protein holdase activity",
+  "url": "https://github.com/geneontology/go-ontology/issues/31601"
+}
