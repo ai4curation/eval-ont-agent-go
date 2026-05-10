@@ -1383,7 +1383,7 @@ comment: This term was made obsolete because 'resistance' implies a phenotype ra
 comment: See also the molecular function term '3-isopropylmalate dehydratase activity ; GO:0003861'.
 comment: See also the molecular function term 'cytochrome o ubiquinol oxidase activity ; GO:0008827'.
 comment: See also the molecular function term 'phosphoribosylaminoimidazole carboxylase activity ; GO:0004638'.
-comment: See also the molecular function term 'alkyl hydroperoxide reductase activity ; GO:0008785'.
+comment: See also the molecular function term 'NADH-dependent peroxiredoxin activity ; GO:0102039'.
 comment: See also the molecular function term 'D-amino-acid oxidase activity ; GO:0003884'.
 comment: See also the molecular function term '3-phenylpropionate dioxygenase activity ; GO:0008695'.
 comment: This term was made obsolete because the catalytic activity resides in a single polypeptide rather than a complex, and the complex is represented by a different GO term.
@@ -3963,7 +3963,6 @@ comment: Note that this term is in the subset of terms that should not be used f
 comment: Note that as agreed during the transcription overhaul, terms specifying binding to specific transcription regulatory motifs are no longer being created. The level of specificity GO has decided to go to is the "core promoter", "core promoter proximal region" and "enhancer". To capture more detail, please consider using column 16.
 comment: See also the molecular function term 'histone acetyltransferase activity ; GO:0004402'.
 comment: Note that this term is not a child of 'co-translational protein modification process ; GO:0043686' because co-translational protein modification implies modification of a previously incorporated amino acid in a nascent chain, rather than addition of new sequence to the C-terminus.
-comment: See also the molecular function term 'alkyl hydroperoxide reductase activity ; GO:0008785'.
 comment: See also the molecular function term 'acetolactate synthase activity ; GO:0003984'.
 comment: Note that 'error-free' does not mean that literally zero errors occur during DNA synthesis, but that the error rate is low, comparable to that of DNA synthesis during replication.
 comment: This term should not be used for direct annotation. The only exception should be when experimental data (e.g., staining with trypan blue or propidium iodide or use of neuron-specific markers) show that neuron death has occurred, but fail to provide details on death modality (accidental versus programmed). When information is provided on the neuron death mechanism, annotations should be made to the appropriate descendant of 'cell death' (such as, but not limited to, GO:0097300 'programmed necrotic cell death' or GO:0006915 'apoptotic process'), and the cell type captured as an annotation extension; or the term GO:0051402 'neuron apoptotic process' may be considered, if appropriate.
