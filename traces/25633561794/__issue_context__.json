@@ -1,0 +1,22 @@
+{
+  "body": "Dear all, \n\nThe proposal has been made to obsolete 'GO:0019584 galactonate catabolic process', because it is an unnecessary grouping term. Please replace by either \n\n- GO:0034194 D-galactonate catabolic process\n- GO:0034195 L-galactonate catabolic process\n\nThere is a single annotation by EcoCyc, that should be replaced by GO:0034195 L-galactonate catabolic process.",
+  "comments": [
+    {
+      "id": "IC_kwDOAkAHws8AAAABAceZLw",
+      "author": {
+        "login": "pgaudet"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "\n- GO:0046181 ketogluconate catabolic process >> replace by child GO:0019524 keto-D-gluconate catabolic process\n- GO:0046180 ketogluconate biosynthetic process >> no annotations, no cross references\n- GO:0046179 keto-D-gluconate biosynthetic process >> no annotations, no cross references\n",
+      "createdAt": "2026-04-27T06:48:25Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/geneontology/go-ontology/issues/31978#issuecomment-4324825391",
+      "viewerDidAuthor": false
+    }
+  ],
+  "title": "Obsoletion request: 'galactonate catabolic process'",
+  "url": "https://github.com/geneontology/go-ontology/issues/31978"
+}
