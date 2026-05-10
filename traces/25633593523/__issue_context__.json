@@ -1,0 +1,6 @@
+{
+  "body": "Please provide as much information as you can: \n\n* **Suggested term label:**\n@genegodbold Put new terms in here\n\n* **Definition (free text)**\n\n\n* **Reference, in format PMID:#######**\n(REQUIRED)\n\n* **Gene product name and ID to be annotated to this term**\n\n\n* **Parent term(s)**\n\n\n* **Children terms (if applicable)** Should any existing terms that should be moved underneath this new proposed term?\n\n\n* **Synonyms (please specify, EXACT, BROAD, NARROW or RELATED)**\n\n* **Cross-references**\n* For enzymes, please provide RHEA and/or EC numbers. \n* Can also provide MetaCyc, KEGG, Wikipedia, and other links.\n\n* **Any other information**\n",
+  "comments": [],
+  "title": "NTR: [symbiont-mediated suppression of platelet aggregation]",
+  "url": "https://github.com/geneontology/go-ontology/issues/31936"
+}
