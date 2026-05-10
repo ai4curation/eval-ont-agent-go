@@ -1,0 +1,6 @@
+{
+  "body": "- [x] Add EC:1.1.1.358 2-dehydropantolactone reductase as exactMatch to GO:0036441 2-dehydropantolactone reductase activity\n- [x] Add/make EC:1.17.3.2 broadMatch xref on GO:0070675 hypoxanthine oxidase activity and GO:0004855 xanthine oxidase activity\n- [x] Also, add [RHEA:68012](https://www.rhea-db.org/rhea/68012) as exactMatch xref on GO:0070675 hypoxanthine oxidase activity, and use as def xref.\n- [x] Add EC:1.14.14.24 to GO:0030343 vitamin D3 25-hydroxylase activity (and change name to 'vitamin D 25-hydroxylase activity' to match EC and other similar GO terms)",
+  "comments": [],
+  "title": "Missing EC/RHEA xrefs to add to oxidoreductase activity GO terms",
+  "url": "https://github.com/geneontology/go-ontology/issues/31962"
+}
