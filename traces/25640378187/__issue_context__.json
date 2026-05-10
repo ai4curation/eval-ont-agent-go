@@ -1,0 +1,59 @@
+{
+  "body": "Please provide as much information as you can: \n\n* **Suggested term label:Ferritin-specific autophagy**\n\n\n* **Definition (A ferritin-specific autophagic pathway leading to the release of the iron stored inside ferritin.)**\n\n\n* **Reference, in format PMID:38714719, 25327288, 26436293**\n(REQUIRED)\n\n* **Gene product name and ID to be annotated to this term: FTH1, NCOA4**\n\n\n* **Parent term(s): GO:0006914 - Autophagy**\n\n\n* **Children terms (if applicable)** Should any existing terms that should be moved underneath this new proposed term?\n\n\n* **Synonyms (ferritinophagy - exact)**\n\n* **Cross-references**\n* For enzymes, please provide RHEA and/or EC numbers. \n* Can also provide MetaCyc, KEGG, Wikipedia, and other links.\n\n* **Any other information**\n",
+  "comments": [
+    {
+      "id": "IC_kwDOAkAHws7grbwP",
+      "author": {
+        "login": "ValWood"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Adding with parent \"macroautophagy\"\nand as ferritinophagy\nexact synonym ferritin-specific autophagy\n\nstandardized def\nThe selective degradation of ferritin to release iron by macroautophagy. \n\n",
+      "createdAt": "2026-01-19T17:29:56Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/geneontology/go-ontology/issues/30894#issuecomment-3769482255",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOAkAHws8AAAABAv1-tA",
+      "author": {
+        "login": "ValWood"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "@dragon-ai-agent  please add this term",
+      "createdAt": "2026-04-29T15:24:56Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "EYES",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/geneontology/go-ontology/issues/30894#issuecomment-4345134772",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOAkAHws8AAAABAv2PvQ",
+      "author": {
+        "login": "dragon-ai-agent"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "🤖 Working on it...\n\nFollow along: [View workflow run](https://github.com/geneontology/go-ontology/actions/runs/25117814462)\n\n*— @dragon-ai-agent*",
+      "createdAt": "2026-04-29T15:25:27Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/geneontology/go-ontology/issues/30894#issuecomment-4345139133",
+      "viewerDidAuthor": true
+    }
+  ],
+  "title": "NTR: [Ferritin-specific autophagy]",
+  "url": "https://github.com/geneontology/go-ontology/issues/30894"
+}
