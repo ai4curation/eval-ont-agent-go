@@ -3826,7 +3826,7 @@ comment: This term was obsoleted because EC obsoleted it, and there was no other
 comment: This term was obsoleted because EC obsoleted it, and there was no other evidence that this function exists.
 comment: Note that enzymes classified as EC:1.1.5.3 have several activities. They should be annotated with the terms GO:0004368, GO:0052590 and GO:0052591.
 comment: Note that enzymes classified as EC:1.1.5.3 have several activities. They should be annotated with the terms GO:0004368, GO:0052590 and GO:0052591.
-comment: The reason for obsoletion is that this term does not provide a useful distinction from its parent, GO:0052704 (because that trimethyl-His yada is present in both pathways)
+comment: The reason for obsoletion is that this term does not provide a useful distinction from ergothioneine biosynthetic process.
 comment: Class II AP endonuclease is a nuclease, but not Class I, III and IV.
 comment: In this reaction N,N'-diacetylchitobiose is deacetylated at the non-reducing residue to produce 2-acetamido-4-O-(2-amino-2-deoxy-beta-D-glucopyranosyl)-2-deoxy-D-glucose (GlcN-GlcNAc). This is in contrast to EC:3.5.1.105 in which N,N'-diacetylchitobiose is deacetylated at the reducing residue to produce 4-O-(N-acetyl-beta-D-glucosaminyl)-D-glucosamine (GlcNAc-GlcN). For the latter reaction, see GO:0036311.
 comment: EC has determined that this reaction in fact does not exist and have withdrawn EC:1.3.3.1. Note: If fumarate is not shown to be involved, you may want to consider GO:0004152, dihydroorotate dehydrogenase activity (parent term); if the reaction involves fumarate, then use GO:0052888 dihydroorotate oxidase (fumarate) activity. Details at http://sourceforge.net/p/geneontology/ontology-requests/10770/

@@ -28202,25 +28202,6 @@
     
 
 
-    <!-- http://purl.obolibrary.org/obo/GO_0052704 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0052704">
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002160"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_2"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002162"/>
-                <owl:allValuesFrom rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_2"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-    </owl:Class>
-    
-
-
     <!-- http://purl.obolibrary.org/obo/GO_0052907 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0052907">
@@ -37884,25 +37865,6 @@
     <!-- http://purl.obolibrary.org/obo/GO_0140446 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0140446">
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002160"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_4751"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002162"/>
-                <owl:allValuesFrom rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_4751"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/GO_0140479 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0140479">
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002160"/>
