@@ -1,0 +1,95 @@
+# Protoporphyrinogen Oxidase Activity Terms - Implementation Details
+
+## Issue #31965 Resolution
+
+### Checklist Completion
+
+- [x] PLAN: Issue analyzed, context understood, implementation plan created
+- [x] PRE-VALIDATION: Ontology validated before changes (no pre-existing errors)
+- [x] TERM-SEARCH: Located GO:0070818, GO:0070819, GO:0004729 using obo-grep.pl
+- [x] REACTION-SKILL: Consulted /reaction skill for RHEA/EC xref handling
+- [x] DESIGN-PATTERNS: Verified compliance with catalytic activity design patterns
+- [x] EDITS: Modified terms using obo-checkout.pl / obo-checkin.pl workflow
+- [x] RELATIONSHIPS: Verified all is_a relationships remain intact
+- [x] METADATA: Confirmed metadata on modified terms (created_by/creation_date preserved for existing terms)
+- [x] AUTOMATED-VALIDATION: Syntax validated with ROBOT converter
+- [x] CHANGES-COMMITTED: Changes committed with detailed message
+
+## Technical Details
+
+### GO:0070819 - "quinone-dependent protoporphyrinogen oxidase activity"
+
+**Rationale for renaming from "menaquinone-dependent":**
+- According to EC 1.3.5.3 classification: "In the bacterium Escherichia coli it interacts with either ubiquinone or menaquinone, depending on whether the organism grows aerobically or anaerobically."
+- Broader "quinone-dependent" term correctly captures both ubiquinone and menaquinone substrates
+- Menaquinone-specific term would be overly restrictive given biological evidence
+
+**EC/RHEA Mapping Changes:**
+- Removed: EC:1.3.3.4 {source="skos:broadMatch"} - This is oxygen-dependent, belongs on GO:0004729
+- Added: EC:1.3.5.3 {source="skos:exactMatch"} - Quinone-dependent, correctly mapped
+- Added: RHEA:65032 {source="skos:exactMatch"} - Reaction: protoporphyrinogen IX + 3 a quinone = protoporphyrin IX + 3 a quinol
+
+**Definition Update:**
+- Previous: "Catalysis of the reaction: protoporphyrinogen IX + menaquinone = protoporphyrin IX + reduced menaquinone." [GOC:mah, PMID:19583219]
+- Current: "Catalysis of the reaction: protoporphyrinogen IX + 3 a quinone = protoporphyrin IX + 3 a quinol." [RHEA:65032]
+- Now uses RHEA as primary reference (more precise reaction specification)
+
+### GO:0070818 - "protoporphyrinogen oxidase activity"
+
+**Definition Stoichiometry Correction:**
+- Previous: "Catalysis of the reaction: protoporphyrinogen IX + acceptor = protoporphyrin IX + reduced acceptor."
+- Current: "Catalysis of the reaction: protoporphyrinogen IX + 3 acceptor = protoporphyrin IX + 3 reduced acceptor."
+- Specifies that 3 acceptor molecules are required (consistent with child terms)
+
+**RHEA Mapping Addition:**
+- Added: RHEA:62000 {source="skos:exactMatch"} - General reaction: protoporphyrinogen IX + 3 A = protoporphyrin IX + 3 AH2
+- Changed reference in definition from GOC:mah to RHEA:62000
+- Retained PMID:19583219 as supporting citation
+
+**Reference Provenance:**
+- RHEA:62000 serves as the primary source-of-truth for this generic reaction
+- PMID:19583219 provides biological/publication backing
+
+### Design Pattern Compliance
+
+Following GO reaction term design patterns:
+- RHEA terms used as primary reference in definitions (single source of truth)
+- EC terms included as xrefs with appropriate skos predicates
+  - EC:1.3.3.4 on GO:0004729 with skos:exactMatch (oxygen-dependent)
+  - EC:1.3.5.3 on GO:0070819 with skos:exactMatch (quinone-dependent)
+  - EC:1.3.3.4 also in synonyms for discoverability
+- Parent-child hierarchy maintained and correct:
+  - GO:0070818 (parent - general acceptor)
+    - GO:0070819 (child - quinone-specific)
+    - GO:0004729 (child - oxygen-specific)
+
+### Files Modified
+- src/ontology/go-edit.obo (GO:0070818 and GO:0070819 terms)
+
+### Files NOT Modified (as per CLAUDE.md guidance)
+- GO:0004729 required no changes per issue specification
+- No other files modified
+
+### Validation
+- OBO file syntax: ✓ Valid (robot convert)
+- Term structure: ✓ All required fields present
+- Relationships: ✓ is_a hierarchy preserved
+- Xrefs: ✓ RHEA and EC properly qualified with skos predicates
+
+### Key Decisions
+
+1. **Renaming GO:0070819**: The change from "menaquinone-dependent" to "quinone-dependent" reflects the biological reality that the same enzyme (E. coli protoporphyrinogen oxidase) uses either quinone depending on aerobic/anaerobic conditions, rather than being mechanistically specific to menaquinone.
+
+2. **EC:1.3.3.4 removal from GO:0070819**: Although EC:1.3.3.4 appears in multiple sources, it specifically describes oxygen-dependent protoporphyrinogen oxidase (GO:0004729). GO:0070819 uses EC:1.3.5.3 instead.
+
+3. **RHEA as primary reference**: RHEA terms provide precise reaction specifications and serve as the single source of truth for reaction-based terms, per GO design patterns for reaction/catalytic activity terms.
+
+4. **Stoichiometry specification**: Adding "3" to the parent term definition clarifies that multiple acceptor molecules are involved, matching the specificity of child terms and biological reality.
+
+---
+🤖 **Generated by claude agent**
+- Runtime: `claude`
+- Model: `claude-haiku-4-5-20251001`
+- Agent config: `ai4curation/go-ontology-agent-config@v9:.`
+- Iteration: `1`
+- Run: [View workflow run](https://github.com/ai4curation/eval-ont-agent-go/actions/runs/25640387478)
