@@ -1,0 +1,126 @@
+{
+  "body": "Following up on comments in https://github.com/geneontology/go-ontology/issues/29539.\n\nThere are currently 5 nested GO terms for Entner-Doudoroff pathways, though only 1 has ever been used in annotation:\n\n```\nEntner-Doudoroff pathway [0 direct annotations]\n    |_Entner-Doudoroff pathway through 6-phosphogluconate (MetaCyc:PWY-8004) [4 EXP annotations + InterPro:IPR004786]*\n    |_Entner-Doudoroff pathway through gluconate [0 direct annotations]\n        |_Entner-Doudoroff pathway through gluconate to D-glyceraldehyde (MetaCyc:NPGLUCAT-PWY) [0 annotations]\n        |_Entner-Doudoroff pathway through gluconate to D-glyceraldehyde-3-phosphate (MetaCyc:PWY-2221) [0 annotations]\n```\n\n* The 4 EXP annotations are to Thermoplasma Ta0809, Picrophilus PTO0332, and E.coli Eda by UniProt/EcoCyc\n\n\nAs suggested in https://github.com/geneontology/go-ontology/issues/29539, the 4 child terms should be merged into the parent \"Entner-Doudoroff pathway\" (GO:0061678), consistent with MetaCyc classing these as 'variant pathways' and the fact that such variants are better represented as GO-CAMs. Morever, the MetaCyc descriptions of the variants differ slightly (in their start/end points) from the GO descriptions.\n\nThe individual MetaCyc IDs should be made narrowMatch xrefs on the parent term GO:0061678.\nAlso add a fourth variant, MetaCyc:ENTNER-DOUDOROFF-PWY, as narrowMatch xref.\nAnd remove the 'MetaCyc:Entner-Doudoroff-Pathways' xref since that is the grouping class.\n\nIndividual GO term entries are shown below:\n\nid: GO:0061678\nname: Entner-Doudoroff pathway\nnamespace: biological_process\ndef: \"A cellular carbohydrate catabolic process that converts a carbohydrate to pyruvate and either glyceraldehyde or glyceraldehyde-3 phosphate by dehydration and aldol cleavage via a gluconate or 6-phosphogluconate intermediate.\" [GOC:dph, PMID:12921536]\nxref: MetaCyc:Entner-Doudoroff-Pathways\nis_a: GO:0016052 ! carbohydrate catabolic process\nrelationship: has_primary_output CHEBI:15361 ! pyruvate\ncreated_by: dph\ncreation_date: 2015-01-16T15:28:25Z\n\n\nid: GO:0009255\nname: Entner-Doudoroff pathway through 6-phosphogluconate\nnamespace: biological_process\ndef: \"A pathway that converts a carbohydrate to pyruvate and glyceraldehyde-3 phosphate by producing 6-phosphogluconate and then dehydrating it.\" [GOC:jl, MetaCyc:PWY-8004, PMID:12921356, PMID:12981024]\nxref: MetaCyc:PWY-8004\nis_a: GO:0005975 ! carbohydrate metabolic process\nis_a: GO:0044281 ! small molecule metabolic process\nis_a: GO:0061678 ! Entner-Doudoroff pathway\nintersection_of: GO:0061678 ! Entner-Doudoroff pathway\nintersection_of: ends_with GO:0008675 ! 2-dehydro-3-deoxy-phosphogluconate aldolase activity\nintersection_of: has_intermediate CHEBI:58759 ! 6-phosphonatooxy-D-gluconate\nintersection_of: has_part GO:0004456 ! phosphogluconate dehydratase activity\nintersection_of: has_primary_output CHEBI:15361 ! pyruvate\nintersection_of: has_primary_output CHEBI:58027 ! glyceraldehyde 3-phosphate(2-)\n\n\nid: GO:0061679\nname: Entner-Doudoroff pathway through gluconate\nnamespace: biological_process\ndef: \"The Entner-Doudoroff pathway that proceeds through a D-gluconate intermediate.\" [GOC:dph, PMID:12921536]\nsynonym: \"gluconate pathway\" RELATED []\nis_a: GO:0061678 ! Entner-Doudoroff pathway\nintersection_of: GO:0061678 ! Entner-Doudoroff pathway\nintersection_of: has_intermediate CHEBI:18391 ! D-gluconate\nintersection_of: has_part GO:0047929 ! gluconate dehydratase activity\nintersection_of: has_part GO:0047935 ! glucose 1-dehydrogenase (NADP+) activity\nintersection_of: has_primary_output CHEBI:15361 ! pyruvate\ncreated_by: dph\ncreation_date: 2015-01-16T15:41:22Z\n\n\nid: GO:0061680\nname: Entner-Doudoroff pathway through gluconate to D-glyceraldehyde\nnamespace: biological_process\ndef: \"The Entner-Doudoroff pathway that proceeds through a D-gluconate intermediate and yields pyruvate and D-glyceraldehyde.\" [GOC:dph, MetaCyc:NPGLUCAT-PWY, PMID:12921536]\nxref: MetaCyc:NPGLUCAT-PWY\nis_a: GO:0019595 ! non-phosphorylated glucose catabolic process\nis_a: GO:0061679 ! Entner-Doudoroff pathway through gluconate\nintersection_of: GO:0061679 ! Entner-Doudoroff pathway through gluconate\nintersection_of: ends_with GO:0061677 ! 2-dehydro-3-deoxy-D-gluconate aldolase activity\nintersection_of: has_primary_output CHEBI:17378 ! D-glyceraldehyde\nproperty_value: term_tracker_item \"https://github.com/geneontology/go-ontology/issues/28392\" xsd:anyURI\ncreated_by: dph\ncreation_date: 2015-01-22T08:51:31Z\n\n\nid: GO:0061681\nname: Entner-Doudoroff pathway through gluconate to D-glyceraldehyde-3-phosphate\nnamespace: biological_process\ndef: \"The Entner-Doudoroff pathway that proceeds through a D-gluconate intermediate and yields pyruvate and D-glyceraldehyde-3-phosphate.\" [GOC:dph, PMID:12921536]\nxref: MetaCyc:PWY-2221\nis_a: GO:0061679 ! Entner-Doudoroff pathway through gluconate\nintersection_of: GO:0061679 ! Entner-Doudoroff pathway through gluconate\nintersection_of: ends_with GO:0008675 ! 2-dehydro-3-deoxy-phosphogluconate aldolase activity\nintersection_of: has_part GO:0008673 ! 2-dehydro-3-deoxygluconokinase activity\nintersection_of: has_primary_output CHEBI:58027 ! glyceraldehyde 3-phosphate(2-)\ncreated_by: dph\ncreation_date: 2015-01-22T08:55:22Z\n\n\n",
+  "comments": [
+    {
+      "id": "IC_kwDOAkAHws8AAAABAykORg",
+      "author": {
+        "login": "raymond91125"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Also there is GO:0061688 glycolytic process via Entner-Doudoroff Pathway, 10 IEA annotations, no EXP. @sjm41 I think this too should be 'merged' into (obsolete with consider) GO:0061678 Entner-Doudoroff pathway or GO:0006096 glycolytic process. Do you agree?",
+      "createdAt": "2026-04-29T22:28:31Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/geneontology/go-ontology/issues/31916#issuecomment-4347989574",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOAkAHws8AAAABA2aYBQ",
+      "author": {
+        "login": "sjm41"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "> Also there is GO:0061688 glycolytic process via Entner-Doudoroff Pathway, 10 IEA annotations, no EXP. @sjm41 I think this too should be 'merged' into (obsolete with consider) GO:0061678 Entner-Doudoroff pathway or GO:0006096 glycolytic process. Do you agree?\n\n@raymond91125  Yes, I'd suggest that term is merged into its parent GO:0006096 glycolytic process. Thanks.\n\nI'll note that the 10 IEA annotations are all by CGD, based on evidence from [PomBase:SPAC4G9.12](https://www.pombase.org/gene/SPAC4G9.12) or [PomBase:SPBC660.16](https://www.pombase.org/gene/SPBC660.16).\nLooking at those records in PomBase, they are annotated with a different BP \"pentose-phosphate shunt, oxidative branch (GO:0009051)\". So CGD may want to change those annotations anyway. (I don't know who the CGD contact is.)",
+      "createdAt": "2026-04-30T11:23:04Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/geneontology/go-ontology/issues/31916#issuecomment-4352022533",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOAkAHws8AAAABA2pKsQ",
+      "author": {
+        "login": "pgaudet"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "CGD contact is @jlewsmith \n\nI assume that the IEA will get update automatically ? ",
+      "createdAt": "2026-04-30T12:01:10Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/geneontology/go-ontology/issues/31916#issuecomment-4352264881",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOAkAHws8AAAABA2ruNQ",
+      "author": {
+        "login": "sjm41"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "> I assume that the IEA will get update automatically ?\n\nThat's what I thought, so I was surprised to see the mismatch between the current PomBase BP and the CGD annotations!",
+      "createdAt": "2026-04-30T12:07:34Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/geneontology/go-ontology/issues/31916#issuecomment-4352306741",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOAkAHws8AAAABA2tkbA",
+      "author": {
+        "login": "pgaudet"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "I don't know how frequent CGD releases are.",
+      "createdAt": "2026-04-30T12:12:36Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/geneontology/go-ontology/issues/31916#issuecomment-4352337004",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOAkAHws8AAAABBKv3NQ",
+      "author": {
+        "login": "raymond91125"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "@dragon-ai-agent please obsolete with replaced_by:\nGO:0009255 Entner-Doudoroff pathway through 6-phosphogluconate -> GO:0061678 Entner-Doudoroff pathway\nGO:0061679 Entner-Doudoroff pathway through gluconate -> GO:0061678 Entner-Doudoroff pathway\nGO:0061680 Entner-Doudoroff pathway through gluconate to D-glyceraldehyde -> GO:0061678 Entner-Doudoroff pathway\nGO:0061681 Entner-Doudoroff pathway through gluconate to D-glyceraldehyde-3-phosphate -> GO:0061678 Entner-Doudoroff pathway\nGO:0061688 glycolytic process via Entner-Doudoroff Pathway -> GO:0006096 glycolytic process",
+      "createdAt": "2026-05-04T18:11:37Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "EYES",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/geneontology/go-ontology/issues/31916#issuecomment-4373346101",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOAkAHws8AAAABBKwB_g",
+      "author": {
+        "login": "dragon-ai-agent"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "🤖 Working on it...\n\nFollow along: [View workflow run](https://github.com/geneontology/go-ontology/actions/runs/25335280243)\n\n*— @dragon-ai-agent*",
+      "createdAt": "2026-05-04T18:11:59Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/geneontology/go-ontology/issues/31916#issuecomment-4373348862",
+      "viewerDidAuthor": true
+    }
+  ],
+  "title": "Review of Entner-Doudoroff pathways",
+  "url": "https://github.com/geneontology/go-ontology/issues/31916"
+}
