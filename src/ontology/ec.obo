@@ -41131,7 +41131,7 @@ synonym: "gamma-glutamyl hercynylcysteine sulfoxide synthase" EXACT []
 xref: EC:1.14.99.50
 xref: RHEA:42672
 is_a: GO:0016705 ! oxidoreductase activity, acting on paired donors, with incorporation or reduction of molecular oxygen
-relationship: part_of GO:0052704 ! ergothioneine biosynthesis from histidine via gamma-glutamyl-hercynylcysteine sulfoxide
+relationship: part_of GO:0052699 ! ergothioneine biosynthetic process
 property_value: term_tracker_item https://github.com/geneontology/go-ontology/issues/11163 xsd:anyURI
 created_by: jl
 creation_date: 2014-12-15T11:44:54Z
@@ -68667,7 +68667,7 @@ synonym: "hercynylcysteine sulfoxide synthase" EXACT []
 xref: EC:1.14.99.51
 xref: RHEA:42704
 is_a: GO:0016705 ! oxidoreductase activity, acting on paired donors, with incorporation or reduction of molecular oxygen
-relationship: part_of GO:0140479 ! ergothioneine biosynthesis from histidine via hercynylcysteine sulfoxide synthase
+relationship: part_of GO:0052699 ! ergothioneine biosynthetic process
 property_value: term_tracker_item https://github.com/geneontology/go-ontology/issues/11163 xsd:anyURI
 created_by: dph
 creation_date: 2015-03-06T15:08:51Z
