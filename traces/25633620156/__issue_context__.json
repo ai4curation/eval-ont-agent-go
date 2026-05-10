@@ -1,0 +1,22 @@
+{
+  "body": "",
+  "comments": [
+    {
+      "id": "IC_kwDOAkAHws8AAAABBLhK4w",
+      "author": {
+        "login": "github-actions"
+      },
+      "authorAssociation": "NONE",
+      "body": "<!-- GITHUB_ACTION_COMMENT_PR -->\nHere's a diff of how these changes impact the classified ontology: \n\n# Ontology comparison\n\n## Left\n- Ontology IRI: `http://purl.obolibrary.org/obo/go.owl`\n- Version IRI: `http://purl.obolibrary.org/obo/go/releases/2026-05-04/go.owl`\n- Loaded from: `file:/__w/go-ontology/go-ontology/src/ontology/../../reasoned-master.ofn/reasoned.ofn`\n\n## Right\n- Ontology IRI: `http://purl.obolibrary.org/obo/go.owl`\n- Version IRI: `http://purl.obolibrary.org/obo/go/releases/2026-05-04/go.owl`\n- Loaded from: `file:/__w/go-ontology/go-ontology/src/ontology/../../reasoned-pr.ofn/reasoned.ofn`\n\n### Ontology imports \n\n\n\n### Ontology annotations \n\n\n\n### sulfide oxidation, using sulfide:quinone oxidoreductase `http://purl.obolibrary.org/obo/GO_0070221`\n#### Removed\n- [sulfide oxidation, using sulfide:quinone oxidoreductase](http://purl.obolibrary.org/obo/GO_0070221) [definition](http://purl.obolibrary.org/obo/IAO_0000115) \"A sulfide oxidation process that proceeds via the reaction catalyzed by sulfide:quinone oxidoreductase.\" \n  - [database_cross_reference](http://www.geneontology.org/formats/oboInOwl#hasDbXref) \"GOC:ew\" \n\n- [sulfide oxidation, using sulfide:quinone oxidoreductase](http://purl.obolibrary.org/obo/GO_0070221) [label](http://www.w3.org/2000/01/rdf-schema#label) \"sulfide oxidation, using sulfide:quinone oxidoreductase\" \n\n- [sulfide oxidation, using sulfide:quinone oxidoreductase](http://purl.obolibrary.org/obo/GO_0070221) SubClassOf [sulfide oxidation](http://purl.obolibrary.org/obo/GO_0019418) \n\n#### Added\n- [sulfide oxidation, using sulfide:quinone oxidoreductase](http://purl.obolibrary.org/obo/GO_0070221) [term replaced by](http://purl.obolibrary.org/obo/IAO_0100001) [sulfide oxidation](http://purl.obolibrary.org/obo/GO_0019418) \n\n- [sulfide oxidation, using sulfide:quinone oxidoreductase](http://purl.obolibrary.org/obo/GO_0070221) [definition](http://purl.obolibrary.org/obo/IAO_0000115) \"OBSOLETE. A sulfide oxidation process that proceeds via the reaction catalyzed by sulfide:quinone oxidoreductase.\" \n  - [database_cross_reference](http://www.geneontology.org/formats/oboInOwl#hasDbXref) \"GOC:ew\" \n\n- [sulfide oxidation, using sulfide:quinone oxidoreductase](http://purl.obolibrary.org/obo/GO_0070221) [deprecated](http://www.w3.org/2002/07/owl#deprecated) true \n\n- [sulfide oxidation, using sulfide:quinone oxidoreductase](http://purl.obolibrary.org/obo/GO_0070221) [comment](http://www.w3.org/2000/01/rdf-schema#comment) \"The reason for obsoletion is that this term represents a GO-CAM.\" \n\n- [sulfide oxidation, using sulfide:quinone oxidoreductase](http://purl.obolibrary.org/obo/GO_0070221) [label](http://www.w3.org/2000/01/rdf-schema#label) \"obsolete sulfide oxidation, using sulfide:quinone oxidoreductase\" \n\n",
+      "createdAt": "2026-05-04T20:12:56Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/geneontology/go-ontology/pull/32025#issuecomment-4374153955",
+      "viewerDidAuthor": false
+    }
+  ],
+  "title": "obsolete GO:070221; part #31842",
+  "url": "https://github.com/geneontology/go-ontology/pull/32025"
+}
