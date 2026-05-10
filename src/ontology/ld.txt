@@ -2591,8 +2591,6 @@ intersection_of: GO:0010001 ! glial cell differentiation
 intersection_of: part_of GO:0003386 ! amphid sensory organ development
 intersection_of: GO:0009653 ! anatomical structure morphogenesis
 intersection_of: results_in_morphogenesis_of GO:0035230 ! cytoneme
-intersection_of: GO:0065007 ! biological regulation
-intersection_of: regulates GO:0048208 ! COPII vesicle coating
 intersection_of: GO:0060071 ! Wnt signaling pathway, planar cell polarity pathway
 intersection_of: part_of GO:0003401 ! axis elongation
 intersection_of: GO:0048646 ! anatomical structure formation involved in morphogenesis
