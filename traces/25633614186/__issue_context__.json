@@ -1,0 +1,6 @@
+{
+  "body": "\n1. GO:0006896   Golgi to vacuole transport\nadd narrow ALP pathway \nRoute: The ALP pathway follows a direct route from the trans-Golgi network (TGN) → vacuole, bypassing the prevacuolar compartment (PVC)/endosome that the VPS pathway passes through.\n\nwill add ref shortly",
+  "comments": [],
+  "title": "synonyms vesicle-mediated transport",
+  "url": "https://github.com/geneontology/go-ontology/issues/31983"
+}
