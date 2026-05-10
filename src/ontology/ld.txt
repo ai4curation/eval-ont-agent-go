@@ -5674,7 +5674,7 @@ intersection_of: capable_of GO:0009486 ! cytochrome bo3 ubiquinol oxidase activi
 intersection_of: GO:0032991 ! protein-containing complex
 intersection_of: capable_of GO:0004638 ! phosphoribosylaminoimidazole carboxylase activity
 intersection_of: GO:0032991 ! protein-containing complex
-intersection_of: capable_of GO:0008785 ! alkyl hydroperoxide reductase activity
+intersection_of: capable_of GO:0102039 ! NADH-dependent peroxiredoxin activity
 intersection_of: GO:0032991 ! protein-containing complex
 intersection_of: capable_of GO:0009033 ! trimethylamine-N-oxide reductase activity
 intersection_of: GO:0032991 ! protein-containing complex
