@@ -1,0 +1,96 @@
+{
+  "body": "https://enzyme.expasy.org/EC/1.13.11.37\r\nEntry: EC:1.13.11.37\r\nAccepted Name: hydroxyquinol 1,2-dioxygenase\r\nReaction catalysed: benzene-1,2,4-triol + O2 <=> 2 H(+) + maleylacetate\r\n\r\nThat EC is currently on two GO terms (shown below), it's an exact match for the second one (GO:0047074) that describes the 'complete 2-step reaction', but should only be a 'broadMatch' for the first one (GO:0018581) that only describes the first step of the reaction. (The second step in non-enzymatic conversion of 3-hydroxy-cis,cis-muconate to maleylacetate - see https://biocyc.org/META/NEW-IMAGE?type=REACTION&object=RXN-10137)\r\nTasks:\r\n- [x] Make EC:1.13.11.37 xref on GO:0018581 a 'broadMatch'\r\n- [x] Remove EC:1.13.11.37-attributed synonyms from GO:0018581 (EC:1.13.11.37 currently doesn't list any synonyms)\r\n- [x] Change GO:0018581 def attribution to use RHEA:19441\r\n- [x] Make EC:1.13.11.37 xref on GO:0047074 a 'exactMatch'\r\n- [x] Tweak GO:0047074 def to match EC:1.13.11.37 def\r\n\r\n\r\nid: GO:0018581\r\nname: hydroxyquinol 1,2-dioxygenase activity\r\ndef: \"Catalysis of the reaction: benzene-1,2,4-triol + O2 = 3-hydroxy-cis,cis-muconate.\" [EC:1.13.11.37]\r\nsynonym: \"benzene-1,2,4-triol:oxygen 1,2-oxidoreductase (decyclizing)\" RELATED [EC:1.13.11.37]\r\nsynonym: \"hydroxyquinol dioxygenase activity\" RELATED [EC:1.13.11.37]\r\nxref: EC:1.13.11.37\r\nxref: MetaCyc:HYDROXYQUINOL-12-DIOXYGENASE-RXN\r\nxref: RHEA:19441\r\nxref: UM-BBD_reactionID:r0232\r\nis_a: GO:0016702 ! oxidoreductase activity, acting on single donors with incorporation of molecular oxygen, incorporation of two atoms of oxygen\r\n\r\nid: GO:0047074\r\nname: 4-hydroxycatechol 1,2-dioxygenase activity\r\nnamespace: molecular_function\r\ndef: \"Catalysis of the reaction: O2 + benzene-1,2,4-triol = maleylacetate.\" [RHEA:35595]\r\nxref: EC:1.13.11.37\r\nxref: MetaCyc:R308-RXN\r\nxref: MetaCyc:RXN-10137\r\nxref: RHEA:35595\r\nis_a: GO:0016702 ! oxidoreductase activity, acting on single donors with incorporation of molecular oxygen, incorporation of two atoms of oxygen\r\n\r\n\r\n",
+  "comments": [
+    {
+      "id": "IC_kwDOAkAHws5jRjOX",
+      "author": {
+        "login": "sjm41"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Also:\r\n\r\n- [x] MetaCyc:HYDROXYQUINOL-12-DIOXYGENASE-RXN is obsolete. Replace with RXN-17556.\r\n- [x] MetaCyc:R308-RXN is obsolete. Remove.",
+      "createdAt": "2023-08-04T12:40:37Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/geneontology/go-ontology/issues/25870#issuecomment-1665545111",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOAkAHws8AAAABAQaW9Q",
+      "author": {
+        "login": "sjm41"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Looking at this one again, we should:\n- [x] Obsolete GO:0018581, because it's a sub-reaction of RHEA:35595 (it has 0 GO annotations anyway)\n- [x] Then rename GO:0047074 to \"hydroxyquinol 1,2-dioxygenase activity\" (the name currently on GO:0018581), since that's the EC name.\n",
+      "createdAt": "2026-04-24T09:43:43Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/geneontology/go-ontology/issues/25870#issuecomment-4312176373",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOAkAHws8AAAABApxQaA",
+      "author": {
+        "login": "raymond91125"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Dear all, \n\nThe proposal has been made to obsolete GO:0018581 hydroxyquinol 1,2-dioxygenase activity\n\n* The reason for obsoletion is that this term is equivalent to GO:0047074 4-hydroxycatechol 1,2-dioxygenase activity\n\nThere are no experimental annotations to this term.\nThere are no mappings to this term.\nThis term is not present in any subset.\nThis term is being replaced by GO:0047074 4-hydroxycatechol 1,2-dioxygenase activity\n\nAny comments can be  added to the issue: https://github.com/geneontology/go-ontology/issues/25870.\n\nThanks, ",
+      "createdAt": "2026-04-28T20:20:16Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/geneontology/go-ontology/issues/25870#issuecomment-4338765928",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOAkAHws8AAAABApyMNg",
+      "author": {
+        "login": "raymond91125"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "@dragon-ai-agent please Obsolete GO:0018581 and then rename GO:0047074 to \"hydroxyquinol 1,2-dioxygenase activity\".",
+      "createdAt": "2026-04-28T20:22:20Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "EYES",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/geneontology/go-ontology/issues/25870#issuecomment-4338781238",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOAkAHws8AAAABApyZ5w",
+      "author": {
+        "login": "dragon-ai-agent"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "🤖 Working on it...\n\nFollow along: [View workflow run](https://github.com/geneontology/go-ontology/actions/runs/25075714761)\n\n*— @dragon-ai-agent*",
+      "createdAt": "2026-04-28T20:22:51Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/geneontology/go-ontology/issues/25870#issuecomment-4338784743",
+      "viewerDidAuthor": false
+    }
+  ],
+  "title": "GO terms with EC:1.13.11.37 xref",
+  "url": "https://github.com/geneontology/go-ontology/issues/25870"
+}
