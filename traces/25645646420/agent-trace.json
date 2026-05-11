@@ -1,0 +1,4 @@
+Performing one time database migration, may take a few minutes...
+sqlite-migration:done
+Database migration complete.
+{"type":"error","timestamp":1778463129228,"sessionID":"ses_1eb56424bffeQzIVIaaDPueAPY","error":{"name":"UnknownError","data":{"message":"Model not found: togetherai/moonshotai/kimi-k2.6-thinking."}}}
