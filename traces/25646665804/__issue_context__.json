@@ -1,0 +1,59 @@
+{
+  "body": "Please provide as much information as you can:\n\n* **GO term ID and Label**\nid: GO:0009095\nname: aromatic amino acid biosynthetic process, prephenate pathway\ndef: \"The chemical reactions and pathways resulting in the formation of phenylalanine and tyrosine from other compounds, including chorismate, via the intermediate prephenate.\" [GOC:mah, ISBN:0471331309, MetaCyc:PWY-3481]\nxref: MetaCyc:PWY-3481\nis_a: GO:0009073 ! aromatic amino acid biosynthetic process\nintersection_of: GO:0009058 ! biosynthetic process\nintersection_of: has_intermediate CHEBI:57852 ! prephenate(2-)\nintersection_of: has_primary_output CHEBI:33856 ! aromatic amino acid\n\n\n* **Reason for deprecation** Put an x in the appropriate box: \n - [ ]  The reason for obsoletion is that this term is pre-composed and should be represented as a GO-CAM model.\n\nMetaCyc:PWY-3481 is \"superpathway of L-phenylalanine and L-tyrosine biosynthesis\" and is a combined representation of two separate pathways:\n- L-phenylalanine biosynthesis II (PWY-3462)\n- L-tyrosine biosynthesis II (PWY-3461)\nAnd these xrefs correctly appear as narrowMatch xrefs on the corresponding GO terms for those pathways (GO:0009094 L-phenylalanine biosynthetic process & GO:0006571 L-tyrosine biosynthetic process)\n\n* **\"Consider\" term(s) (ID and label)**\nGO:0009094 L-phenylalanine biosynthetic process\nand/or\nGO:0006571 L-tyrosine biosynthetic process\n\n* **Are there annotations to this term?**\n- How many EXP: 4\n\n2 annotations by UP from PMID:21102469 to Arabidopsis PAT and Petunia PPA-AT\n- Fig 1 shows Petunia PPA-AT RNAi affects L-phenylalanine synthesis, so could reannotate PPA-AT to 'GO:0009094 L-phenylalanine biosynthetic process'\n- I don't see any evidence for BP annotation to Arabidopsis PAT from this paper (though I could have missed it) so suggest the annotation is just removed from Arabidopsis PA\n\n1 annotation by TAIR from PMID:20883697 to Arabidopsis PAT\n- This is a biochemical paper, I don't see any BP information - I suggest this annotation is removed.\n\n1 annotation by MTBBASE from PMID:18727669 to M. tuberculosis Rv0948c (chorismate mutase)\n- This is a biochemical/structural paper, I don't see any BP information - I suggest this annotation is removed.\n\n\n* **Are there mappings and cross references to this term? (InterPro, Keywords; check QuickGO cross-references section)**\nNo (only the MetaCyc:PWY-3481 xref mentioned above)\n\n* **Is this term in a subset? (check the AmiGO page for that term)**\nNo\n\n\n----\nChecklist for ontology editor\n\n***Check term usage and metadata in Protégé***\n- [ ] check term usage in the ontology \n- [ ] check internal mappings: RHEA, EC, MetaCyc\n- [ ] check subset usage\n- [ ] check taxon constraints \n\n***Check annotations***\n- [ ] create Annotation Review spreadsheet \n- * Annotation Review template: https://docs.google.com/spreadsheets/d/1izV3q1jnq_Ybg5MJ53O_b5BCTkGtjl_Fi-cOg3-7eBE/edit#gid=0\n- * Instructions: https://wiki.geneontology.org/Annotation_Review_Request\n- [ ] create annotation review ticket: https://github.com/geneontology/go-annotation/issues/new?assignees=&labels=annotation+review&template=annotation-review-for-obsoletion.md&title=Review+annotations+to+%5BINSERT+GO+TERM%5D\n- [ ] find external mappings (via IEAS), include in obsoletion notice  \n- [ ] tag curators in Annotation Review ticket. Responsible annotator for each group: https://github.com/geneontology/go-site/blob/master/metadata/group-contacts.csv\n\n***Notification***\n- [ ] create [obsoletion announcement](https://github.com/geneontology/go-announcements/issues/new?assignees=&labels=obsoletion&template=obsoletion-notice.md&title=Obsoletion+notice%3A+%5BGO+ID%3A+term+label%5D)\n- [ ] announce to GO friends (go-friends@mailman.stanford.edu)\n- [ ] paste the text in the ontology ticket\n",
+  "comments": [
+    {
+      "id": "IC_kwDOAkAHws8AAAABBLzxMg",
+      "author": {
+        "login": "raymond91125"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Dear all, \n\nThe proposal has been made to obsolete GO:0009095 aromatic amino acid biosynthetic process, prephenate pathway.\n\n*  The reason for obsoletion is that this term represents a GO-CAM model.\n\n\nExperimental annotations\nUniProt 2\nTAIR 1\nMTBBASE 2\n\n0 InterPro2GO/UniRule/UniProtKW mappings.\n\nAnnotations can be viewed here: [link to GitHub ticket in the go-annotation tracker].\n\nAnnotations can be transferred to\nGO:0009094 L-phenylalanine biosynthetic process\nGO:0006571 L-tyrosine biosynthetic process\n\nAny comments can be  added to the issue: https://github.com/geneontology/go-ontology/issues/32005.\n\n\nThanks, ",
+      "createdAt": "2026-05-04T21:02:09Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/geneontology/go-ontology/issues/32005#issuecomment-4374458674",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOAkAHws8AAAABBL0qtQ",
+      "author": {
+        "login": "raymond91125"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "@dragon-ai-agent please obsolete GO:0009095 aromatic amino acid biosynthetic process, prephenate pathway",
+      "createdAt": "2026-05-04T21:04:50Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "EYES",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/geneontology/go-ontology/issues/32005#issuecomment-4374473397",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOAkAHws8AAAABBL0ykA",
+      "author": {
+        "login": "dragon-ai-agent"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "🤖 Working on it...\n\nFollow along: [View workflow run](https://github.com/geneontology/go-ontology/actions/runs/25343484309)\n\n*— @dragon-ai-agent*",
+      "createdAt": "2026-05-04T21:05:11Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/geneontology/go-ontology/issues/32005#issuecomment-4374475408",
+      "viewerDidAuthor": false
+    }
+  ],
+  "title": "Obsoletion request: GO:0009095 aromatic amino acid biosynthetic process, prephenate pathway",
+  "url": "https://github.com/geneontology/go-ontology/issues/32005"
+}
