@@ -1,0 +1,67 @@
+## Summary
+
+Addresses geneontology/go-ontology#27593 (NTR ferric iron reductase, for non-siderophore chelates).
+
+### New term
+
+**GO:7770068 ferric iron reductase activity**
+
+- `def`: "Catalysis of the reduction of ferric iron (Fe3+) to ferrous iron (Fe2+). The iron substrate may be free or chelated, and the activity may be coupled to a range of electron donors. A representative reaction is: 2 Fe2+ + NADP+ + H+ = 2 Fe3+ + NADPH (RHEA:71767)." [PMID:8321236, PMID:34614242, PMID:39940646]
+- `synonym`: "ferrireductase activity" RELATED
+- `xref`: RHEA:71767 (skos:narrowMatch — the GO term is broader than the NADPH-specific RHEA reaction)
+- `is_a`: GO:0016722 ! oxidoreductase activity, acting on metal ions
+- `created_by`: dragon-ai-agent
+- `creation_date`: 2026-05-11T04:49:29Z
+- `term_tracker_item`: this issue
+
+### Updated term
+
+**GO:0000293 ferric-chelate reductase activity**
+
+- `def` changed from `2 Fe3+-siderophore + electron donor = 2 Fe2+-siderophore + electron acceptor` to `2 Fe3+-chelate + electron donor = 2 Fe2+-chelate + electron acceptor`.
+- Parent changed from GO:0016722 to the new GO:7770068. The previous parent is retained transitively.
+- Added the issue URL to `term_tracker_item`.
+
+### Resulting hierarchy
+
+```
+GO:0016722 oxidoreductase activity, acting on metal ions
+└── GO:7770068 ferric iron reductase activity (NEW)
+    └── GO:0000293 ferric-chelate reductase activity
+        └── GO:0052851 ferric-chelate reductase (NADPH) activity
+```
+
+## Rationale
+
+The requester (ValWood) reported that fission yeast Frp1 was being annotated to GO:0052851 *ferric-chelate reductase (NADPH) activity* because there was no GO term for the more general activity that Frp1 actually performs at the cell surface: reduction of ferric iron (potentially uncomplexed or non-siderophore-chelated) as part of the reductive iron assimilation system (GO:0033215), via the Fio1/Fip1 transporter (the S. pombe equivalent of S. cerevisiae Ftr1/Fet3). Annotating Frp1 to a siderophore-specific term is misleading because S. pombe Frp1/Frp2 are not implicated in siderophore (ferrichrome) uptake (per the expert quoted in the issue).
+
+The new grouping term gives a non-siderophore-committed parent for ferric reductases, and the GO:0000293 definition is generalised to chelate (broader than siderophore) so that curators are less likely to mis-annotate non-siderophore activities. The siderophore-specific subclass GO:0052851 remains unchanged.
+
+## Note for reviewer
+
+The original request asked for the GO:0000293 definition to be changed asymmetrically (`Fe3+-chelate` on the substrate side, `Fe2+-siderophore` on the product side). I made both sides `chelate` because the chelating agent isn't transformed by the reduction — keeping siderophore on one side would create a chemically incorrect equation. Flagged in the issue comment.
+
+## Checklist
+
+- [x] PLAN — issue analysed, intent inferred from the long discussion thread; user has explicitly re-requested the same three changes as the previous (closed) PR #31797
+- [x] PRE-VALIDATION — `robot convert` and `robot reason -r ELK` succeed on the pre-edit `go-edit.obo`
+- [x] RESEARCH — references for the new term taken directly from the requester's comment and from RHEA:71767 metadata; PMIDs verified via NCBI eutils (titles match)
+- [x] TERM-SEARCH — `obo-grep.pl` used to confirm GO:0000293, GO:0052851, GO:0016722, GO:0016723, and to confirm GO:7770068 was unused
+- [x] DESIGN-PATTERNS — examined the pattern used by sibling terms (GO:0000293, GO:0052851); this is a non-compositional grouping term so no `intersection_of` is appropriate. Logical definition deliberately omitted (over-specification anti-pattern).
+- [x] EDITS — used `obo-checkout.pl` / `obo-checkin.pl` via `terms/` rather than editing `go-edit.obo` directly
+- [x] RELATIONSHIPS — single `is_a` parent (GO:0016722); GO:0000293's direct `is_a` retargeted to the new term and the previously direct GO:0016722 link removed to avoid over-asserted is_a
+- [x] SPECIALIZED-EDITS — /reaction skill relevant in spirit: RHEA:71767 confirmed via RHEA SPARQL endpoint; xref scope chosen as `narrowMatch` since the GO term is broader than the specific NADPH-dependent reaction
+- [x] METADATA — `created_by: dragon-ai-agent` and `creation_date` set on the new term only; existing GO:0000293 metadata preserved; `term_tracker_item` URLs use the required xsd:anyURI form; namespace set to `molecular_function`
+- [x] AUTOMATED-VALIDATION — `robot convert -i go-edit.obo -f obo` succeeds; `robot reason -r ELK` succeeds; all 16 SPARQL QC rules in the verify suite PASS with 0 violations
+- [x] REFERENCE-VALIDATION — PMIDs 8321236, 34614242, 39940646 verified against NCBI; all titles consistent with the requester's citation; no RESEARCH.md generated since the references were directly supplied
+- [x] CHANGES-COMMITTED — only `src/ontology/go-edit.obo` is committed; no incidental edits
+
+🤖 Generated with [Claude Code](https://claude.com/claude-code)
+
+---
+🤖 **Generated by claude agent**
+- Runtime: `claude`
+- Model: `claude-opus-4-7`
+- Agent config: `ai4curation/go-ontology-agent-config@v9:.`
+- Iteration: `1`
+- Run: [View workflow run](https://github.com/ai4curation/eval-ont-agent-go/actions/runs/25650668942)

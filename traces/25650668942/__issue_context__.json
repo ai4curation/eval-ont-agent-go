@@ -1,0 +1,261 @@
+{
+  "body": "I am trying to locate a ferric iron reductase term to curate frp1.\r\n\r\nCurrently it is annotated to\r\nferric-chelate reductase (NADPH) activity (GO:0052851)\r\nCatalysis of the reaction: 2 Fe3+-siderophore + NADP+ + H+ -> 2 Fe2+-siderophore + NADPH.\r\n\r\nand although it *may* have this activity **if** it also operates in the siderophore system, its known role is in the \r\nis in\r\n\r\nreductive iron assimilation (GO:0033215)\r\nA process in which iron is solubilized by reduction from Fe3+ to Fe2+ via a cell surface reductase and subsequent transport of the iron across the membrane by iron uptake proteins. \r\n\r\nvia fio1/fip1 transporter system (Ftr1/Fet3 equivalent)\r\n\r\nand this iron is not chelated\r\n\r\n\"However, not all ferric iron reductases exclusively target chelated iron. Some ferric iron reductases can act on unchelated ferric iron as well. For example, membrane-bound ferric reductases in bacteria and yeast, such as the Feo system and the Ftr1/Fet3 complex, are capable of reducing both chelated and unchelated ferric iron.\"\r\n\r\n\r\nSo which term would I use for a ferric iron reductase (non-chelated iron)\r\n\r\n\r\ncc\r\n@Antonialock  you may know",
+  "comments": [
+    {
+      "id": "IC_kwDOAkAHws56Sziq",
+      "author": {
+        "login": "ValWood"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Expert says\r\n\r\n\"With respect to high affinity Fe uptake via Fio1/Frp1 machinery, it is known (based on S cerevisiae data) that Frp1 plays a crucial role for reducing Fe3+ to Fe2+ prior its passage across the membrane through Fio1/Frp1 heterocomplex.\r\nWe know that Frp1 has a huge ferrireductase activity at the cell surface. Based on the Orfeome, Frp1 localizes at the cell surface.\"\r\n\r\nand\r\n\"Concerning your questions, as far as know, there are no papers reporting any functional roles for Frp1 and Frp2 with respect to siderophore (ferrichrome) uptake in S pombe.\"\r\n\r\nSo it seems PomBase and SGD @edwong57  are using the wrong term here, and I cannot find the correct term.\r\nI will transfer this to the ontology tracker for the new term.\r\n",
+      "createdAt": "2024-04-12T13:18:29Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/geneontology/go-ontology/issues/27593#issuecomment-2051750058",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOAkAHws6fbsB1",
+      "author": {
+        "login": "ValWood"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "need \nferric iron reductase\n\n2 Fe3+ + NADP+ + H+ -> 2 Fe2 + NADPH",
+      "createdAt": "2025-02-21T15:20:06Z",
+      "includesCreatedEdit": false,
+      "isMinimized": true,
+      "minimizedReason": "outdated",
+      "reactionGroups": [],
+      "url": "https://github.com/geneontology/go-ontology/issues/27593#issuecomment-2674835573",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOAkAHws6fb1bl",
+      "author": {
+        "login": "ValWood"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "I can't find a Rhea ID for this...does that matter?\n",
+      "createdAt": "2025-02-21T15:36:56Z",
+      "includesCreatedEdit": false,
+      "isMinimized": true,
+      "minimizedReason": "outdated",
+      "reactionGroups": [],
+      "url": "https://github.com/geneontology/go-ontology/issues/27593#issuecomment-2674874085",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOAkAHws6fb2OD",
+      "author": {
+        "login": "ValWood"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "https://github.com/geneontology/go-ontology/issues/28334\nis related, I'll do both together.",
+      "createdAt": "2025-02-21T15:38:21Z",
+      "includesCreatedEdit": false,
+      "isMinimized": true,
+      "minimizedReason": "outdated",
+      "reactionGroups": [],
+      "url": "https://github.com/geneontology/go-ontology/issues/27593#issuecomment-2674877315",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOAkAHws6fmbK8",
+      "author": {
+        "login": "pgaudet"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "> 2 Fe3+ + NADP+ + H+ -> 2 Fe2 + NADPH\n\nhttps://www.rhea-db.org/rhea/71767",
+      "createdAt": "2025-02-24T07:49:36Z",
+      "includesCreatedEdit": false,
+      "isMinimized": true,
+      "minimizedReason": "outdated",
+      "reactionGroups": [],
+      "url": "https://github.com/geneontology/go-ontology/issues/27593#issuecomment-2677650108",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOAkAHws6gmCY_",
+      "author": {
+        "login": "ValWood"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "OK, now I see that the problem here is the existing definition of\n\nferric-chelate reductase activity\nCatalysis of the reaction: 2 Fe3+-siderophore + electron donor -> 2 Fe2+-siderophore + electron acceptor.\n\nIt seems possibly Fe3+ must have a chelator, but it often isn't a siderophore\n\nSo, I suggest:\n\n- [ ]  create a grouping term\nNTR ferric iron-chelate reductase\nFe 3+ (Chelate)+e -> Fe 2+ +Chelate\n\n- [ ]  Rename  existing\nferric-chelate reductase activity\nto \nferric siderophore reductase activity\nto match\nCatalysis of the reaction: 2 Fe3+-siderophore + electron donor -> 2 Fe2+-siderophore + electron acceptor.\n\n\nI won't add 2 Fe3+ + NADP+ + H+ -> 2 Fe2 + NADPH yet because we don't know the chelator or the acceptor (we only know that the chelator isn't a siderophore).\n\nI think this issue arises because  iron chelate reductase and iron siderophore reductase are used interchangeably as enzyme names, but they are not exact.\n\nI'm currently checking this with an expert.\n\n",
+      "createdAt": "2025-03-03T13:01:53Z",
+      "includesCreatedEdit": false,
+      "isMinimized": true,
+      "minimizedReason": "outdated",
+      "reactionGroups": [],
+      "url": "https://github.com/geneontology/go-ontology/issues/27593#issuecomment-2694325823",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOAkAHws6gnXeZ",
+      "author": {
+        "login": "pgaudet"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "OK, thanks, Please provide some references if you find evidence of non-siderophore-dependent reaction, so we can request a new reaction from RHEA.",
+      "createdAt": "2025-03-03T14:56:06Z",
+      "includesCreatedEdit": false,
+      "isMinimized": true,
+      "minimizedReason": "outdated",
+      "reactionGroups": [],
+      "url": "https://github.com/geneontology/go-ontology/issues/27593#issuecomment-2694674329",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOAkAHws6gpxWi",
+      "author": {
+        "login": "ValWood"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "1. Fission yeast RNA-binding proteins Puf2 and Puf4 are involved in repression of ferrireductase Frp1 expression in response to iron.\n\nBeaudoin J, Normant V, Brault A, Henry DJ, Bachand F, Massé É, Chua G, Labbé S. Mol Microbiol. 2021 Nov;116(5):1361-1377. doi: 10.1111/mmi.14829. Epub 2021 Oct 21. PMID: 34614242\n\n\n2. The fission yeast ferric reductase gene frp1+ is required for ferric iron uptake and encodes a protein that is homologous to the gp91-phox subunit of the human NADPH phagocyte oxidoreductase.\n\nRoman DG, Dancis A, Anderson GJ, Klausner RD. Mol Cell Biol. 1993 Jul;13(7):4342-50. doi: 10.1128/mcb.13.7.4342-4350.1993. PMID: 8321236 \n\n",
+      "createdAt": "2025-03-03T19:07:50Z",
+      "includesCreatedEdit": false,
+      "isMinimized": true,
+      "minimizedReason": "outdated",
+      "reactionGroups": [],
+      "url": "https://github.com/geneontology/go-ontology/issues/27593#issuecomment-2695304610",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOAkAHws6gp3A6",
+      "author": {
+        "login": "ValWood"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "This review also\nhttps://pmc.ncbi.nlm.nih.gov/articles/PMC11817551/\n",
+      "createdAt": "2025-03-03T19:19:13Z",
+      "includesCreatedEdit": false,
+      "isMinimized": true,
+      "minimizedReason": "outdated",
+      "reactionGroups": [],
+      "url": "https://github.com/geneontology/go-ontology/issues/27593#issuecomment-2695327802",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOAkAHws6guyaW",
+      "author": {
+        "login": "ValWood"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Actually , I got confused. I don't need the non-siderophore term. I need the\n2 Fe3+ + NADP+ + H+ -> 2 Fe2 + NADPH\nhttps://www.rhea-db.org/rhea/71767\n\nI think it is still a good idea to rename\nferric-chelate reductase activity\nto ferric-siderophore reductase\nThis way curators are more likely to spot if they are annotating a non-siderophore chelate\n\nA grouping term. would be useful for \"ferric iron reductases\" I spent  a long time trying to figure out/locate  the correct term\nhttps://github.com/geneontology/go-ontology/issues/28334\n",
+      "createdAt": "2025-03-04T08:29:12Z",
+      "includesCreatedEdit": false,
+      "isMinimized": true,
+      "minimizedReason": "outdated",
+      "reactionGroups": [],
+      "url": "https://github.com/geneontology/go-ontology/issues/27593#issuecomment-2696619670",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOAkAHws74Lqep",
+      "author": {
+        "login": "ValWood"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "1. \nADD GONEW ferric iron reductase\nDef Fe3+ + NADP+ + H+ -> 2 Fe2 + NADPH\nRHEA:71767(https://www.rhea-db.org/rhea/71767)\nPMID:39940646\nPMID:34614242\nPMID:8321236\n\n2. Make GO:0000293  ferric-chelate reductase activity a subclass  of GONEW\n\n3. Fix the definition of \n ferric-chelate reductase activity\nfrom  Catalysis of the reaction: 2 Fe3+-siderophore + electron donor -> 2 Fe2+-siderophore + electron acceptor.\nto\nCatalysis of the reaction: 2 Fe3+-chelate + electron donor -> 2 Fe2+-siderophore + electron acceptor.\n(chalate is broader than siderophore)",
+      "createdAt": "2026-03-31T16:15:23Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/geneontology/go-ontology/issues/27593#issuecomment-4163807145",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOAkAHws74eDUq",
+      "author": {
+        "login": "ValWood"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "@dragon-ai-agent  please\n\nADD GONEW ferric iron reductase\nDefinition: Fe3+ + NADP+ + H+ -> 2 Fe2 + NADPH\nAdd RHEA:71767 cross reference (https://www.rhea-db.org/rhea/71767)\nAdd dbxrefs:\nPMID:39940646\nPMID:34614242\nPMID:8321236\n\nMake GO:0000293 ferric-chelate reductase activity a subclass of GONEW\n\nFix the definition of\nferric-chelate reductase activity\nfrom Catalysis of the reaction: 2 Fe3+-siderophore + electron donor -> 2 Fe2+-siderophore + electron acceptor.\nto\nCatalysis of the reaction: 2 Fe3+-chelate + electron donor -> 2 Fe2+-siderophore + electron acceptor.\n(Chelate is broader than siderophore, not all chelates are sideophores)\n\n",
+      "createdAt": "2026-04-01T09:03:20Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "EYES",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/geneontology/go-ontology/issues/27593#issuecomment-4168627498",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOAkAHws74eDwZ",
+      "author": {
+        "login": "dragon-ai-agent"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "🤖 Working on it...\n\nFollow along: [View workflow run](https://github.com/geneontology/go-ontology/actions/runs/23840801870)\n\n*— @dragon-ai-agent*",
+      "createdAt": "2026-04-01T09:03:43Z",
+      "includesCreatedEdit": false,
+      "isMinimized": true,
+      "minimizedReason": "outdated",
+      "reactionGroups": [],
+      "url": "https://github.com/geneontology/go-ontology/issues/27593#issuecomment-4168629273",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOAkAHws74egDX",
+      "author": {
+        "login": "dragon-ai-agent"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "PR #31797 addresses this request with the following changes:\n\n**New term: GO:7770057 - ferric iron reductase activity**\n- Reaction: `2 Fe2+ + NADP+ + H+ = 2 Fe3+ + NADPH` (RHEA:71767, confirmed)\n- References: PMID:8321236 (Roman et al. 1993, original frp1+ characterization), PMID:34614242 (Beaudoin et al. 2021, Frp1 regulation), PMID:39940646 (Amadei et al. 2025, ferroxidase-permease system review)\n- Parent: GO:0016723 (oxidoreductase activity, acting on metal ions, NAD or NADP as acceptor)\n\n**GO:0000293 (ferric-chelate reductase activity) updated:**\n- Definition changed from \"Fe3+-siderophore\" to \"Fe3+-chelate\" (both substrate and product sides, for chemical consistency)\n- Now classified as a subclass of the new GO:7770057\n\nOne point for review: your request changed only the substrate side of the GO:0000293 definition to \"chelate\" while keeping \"siderophore\" on the product side. I changed both sides to \"chelate\" since the chelating agent doesn't change during the reduction reaction. Let me know if the asymmetry was intentional.\n\nAll validation passes (`make travis_build`, all 20 SPARQL rules, ELK reasoning).\n\n---\n🤖 **Generated by @dragon-ai-agent**\n- Model: `claude-opus-4-6`\n- Agent harness: claude-code\n- Triggered by: @ValWood\n- Run: [View workflow run](https://github.com/geneontology/go-ontology/actions/runs/23840801870)",
+      "createdAt": "2026-04-01T09:24:51Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/geneontology/go-ontology/issues/27593#issuecomment-4168745175",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOAkAHws8AAAABAlQaaw",
+      "author": {
+        "login": "ValWood"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "@dragon-ai-agent  please do this ticket again I closed the previous pull request becasue there was a conflict. ",
+      "createdAt": "2026-04-28T09:34:12Z",
+      "includesCreatedEdit": false,
+      "isMinimized": true,
+      "minimizedReason": "outdated",
+      "reactionGroups": [
+        {
+          "content": "EYES",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/geneontology/go-ontology/issues/27593#issuecomment-4334033515",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOAkAHws8AAAABAlQk6g",
+      "author": {
+        "login": "dragon-ai-agent"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "🤖 Working on it...\n\nFollow along: [View workflow run](https://github.com/geneontology/go-ontology/actions/runs/25045300921)\n\n*— @dragon-ai-agent*",
+      "createdAt": "2026-04-28T09:34:37Z",
+      "includesCreatedEdit": false,
+      "isMinimized": true,
+      "minimizedReason": "outdated",
+      "reactionGroups": [],
+      "url": "https://github.com/geneontology/go-ontology/issues/27593#issuecomment-4334036202",
+      "viewerDidAuthor": false
+    }
+  ],
+  "title": "NTR ferric iron reductase (for non siderophore)",
+  "url": "https://github.com/geneontology/go-ontology/issues/27593"
+}
