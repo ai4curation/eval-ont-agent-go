@@ -1,0 +1,44 @@
+{
+  "body": "This term has no enzyme xref:\n\nid: GO:0045550\nname: geranylgeranyl reductase activity\nnamespace: molecular_function\ndef: \"Catalysis of the formation of phytyl group from the stepwise reduction of a geranylgeranyl group.\" [PMID:9492312]\nis_a: GO:0016491 ! oxidoreductase activity\n\nPMID:9492312 abstract says:\n\"Geranylgeranyl reductase expressed in Escherichia coli sequentially catalyzes the reduction of geranylgeranyl-chlorophyll a into phytyl-chlorophyll a as well as the reduction of free geranylgeranyl diphosphate into phytyl diphosphate.\"\n\nBoth these reactions are covered by EC:1.3.1.83, whose entry says:\nReaction catalysed: phytyl diphosphate + 3 NADP(+) = geranylgeranyl diphosphate + 3 NADPH + 3 H(+)\nComments: This enzyme also acts on geranylgeranyl-chlorophyll a.\n\nThis is consistent with the MetaCyc entry for this gene (also attributed to PMID:9492312): https://metacyc.org/gene?orgid=META&id=AT1G74470-MONOMER#REFS\n\nSo:\n- [x] GO:0045550 should be obsoleted and replaced with GO:0102067:\n\nid: GO:0102067\nname: geranylgeranyl diphosphate reductase activity\nnamespace: molecular_function\ndef: \"Catalysis of the reaction: (E)-3,7,11,15-tetramethylhexadec-2-en-1-yl diphosphate + 3 NADP = 2-trans,6-trans,10-trans-geranylgeranyl diphosphate + 3 NADPH + 3 H+.\" [EC:1.3.1.83, GOC:pz]\nxref: EC:1.3.1.83 {source=\"skos:exactMatch\"}\nxref: MetaCyc:RXN-10625\nxref: RHEA:26229 {source=\"skos:exactMatch\"}\nis_a: GO:0016628 ! oxidoreductase activity, acting on the CH-CH group of donors, NAD or NADP as acceptor\nproperty_value: term_tracker_item \"https://github.com/geneontology/go-ontology/issues/30193\" xsd:anyURI\n\n\nThere are only 3 annotations to GO:0045550 geranylgeranyl reductase activity:\n- human [AKR1C3](https://amigo.geneontology.org/amigo/gene_product/UniProtKB:P42330) by UP\n- human [AKR1B10](https://amigo.geneontology.org/amigo/gene_product/UniProtKB:O60218) by UP\n- Arabidopsis [CHLP](https://amigo.geneontology.org/amigo/gene_product/AGI_LocusCode:AT1G74470) by TIGR\n\nAlso:\n- [x] Update def of GO:0102067 to match EC/RHEA: phytyl diphosphate + 3 NADP+ = geranylgeranyl diphosphate + 3 NADPH + 3 H+\n- [x] Add sentence to GO:0102067 definition to say \"also catalyzes the the reduction of geranylgeranyl-chlorophyll a into phytyl-chlorophyll a\"\n",
+  "comments": [
+    {
+      "id": "IC_kwDOAkAHws8AAAABAoTt7g",
+      "author": {
+        "login": "raymond91125"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "@dragon-ai-agent please update GO:0102067 definition according to sjm41 comments. Do not close this ticket. Obsoletion is to be completed later.",
+      "createdAt": "2026-04-28T16:34:47Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "EYES",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/geneontology/go-ontology/issues/31963#issuecomment-4337233390",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOAkAHws8AAAABAoT3Qg",
+      "author": {
+        "login": "dragon-ai-agent"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "🤖 Working on it...\n\nFollow along: [View workflow run](https://github.com/geneontology/go-ontology/actions/runs/25065339565)\n\n*— @dragon-ai-agent*",
+      "createdAt": "2026-04-28T16:35:11Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/geneontology/go-ontology/issues/31963#issuecomment-4337235778",
+      "viewerDidAuthor": false
+    }
+  ],
+  "title": "Obsolete GO:0045550 geranylgeranyl reductase activity",
+  "url": "https://github.com/geneontology/go-ontology/issues/31963"
+}
