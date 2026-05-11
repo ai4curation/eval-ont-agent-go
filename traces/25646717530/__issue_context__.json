@@ -1,0 +1,44 @@
+{
+  "body": "Hi GO,\n\nI would need a couple of terms for pattern recognition receptors that specifically recognize double stranded RNAs (NLRP1, NLRP6 and IFIH1/MDA5) and one protein that specifically interacts with left-handed Z-RNA, a specific form of double stranded RNAs (ZBP1).\n\nIt would be pretty important to have these terms in GO, since we cannot represent large molecules, such as double-stranded RNAs in ChEBI.\n\nThanks\n\nSylvain\n\nTerm 1\nName: double-stranded RNA immune receptor activity\nDefinition: Combining with a double-stranded RNA and transmitting the signal across the cell membrane to initiate an innate immune response. \nchild of GO:0038187 pattern recognition receptor activity\nSynonyms: dsRNA RNA immune receptor activity\nPMID:33243852\nPMID:34678144\nPMID:23273991\n\nTerm 2\nName: Left-handed Z-RNA immune receptor activity\nDefinition: Combining with a left-handed Z-RNA and transmitting the signal across the cell membrane to initiate an innate immune response. \nChild of GO:XXXXXXX double-stranded RNA immune receptor activity\nPMID:32200799\n",
+  "comments": [
+    {
+      "id": "IC_kwDOAkAHws8AAAABBheXMQ",
+      "author": {
+        "login": "pgaudet"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "@dragon-ai-agent please create the two terms requested above",
+      "createdAt": "2026-05-07T12:40:56Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "EYES",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/geneontology/go-ontology/issues/32046#issuecomment-4397176625",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOAkAHws8AAAABBhejMQ",
+      "author": {
+        "login": "dragon-ai-agent"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "🤖 Working on it...\n\nFollow along: [View workflow run](https://github.com/geneontology/go-ontology/actions/runs/25496355429)\n\n*— @dragon-ai-agent*",
+      "createdAt": "2026-05-07T12:41:23Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/geneontology/go-ontology/issues/32046#issuecomment-4397179697",
+      "viewerDidAuthor": false
+    }
+  ],
+  "title": "NTR: [double-stranded RNA immune receptor activity]",
+  "url": "https://github.com/geneontology/go-ontology/issues/32046"
+}
