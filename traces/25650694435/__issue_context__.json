@@ -1,0 +1,44 @@
+{
+  "body": "Please provide as much information as you can:\n\n* **GO term ID and Label**\n\nObsoletion request: GO:0005870     actin capping protein of dynactin complex\nA heterodimer consisting of alpha and beta subunits that binds to and caps the barbed ends of actin filaments, nucleates the polymerization of actin monomers but does not sever actin filaments, and which is a part of the dynactin complex. PMID:18221362 PMID:18544499\n\n* **Reason for deprecation** Put an x in the appropriate box: \n\n - [ ] The reason for obsoletion is that the data from the paper for which the term was requested can be accurately described using [appropriate GO term].\n\n\n* **\"Replace by\" term (ID and label)**\nIf all annotations can safely be moved to that term\n\nGO:0008290  F-actin capping protein complex\n\n\n\n* **Are there annotations to this term?**\n- How many EXP: 0\n\n",
+  "comments": [
+    {
+      "id": "IC_kwDOAkAHws8AAAABAKzdzg",
+      "author": {
+        "login": "raymond91125"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "@dragon-ai-agent please obsolete GO:0005870 actin capping protein of dynactin complex.",
+      "createdAt": "2026-04-23T17:04:34Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "EYES",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/geneontology/go-ontology/issues/31956#issuecomment-4306296270",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOAkAHws8AAAABAKzl9Q",
+      "author": {
+        "login": "dragon-ai-agent"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "🤖 Working on it...\n\nFollow along: [View workflow run](https://github.com/geneontology/go-ontology/actions/runs/24848198316)\n\n*— @dragon-ai-agent*",
+      "createdAt": "2026-04-23T17:04:55Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/geneontology/go-ontology/issues/31956#issuecomment-4306298357",
+      "viewerDidAuthor": false
+    }
+  ],
+  "title": "Obsoletion request: GO:0005870     actin capping protein of dynactin complex (unused, direct replacment)",
+  "url": "https://github.com/geneontology/go-ontology/issues/31956"
+}
