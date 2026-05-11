@@ -1,24 +1,20 @@
-[![Build Status](https://github.com/geneontology/go-ontology/workflows/CI/badge.svg)](https://github.com/geneontology/go-ontology/actions?query=workflow%3ACI)
+# ⚠️ This is an evaluation shadow repo
 
-# Repository for GO Ontology
+**Do not file issues or PRs here.** This repository is an automated mirror
+of [geneontology/go-ontology](https://github.com/geneontology/go-ontology) used exclusively for
+AI agent evaluation experiments.
 
-This repository is primarily for the developers of the GO and contains the source code for the GO ontology. 
+## What is this?
 
-More general documentation about GO can be found on the [GO website](http://geneontology.org/); ontology files can be downloaded from the [GO website/downloads](http://geneontology.org/docs/download-ontology/).
+This repo is managed by [ai4c-scribe](https://github.com/ai4curation/ai4c-scribe),
+a framework for evaluating AI coding agents on biomedical ontology curation tasks.
+Agent runs create `eval-base-*` branches and `[DO NOT MERGE]` PRs that compare
+agent output against human-authored solutions.
 
-You should __NOT__ use this repository to download production versions of GO.
+## Links
 
-## Ontology Editors
+- **Source ontology repo**: [geneontology/go-ontology](https://github.com/geneontology/go-ontology)
+- **Evaluation framework**: [ai4curation/ai4c-scribe](https://github.com/ai4curation/ai4c-scribe)
 
-Instructions for editing the ontology can be found in the [GO wiki/Ontology section](http://wiki.geneontology.org/index.php/Ontology_Development#Editing_the_Ontology). 
-
-[Status pages](https://geneontology.github.io/go-ontology/) — ontology developers can review changes in the repository since the last official ontology release
-
-## Ontology Pipeline Overview
-
- - GitHub Actions performs tests on every commit or pull request - https://github.com/geneontology/go-ontology/actions?query=workflow%3ACI
- - A Jenkins job produces SNAPSHOT releases every second day- https://build.geneontology.org/job/geneontology/job/pipeline/job/snapshot/
-    * The S3 bucket for go-data-product-snapshot/ontology/, mapped to http://snapshot.geneontology.org/ontology/, is redirected to from the OBO Library PURL (http://purl.obolibrary.org/obo/go/snapshot/FOO)
- - A Jenkins job produces monthly production releases (https://build.geneontology.org/job/geneontology/job/pipeline/job/release/)
-
-
+If you're looking for the actual ontology, go to
+[geneontology/go-ontology](https://github.com/geneontology/go-ontology).
