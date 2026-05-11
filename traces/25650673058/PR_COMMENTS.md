@@ -1,0 +1,57 @@
+## Summary
+
+Renames two existing terms (no new IDs minted) to the labels originally requested in issue #31114, and fixes the `created_by` value.
+
+The terms were originally requested in #31114 as `terreic acid biosynthetic process` / `positive regulation of terreic acid biosynthetic process`, but were added in PR #31612 with `terreate` (the pH 7.3 chemistry name) as the primary label and `terreic acid` as a RELATED synonym. PR #31374 attempted the rename but was closed due to ID conflicts. PR #32014 was a previous attempt that was not merged.
+
+This PR redoes the rename and folds in the `created_by` cleanup requested in [issue comment](https://github.com/geneontology/go-ontology/issues/31114#issuecomment-4377304070).
+
+## Changes
+
+| Term | Before | After |
+| --- | --- | --- |
+| GO:0180067 name | `terreate biosynthetic process` | `terreic acid biosynthetic process` |
+| GO:0180067 RELATED synonym | `terreic acid biosynthetic process` | `terreate biosynthetic process` |
+| GO:0180067 def | `...formation of terreate, a fungal metabolite...` | `...formation of terreic acid, a fungal metabolite...` |
+| GO:0180067 created_by | `PomBase:vw` | `GOC:vw` |
+| GO:0180069 name | `positive regulation of terreate biosynthetic process` | `positive regulation of terreic acid biosynthetic process` |
+| GO:0180069 RELATED synonym | (none) | `positive regulation of terreate biosynthetic process` |
+| GO:0180069 def | `Any process that modulates the frequency, rate or extent of the chemical reactions and pathways resulting in the formation of terreate.` | `Any process that activates or increases the frequency, rate or extent of terreic acid biosynthetic process.` (standard positive-regulation phrasing) |
+| GO:0180069 created_by | `PomBase:vw` | `GOC:vw` |
+
+Logical definitions, asserted `is_a`, and `creation_date` are unchanged. The pH 7.3 form `CHEBI:233617 ! terreate` remains the chemical referenced in the equivalence axiom, in line with the chemical-entity skill convention (cf. the L-histidine exemplar: biologist-friendly label, pH 7.3 CHEBI in the logical def).
+
+`term_tracker_item` already pointed to this issue.
+
+## Rationale
+
+- **Label swap**: pgaudet approved swapping the label and synonym in the [issue thread](https://github.com/geneontology/go-ontology/issues/31114#issuecomment-4371043399). Antonialock previously confirmed the term and `terrein biosynthetic process` (GO:0140880) describe distinct pathways with different gene clusters, so `terreic acid biosynthetic process` is a valid distinct term.
+- **Definition rewording**: the GO:0180067 def needed `terreate` → `terreic acid` to mirror the new primary label. The GO:0180069 def was rewritten to match the standard `positive regulation of X` phrasing used elsewhere (cf. GO:1900378 `positive regulation of secondary metabolite biosynthetic process`).
+- **`created_by` fix**: ValWood explicitly requested `GOC:vw`. Note that pgaudet's earlier suggestion was just `vw` (no prefix), which matches the dominant convention in the file (no `GOC:` prefixed `created_by` values exist elsewhere). I went with the more recent, explicit user instruction; flagged in the issue comment so this can be revisited if reviewers prefer plain `vw`.
+
+## Checklist
+
+- [x] PLAN: issue analyzed, intent clear (label/synonym swap + `created_by` fix).
+- [x] PRE-VALIDATION: ontology validates (ROBOT SPARQL QC + ELK reasoning).
+- [N/A] RESEARCH: no new biology — terms exist; this is a rename.
+- [x] TERM-SEARCH: confirmed only GO:0180067 and GO:0180069 reference `terreate`/`terreic` in the edit file. No other terms cross-reference these by name.
+- [N/A] DESIGN-PATTERNS: no structural change. Logical def already follows the `biosynthetic process` + `has_primary_output CHEBI` pattern; chemical-entity convention re-confirmed (label uses biologist form, axiom uses pH 7.3 CHEBI).
+- [x] EDITS: used `obo-checkout.pl` / `obo-checkin.pl` workflow on `terms/`.
+- [x] RELATIONSHIPS: unchanged. `intersection_of`, `is_a`, and `positively_regulates` axioms preserved.
+- [N/A] SPECIALIZED-EDITS:
+  - `/term-obsoletion`: N/A (no obsoletion).
+  - `/chemical-entity`: applied — kept pH 7.3 `CHEBI:233617 ! terreate` in the logical def while exposing the biologist-friendly label.
+  - `/reaction`: N/A (not a catalytic activity).
+  - `/taxon-constraint`: N/A.
+- [x] METADATA: `created_by` updated per request; `creation_date` and `term_tracker_item` preserved. No `created_by`/`creation_date` added to existing terms beyond fixing the malformed value.
+- [x] AUTOMATED-VALIDATION: ROBOT SPARQL QC checks all PASS; ELK reasoning completes without error. (`make travis_build` not run in this environment — skipped due to missing Make targets/IO outside ROBOT, but core SPARQL QC + reasoning are the relevant checks for a rename.)
+- [N/A] REFERENCE-VALIDATION: existing PMID:25265334 retained, no new references introduced.
+- [x] CHANGES-COMMITTED: only `src/ontology/go-edit.obo` modified.
+
+---
+🤖 **Generated by claude agent**
+- Runtime: `claude`
+- Model: `claude-opus-4-7`
+- Agent config: `ai4curation/go-ontology-agent-config@v9:.`
+- Iteration: `1`
+- Run: [View workflow run](https://github.com/ai4curation/eval-ont-agent-go/actions/runs/25650673058)
