@@ -1,0 +1,22 @@
+{
+  "body": "Hello,\nI just noticed that there are 3 bacteria have this term, which is being given by PANTHER;\nGO:0070478 nuclear-transcribed mRNA catabolic process, 3'-5' exonucleolytic nonsense-mediated decay\nAs bacteria do not have nuclei, nor NMD, this term makes no sense. \n\nCan you add the following please? Any other terms related to non-mediated RNA decay should also have this constraint.\nnever in taxon: 2\n\nThanks, Andrea\n",
+  "comments": [
+    {
+      "id": "IC_kwDOAkAHws7uwLXh",
+      "author": {
+        "login": "pgaudet"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Added in the 'only_in_taxon' file: \n\nGO:0141065\tmaternal mRNA clearance\tNCBITaxon:2759\tEukaryota\t\nGO:0000958\tmitochondrial mRNA catabolic process\tNCBITaxon:2759\tEukaryota\t\nGO:0000956\tnuclear-transcribed\tmRNA catabolic process\tNCBITaxon:2759\tEukaryota\t\n\n",
+      "createdAt": "2026-03-05T14:49:36Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/geneontology/go-ontology/issues/31670#issuecomment-4005606881",
+      "viewerDidAuthor": false
+    }
+  ],
+  "title": "Taxon constraint: please add for GO:0070478 and similar terms",
+  "url": "https://github.com/geneontology/go-ontology/issues/31670"
+}
