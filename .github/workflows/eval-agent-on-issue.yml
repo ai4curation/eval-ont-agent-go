@@ -98,6 +98,7 @@ on:
           - opencode
           - pi
           - gemini
+          - copilot
       model:
         description: "Model to use (e.g. claude-sonnet-4-5-20250929, gpt-5.4)"
         required: true
@@ -584,6 +585,22 @@ jobs:
             --output-format stream-json \
             2>&1 | tee /tmp/gemini-trace.json
 
+      - name: Install Copilot CLI
+        if: inputs.agent_runtime == 'copilot'
+        run: |
+          npm install -g @github/copilot
+
+      - name: Run Copilot CLI
+        if: inputs.agent_runtime == 'copilot'
+        env:
+          GH_TOKEN: ${{ secrets.COPILOT_GH_TOKEN || secrets.GH_PAT }}
+        run: |
+          copilot -p "$(cat __agent_prompt__.md)" \
+            --model ${{ inputs.model }} \
+            --autopilot \
+            --allow-all \
+            2>&1 | tee /tmp/copilot-trace.json
+
       - name: Add signature blocks to comment files
         run: |
           # Metadata signature includes: model, agent config, iteration number, and link to workflow run
@@ -867,7 +884,7 @@ jobs:
           mkdir -p "$WORK/$TRACE_DIR"
 
           # Copy trace files
-          for src in __issue_context__.json /tmp/run-metadata.json ISSUE_COMMENTS.md PR_COMMENTS.md /tmp/claude-trace.json /tmp/codex-trace.json /tmp/opencode-trace.json /tmp/pi-trace.json /tmp/gemini-trace.json; do
+          for src in __issue_context__.json /tmp/run-metadata.json ISSUE_COMMENTS.md PR_COMMENTS.md /tmp/claude-trace.json /tmp/codex-trace.json /tmp/opencode-trace.json /tmp/pi-trace.json /tmp/gemini-trace.json /tmp/copilot-trace.json; do
             if [ -f "$src" ]; then
               fname=$(basename "$src")
               # Rename runtime-specific traces to agent-trace.json
@@ -876,6 +893,7 @@ jobs:
               [ "$fname" = "opencode-trace.json" ] && fname="agent-trace.json"
               [ "$fname" = "pi-trace.json" ] && fname="agent-trace.json"
               [ "$fname" = "gemini-trace.json" ] && fname="agent-trace.json"
+              [ "$fname" = "copilot-trace.json" ] && fname="agent-trace.json"
               cp "$src" "$WORK/$TRACE_DIR/$fname"
               echo "  Added $fname ($(wc -c < "$src") bytes)"
             fi
