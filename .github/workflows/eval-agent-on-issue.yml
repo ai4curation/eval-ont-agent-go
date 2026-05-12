@@ -778,7 +778,7 @@ jobs:
           PR_URL=$(gh pr create \
             --base "${{ env.eval_base_branch }}" \
             --head "${{ env.expt_branch_name }}" \
-            --title "[DO NOT MERGE] eval #${{ inputs.issue_number }} i:${{ inputs.iter_num }}: ${{ steps.issue_context.outputs.issue_title }} (${{ env.model_short }}, ${{ env.config_short }})" \
+            --title "[DO NOT MERGE] eval #${{ inputs.issue_number }} i:${{ inputs.iter_num }}: ${{ steps.issue_context.outputs.issue_title }} (${{ inputs.agent_runtime }}/${{ env.model_short }}, ${{ env.config_short }})" \
             --body "$PR_BODY" 2>&1) || {
             # PR creation failed — check if one already exists for this branch
             EXISTING_PR=$(gh pr list --head "${{ env.expt_branch_name }}" --base "${{ env.eval_base_branch }}" --json url -q '.[0].url' 2>/dev/null)
