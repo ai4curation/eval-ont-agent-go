@@ -1,0 +1,34 @@
+Warning: 256-color support not detected. Using a terminal with at least 256-color support is recommended for a better visual experience.
+YOLO mode is enabled. All tool calls will be automatically approved.
+Both GOOGLE_API_KEY and GEMINI_API_KEY are set. Using GOOGLE_API_KEY.
+YOLO mode is enabled. All tool calls will be automatically approved.
+Ripgrep is not available. Falling back to GrepTool.
+Both GOOGLE_API_KEY and GEMINI_API_KEY are set. Using GOOGLE_API_KEY.
+{"type":"init","timestamp":"2026-05-12T14:59:06.942Z","session_id":"bceb18be-a3c0-4ad7-8c2c-e0d05c494d59","model":"gemini-2.5-pro"}
+{"type":"message","timestamp":"2026-05-12T14:59:06.944Z","role":"user","content":"Your job is to address issue #31961.\nFirst, read the file __issue_context__.json in the current working directory to get the issue title, body, and comments.\n\nIMPORTANT: You are working in a local copy of ai4curation/eval-ont-agent-go.\nThe issue context was imported from geneontology/go-ontology for evaluation purposes.\nDo NOT attempt to clone, checkout, or interact with any remote repositories.\nStay in the current working directory and make all changes here.\n\nOn completion, commit your changes locally. Do NOT push - that will be handled automatically.\nDon't commit files you did not edit.\n\nAfter committing, create two files:\n\n1. ISSUE_COMMENTS.md: Updates on the issue regarding its status. This will be fed back to the originating issue.\n2. PR_COMMENTS.md: A description of your changes, and the rationale. This will be fed back to the originating PR.\n\nI will take care of feeding these back to the GitHub repo, you just need to create them. Don't commit them,\nand don't attempt to interact with the github repo.\n\nIf the original issue is not clear, ask for clarification in ISSUE_COMMENTS.md, and do not\ncommit any changes. The PR_COMMENTS.md can be empty in this case.\n\nYour PR_COMMENTS.md should be a human-readable description of your changes, and the rationale. Include any checklists\nyou created for yourself and completed. If you performed validation, background research, etc, be sure to mention this.\n\nYour ISSUE_COMMENTS.md need not replicate what is in PR_COMMENTS.md, and in many cases can be terse but polite, e.g\n\"changes committed in PR #<NN>\" (note: use the literal `<NN>` in the output, I will replace it with the actual PR number).\n\nIf the issue is a complex one, you can create a high level summary of the decisions you made. If things are not clear\nor if you want particular people in the thread to check particular aspects you can mention them.\n\nFollow any CODE_OF_CONDUCT.md or other relevant files in the repository."}
+Both GOOGLE_API_KEY and GEMINI_API_KEY are set. Using GOOGLE_API_KEY.
+Error when talking to Gemini API Full report available at: /tmp/gemini-client-error-Turn.run-sendMessageStream-2026-05-12T14-59-07-085Z.json TerminalQuotaError: You have exhausted your daily quota on this model.
+    at classifyGoogleError (file:///usr/local/lib/node_modules/@google/gemini-cli/bundle/chunk-6DSAZLFF.js:269933:16)
+    at retryWithBackoff (file:///usr/local/lib/node_modules/@google/gemini-cli/bundle/chunk-6DSAZLFF.js:270562:31)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async GeminiChat.makeApiCallAndProcessStream (file:///usr/local/lib/node_modules/@google/gemini-cli/bundle/chunk-6DSAZLFF.js:293199:28)
+    at async GeminiChat.streamWithRetries (file:///usr/local/lib/node_modules/@google/gemini-cli/bundle/chunk-6DSAZLFF.js:293037:29)
+    at async Turn.run (file:///usr/local/lib/node_modules/@google/gemini-cli/bundle/chunk-6DSAZLFF.js:293564:24)
+    at async GeminiClient.processTurn (file:///usr/local/lib/node_modules/@google/gemini-cli/bundle/chunk-6DSAZLFF.js:306115:22)
+    at async GeminiClient.sendMessageStream (file:///usr/local/lib/node_modules/@google/gemini-cli/bundle/chunk-6DSAZLFF.js:306227:14)
+    at async file:///usr/local/lib/node_modules/@google/gemini-cli/bundle/gemini-U6FSFXFH.js:10811:26
+    at async main (file:///usr/local/lib/node_modules/@google/gemini-cli/bundle/gemini-U6FSFXFH.js:15885:5) {
+  cause: {
+    code: 429,
+    message: 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \n' +
+      '* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_input_token_count, limit: 0, model: gemini-2.5-pro\n' +
+      '* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-2.5-pro\n' +
+      '* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-2.5-pro\n' +
+      '* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_input_token_count, limit: 0, model: gemini-2.5-pro\n' +
+      'Please retry in 52.928566546s.',
+    details: [ [Object], [Object], [Object] ]
+  },
+  retryDelayMs: undefined,
+  reason: undefined
+}
+{"type":"result","timestamp":"2026-05-12T14:59:07.106Z","status":"error","error":{"type":"unknown","message":"[API Error: You have exhausted your daily quota on this model.]"},"stats":{"total_tokens":0,"input_tokens":0,"output_tokens":0,"cached":0,"input":0,"duration_ms":0,"tool_calls":0,"models":{"gemini-2.5-pro":{"total_tokens":0,"input_tokens":0,"output_tokens":0,"cached":0,"input":0}}}}
