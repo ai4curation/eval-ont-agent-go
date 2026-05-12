@@ -576,6 +576,7 @@ jobs:
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
           GOOGLE_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          GEMINI_CLI_TRUST_WORKSPACE: "true"
         run: |
           gemini -p "$(cat __agent_prompt__.md)" \
             --model ${{ inputs.model }} \
