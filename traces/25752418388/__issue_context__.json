@@ -1,0 +1,66 @@
+{
+  "body": "* **GO term ID and label for which you request a new superclass**\n\nGO:0072318  clathrin coat disassembly\nThe disaggregation of a clathrin coat into its constituent components; results in stripping or removing the clathrin coat from clathrin-coated vesicles (CCV) before fusing with their targets. CVVs transport cargo from plasma membrane and trans-Golgi to the endosomal system. \n\n\n* **New superclass (parent) suggested**\n\nGO:0072583  clathrin-dependent endocytosis\n\n* **Reference(s), if appropriate**\n",
+  "comments": [
+    {
+      "id": "IC_kwDOAkAHws8AAAABAkYeVw",
+      "author": {
+        "login": "ValWood"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "@dragon-ai-agent please add the missing superclass and term tracker ID",
+      "createdAt": "2026-04-28T07:14:08Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "EYES",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/geneontology/go-ontology/issues/31981#issuecomment-4333117015",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOAkAHws8AAAABAkYmbQ",
+      "author": {
+        "login": "dragon-ai-agent"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "🤖 Working on it...\n\nFollow along: [View workflow run](https://github.com/geneontology/go-ontology/actions/runs/25039245202)\n\n*— @dragon-ai-agent*",
+      "createdAt": "2026-04-28T07:14:30Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/geneontology/go-ontology/issues/31981#issuecomment-4333119085",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOAkAHws8AAAABAkaUwg",
+      "author": {
+        "login": "pgaudet"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "This should be part_of, right ? ",
+      "createdAt": "2026-04-28T07:19:36Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/geneontology/go-ontology/issues/31981#issuecomment-4333147330",
+      "viewerDidAuthor": false
+    }
+  ],
+  "title": "Missing parent: GO:0072318  clathrin coat disassembly",
+  "url": "https://github.com/geneontology/go-ontology/issues/31981"
+}
