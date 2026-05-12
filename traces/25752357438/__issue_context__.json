@@ -1,0 +1,59 @@
+{
+  "body": "Please provide as much information as you can:\n\n* **GO term ID and Label**\n\n\nGO:0003400 | regulation of COPII vesicle coating\n\n* **Reason for deprecation** Put an x in the appropriate box: \n\n - [x] The reason for obsoletion is that the data from the paper for which the term was requested can be accurately described using [appropriate GO term].\n\n\n* **\"Replace by\" term (ID and label)**\nIf all annotations can safely be moved to that term\n\nCOPII vesicle coating (GO:0048208)\n\n\n* **Are there annotations to this term?**\n- How many EXP: 11\n\nNOTE THAT ONE ANNOTATION (human MAPK15) is incorrect.  I'll dispute this one.\n\n\n* **Any other information**\n\nThe proteins annotated to  GO:0003400 | regulation of COPII vesicle coating\nare PART_OF the pathway of vesicle coating   (this isn't upstream signalling)\n\nAlso, we could rename \nGO:0048208  COPII vesicle coating\nto \"COPII vesicle coat assembly\" (clearer)\n\nand \"vesicle coating\" to  \"vesicle coat assembly\"\n\n",
+  "comments": [
+    {
+      "id": "IC_kwDOAkAHws8AAAABAw7Wmw",
+      "author": {
+        "login": "raymond91125"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Dear all, \n\nThe proposal has been made to obsolete GO:0003400 regulation of COPII vesicle coating.\n\n* The reason for obsoletion is that the data from the paper for which the term was requested can be accurately described using GO:0048208 COPII vesicle coating.\n\nExperimental annotations\nSGD 8\nUniProt 3\n\nThere is one UniRule/UniProtKW mapping.\n\nAnnotations can be viewed here: https://github.com/geneontology/go-annotation/issues/6389.\n\nThis term is being replaced by GO:0048208 COPII vesicle coating.\n\nAny comments can be  added to the issue: https://github.com/geneontology/go-ontology/issues/31945\n\nThanks, ",
+      "createdAt": "2026-04-29T18:05:29Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/geneontology/go-ontology/issues/31945#issuecomment-4346271387",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOAkAHws8AAAABAw855w",
+      "author": {
+        "login": "raymond91125"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "@dragon-ai-agent please obsolete GO:0003400 regulation of COPII vesicle coating and then rename GO:0048208 and GO:0006901 according to the comment from ValWood.",
+      "createdAt": "2026-04-29T18:09:10Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "EYES",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/geneontology/go-ontology/issues/31945#issuecomment-4346296807",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOAkAHws8AAAABAw9HFA",
+      "author": {
+        "login": "dragon-ai-agent"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "🤖 Working on it...\n\nFollow along: [View workflow run](https://github.com/geneontology/go-ontology/actions/runs/25125757529)\n\n*— @dragon-ai-agent*",
+      "createdAt": "2026-04-29T18:09:38Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/geneontology/go-ontology/issues/31945#issuecomment-4346300180",
+      "viewerDidAuthor": false
+    }
+  ],
+  "title": "Obsoletion request: GO:0003400\t regulation of COPII vesicle coating",
+  "url": "https://github.com/geneontology/go-ontology/issues/31945"
+}
