@@ -1,0 +1,126 @@
+{
+  "body": "\nNEW TERM\nperoxisome-chloroplast membrane tether activity\nThe binding activity of a molecule that brings together the peroxisome and the chloroplast membrane, establishing the localization of the peroxisome close to the chloroplast.\nPMID:17215364\n\n* **GO term ID and Label**\nGO:0010381  peroxisome-chloroplast membrane tethering\nThe attachment of a peroxisome to a chloroplast via molecular tethers that physically bridge their respective membranes and attach them to each other. The tethering may facilitate exchange of metabolites between the organelles. PMID:17215364\n\n\n* **Reason for deprecation** Put an x in the appropriate box: \n\n - [x] The reason for obsoletion is that this term represents a molecular function.\n\n\n* **\"Consider\" term(s) (ID and label)**\nSuggestions for reannotation\n\nNEW Term above, this is a MF\n\n* **Are there annotations to this term?**\n- How many EXP: 1 (TAIR)\n\n* **Are there mappings and cross references to this term? (InterPro, Keywords; check QuickGO cross-references section)**\n\n* **Is this term in a subset? (check the AmiGO page for that term)**\n\n* **Any other information**\n\n\n----\nChecklist for ontology editor\n\n***Check term usage and metadata in Protégé***\n- [ ] check term usage in the ontology \n- [ ] check internal mappings: RHEA, EC, MetaCyc\n- [ ] check subset usage\n- [ ] check taxon constraints \n\n***Check annotations***\n- [ ] create Annotation Review spreadsheet \n- * Annotation Review template: https://docs.google.com/spreadsheets/d/1izV3q1jnq_Ybg5MJ53O_b5BCTkGtjl_Fi-cOg3-7eBE/edit#gid=0\n- * Instructions: https://wiki.geneontology.org/Annotation_Review_Request\n- [ ] create annotation review ticket: https://github.com/geneontology/go-annotation/issues/new?assignees=&labels=annotation+review&template=annotation-review-for-obsoletion.md&title=Review+annotations+to+%5BINSERT+GO+TERM%5D\n- [ ] find external mappings (via IEAS), include in obsoletion notice  \n- [ ] tag curators in Annotation Review ticket. Responsible annotator for each group: https://github.com/geneontology/go-site/blob/master/metadata/group-contacts.csv\n\n***Notification***\n- [ ] create [obsoletion announcement](https://github.com/geneontology/go-announcements/issues/new?assignees=&labels=obsoletion&template=obsoletion-notice.md&title=Obsoletion+notice%3A+%5BGO+ID%3A+term+label%5D)\n- [ ] announce to GO friends (go-friends@mailman.stanford.edu)\n- [ ] paste the text in the ontology ticket\n",
+  "comments": [
+    {
+      "id": "IC_kwDOAkAHws7_ZBd9",
+      "author": {
+        "login": "raymond91125"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "New term added in PR #31929:\n\n**GO:7770065** peroxisome-chloroplast membrane tether activity (molecular_function)\n\nDefinition: \"The binding activity of a molecule that brings together the peroxisome membrane and the chloroplast membrane, establishing the localization of the peroxisome close to the chloroplast.\" [PMID:17215364]\n\nFollows the same pattern as other peroxisome-organelle membrane tether activity terms (GO:0160190 peroxisome-mitochondrion, GO:0160229 peroxisome-ER), placed under GO:0140177 membrane-membrane adaptor activity.\n\nThe obsoletion of GO:0010381 is not included in this PR and should be handled separately through the annotation review process.",
+      "createdAt": "2026-04-20T22:48:11Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/geneontology/go-ontology/issues/31877#issuecomment-4284749693",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOAkAHws7_ZRWL",
+      "author": {
+        "login": "raymond91125"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "[Term]\nid: GO:7770065\nname: peroxisome-chloroplast membrane tether activity\nnamespace: molecular_function\ndef: \"The binding activity of a molecule that brings together the peroxisome membrane and the chloroplast membrane, establishing the localization of the peroxisome close to the chloroplast.\" [PMID:17215364]\nsynonym: \"peroxisome-chloroplast membrane adaptor activity\" EXACT []\nis_a: GO:0140177 ! membrane-membrane adaptor activity\nproperty_value: term_tracker_item \"https://github.com/geneontology/go-ontology/issues/31877\" xsd:anyURI\ncreated_by: dragon-ai-agent\ncreation_date: 2026-04-20T22:23:03Z",
+      "createdAt": "2026-04-20T23:02:42Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/geneontology/go-ontology/issues/31877#issuecomment-4284814731",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOAkAHws8AAAABAUBdnQ",
+      "author": {
+        "login": "tberardini"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "@raymond91125 I don't see the new term in AmiGO or imported into our database yet. Is it in the public files? I will move the annotation when the new term is available for use.",
+      "createdAt": "2026-04-24T20:03:03Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/geneontology/go-ontology/issues/31877#issuecomment-4315962781",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOAkAHws8AAAABAUDVzw",
+      "author": {
+        "login": "raymond91125"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "@tberardini The new term GO:7770065 is in the go-edit.obo on Github. I don't know how long it may take to propagate to your db. If you don't mind, I may proceed with obsoletion.",
+      "createdAt": "2026-04-24T20:08:29Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/geneontology/go-ontology/issues/31877#issuecomment-4315993551",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOAkAHws8AAAABAUD7ew",
+      "author": {
+        "login": "tberardini"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Go for the obsoletion but please don't close the ticket until I've moved the annotation otherwise I will forget.",
+      "createdAt": "2026-04-24T20:10:12Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/geneontology/go-ontology/issues/31877#issuecomment-4316003195",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOAkAHws8AAAABAU-VeQ",
+      "author": {
+        "login": "raymond91125"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "@dragon-ai-agent please obsolete GO:0010381 peroxisome-chloroplast membrane tethering.",
+      "createdAt": "2026-04-24T23:15:10Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "EYES",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/geneontology/go-ontology/issues/31877#issuecomment-4316960121",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOAkAHws8AAAABAU-bFA",
+      "author": {
+        "login": "dragon-ai-agent"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "🤖 Working on it...\n\nFollow along: [View workflow run](https://github.com/geneontology/go-ontology/actions/runs/24916106776)\n\n*— @dragon-ai-agent*",
+      "createdAt": "2026-04-24T23:15:32Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/geneontology/go-ontology/issues/31877#issuecomment-4316961556",
+      "viewerDidAuthor": false
+    }
+  ],
+  "title": "Obsoletion request: GO:0010381  peroxisome-chloroplast membrane tethering and NEW TERM peroxisome-chloroplast membrane tether activity",
+  "url": "https://github.com/geneontology/go-ontology/issues/31877"
+}
