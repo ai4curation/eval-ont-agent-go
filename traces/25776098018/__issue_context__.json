@@ -1,0 +1,253 @@
+{
+  "body": "\n\n**Final decision: see https://github.com/geneontology/go-ontology/issues/31882#issuecomment-4235254498\n(obsolete and replace)**\n\n- obsolete GO:1905353 ciliary transition fiber assembly  >> replace by GO:1905349 ciliary transition zone assembly \n- obsolete  GO:0097711 ciliary basal body-plasma membrane docking >> replace by GO:1905349 ciliary transition zone assembly\n\n\n~GO:0097711  ciliary basal body-plasma membrane docking\nThe docking of a cytosolic centriole/basal body to the plasma membrane via the ciliary transition fibers. In some species this may happen via an intermediate step, by first docking to the ciliary vesicle via the ciliary transition fibers. The basal body-ciliary vesicle then relocates to the plasma membrane, followed by the ciliary vesicle fusing with the plasma membrane, effectively attaching the basal body to the plasma membrane.\nThis sounds MUCH broader than \nremove parent\nGO:0140056 organelle localization by membrane tethering\nThe aggregation, arrangement and bonding together of a set of components to form an organelle. An organelle is an organized structure of distinctive morphology and function. Includes the nucleus, mitochondria, plastids, vacuoles, vesicles, ribosomes and the cytoskeleton. Excludes the plasma membrane.\nand it has other is_a parents\n(this term will be obsoleted once descendants are removed or rehoused)~\n\n",
+  "comments": [
+    {
+      "id": "IC_kwDOAkAHws78Z9iC",
+      "author": {
+        "login": "pgaudet"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "@ValWood \n\nThis term doesn't have other is_a parents: \n\n<img width=\"645\" height=\"469\" alt=\"Image\" src=\"https://github.com/user-attachments/assets/c98cee6d-a721-4176-a554-466bc2cc3b76\" />\n\n\nDidn't we say that tethering was a MF ? ",
+      "createdAt": "2026-04-13T07:43:38Z",
+      "includesCreatedEdit": false,
+      "isMinimized": true,
+      "minimizedReason": "outdated",
+      "reactionGroups": [],
+      "url": "https://github.com/geneontology/go-ontology/issues/31882#issuecomment-4234664066",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOAkAHws78aLdT",
+      "author": {
+        "login": "ValWood"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "GO:0051640   organelle localization ?\n",
+      "createdAt": "2026-04-13T07:54:57Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/geneontology/go-ontology/issues/31882#issuecomment-4234721107",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOAkAHws78aj6f",
+      "author": {
+        "login": "ValWood"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "This is docking. Docking and tethering are separate steps in vesicle -mediated transport.\n\nThis seems to be referring to a broader processs, this isn't just describing docking:\n\nThe docking of a cytosolic centriole/basal body to the plasma membrane via the ciliary transition fibers. In some species this may happen via an intermediate step, by first docking to the ciliary vesicle via the ciliary transition fibers. The basal body-ciliary vesicle then relocates to the plasma membrane, followed by the ciliary vesicle fusing with the plasma membrane, effectively attaching the basal body to the plasma membrane.\n\nIt's a bit vague, so I was going to park it until somebody models this process.....\n\nIf it really is describing \"docking\" it can be obsoleted with the rest of the docking terms\nhttps://github.com/geneontology/go-ontology/issues/31880\n\n",
+      "createdAt": "2026-04-13T08:10:19Z",
+      "includesCreatedEdit": false,
+      "isMinimized": true,
+      "minimizedReason": "outdated",
+      "reactionGroups": [],
+      "url": "https://github.com/geneontology/go-ontology/issues/31882#issuecomment-4234821279",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOAkAHws78asrT",
+      "author": {
+        "login": "ValWood"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "There are only 6 EXP annotations, 3 are fly\n@hattrill  do you know the intended scope of \"ciliary basal body-plasma membrane docking\"?\nIs this single step or a multistep process?\n\nIs it analogous to vesicle dociking?\n\nthanks\nVal",
+      "createdAt": "2026-04-13T08:14:44Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/geneontology/go-ontology/issues/31882#issuecomment-4234857171",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOAkAHws78avXg",
+      "author": {
+        "login": "ValWood"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "It seems to involve the entire centriole:\nhttps://link.springer.com/article/10.1186/s13630-016-0030-8/figures/1",
+      "createdAt": "2026-04-13T08:16:43Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/geneontology/go-ontology/issues/31882#issuecomment-4234868192",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOAkAHws78a6Ui",
+      "author": {
+        "login": "hattrill"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "From \"PMID:27646273\" TZ assembly is a complex process starting with the docking of the mother centriole to cytoplasmic vesicles and the timely and spatially ordered assembly of multiple proteins.\n\nSo, looking at the redundancy in annotation, \"ciliary transition zone assembly\" covers this and we can get rid of  \"ciliary basal body-plasma membrane docking\", for flies at least. ",
+      "createdAt": "2026-04-13T08:24:25Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/geneontology/go-ontology/issues/31882#issuecomment-4234913058",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOAkAHws78bPUf",
+      "author": {
+        "login": "ValWood"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "right, I wondered if these  two terms were related.\n\nI suggest we do that, and if a specific docking activity is required it can be added later.",
+      "createdAt": "2026-04-13T08:36:33Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/geneontology/go-ontology/issues/31882#issuecomment-4234999071",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOAkAHws78bVVY",
+      "author": {
+        "login": "hattrill"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "With you there. I will revise our annotations now.",
+      "createdAt": "2026-04-13T08:40:35Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/geneontology/go-ontology/issues/31882#issuecomment-4235023704",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOAkAHws78bb20",
+      "author": {
+        "login": "hattrill"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Done - no Dmel ones left!",
+      "createdAt": "2026-04-13T08:44:47Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/geneontology/go-ontology/issues/31882#issuecomment-4235050420",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOAkAHws78bprN",
+      "author": {
+        "login": "pgaudet"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "To be clear, the final decision is \n> Obsolete GO:0097711 ciliary basal body-plasma membrane docking and replace by GO:1905349 ciliary transition zone assembly\n\n\nRight ? ",
+      "createdAt": "2026-04-13T08:54:31Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/geneontology/go-ontology/issues/31882#issuecomment-4235107021",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOAkAHws78cBV_",
+      "author": {
+        "login": "hattrill"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "I think as the process of basal body assembly and TZ assemblt can vary between species, I would not add \"replace by\" but \"consider\" GO:1905349 ciliary transition zone assembly. \n\nI think that ciliary transition fiber assembly may also be a consider option in some species, but it is vaguely described and is only a child of protein-containing complex assembly. Just going to look at that with claude...",
+      "createdAt": "2026-04-13T09:09:08Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/geneontology/go-ontology/issues/31882#issuecomment-4235203967",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOAkAHws78cNri",
+      "author": {
+        "login": "hattrill"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Ok, ciliary transition fiber assembly has no annotations and is part of docking/TZ assembly. So I would suggest that we obsolete GO:1905353 ciliary transition fiber assembly and GO:0097711 ciliary basal body-plasma membrane docking\nand **replace** by GO:1905349 ciliary transition zone assembly (rather than consider) ",
+      "createdAt": "2026-04-13T09:17:17Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "THUMBS_UP",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/geneontology/go-ontology/issues/31882#issuecomment-4235254498",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOAkAHws8AAAABBTmfNg",
+      "author": {
+        "login": "raymond91125"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Dear all, \n\nThe proposal has been made to obsolete\nGO:1905353 ciliary transition fiber assembly\nGO:0097711 ciliary basal body-plasma membrane docking\n\n* The reason for obsoletion is that this term is redundant with GO:1905349 ciliary transition zone assembly.\n\nExperimental annotations\nFlyBase 2 DONE\nMGI 1 DONE\nReactome 1 DONE\nUniProt 1\nXenbase 1 DONE\nZFIN 1\n\n0 InterPro2GO/UniRule/UniProtKW mappings.\n\nAnnotations can be viewed here: https://github.com/geneontology/go-annotation/issues/6405.\n\nThe terms are replaced by GO:1905349 ciliary transition zone assembly.\n\nAny comments can be  added to the issue: https://github.com/geneontology/go-ontology/issues/31882\n\nThanks, ",
+      "createdAt": "2026-05-05T20:08:30Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/geneontology/go-ontology/issues/31882#issuecomment-4382629686",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOAkAHws8AAAABBTm3KA",
+      "author": {
+        "login": "raymond91125"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "@dragon-ai-agent please obsolete GO:1905353 and GO:0097711.",
+      "createdAt": "2026-05-05T20:09:29Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "EYES",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/geneontology/go-ontology/issues/31882#issuecomment-4382635816",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOAkAHws8AAAABBTnCdQ",
+      "author": {
+        "login": "dragon-ai-agent"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "🤖 Working on it...\n\nFollow along: [View workflow run](https://github.com/geneontology/go-ontology/actions/runs/25399618844)\n\n*— @dragon-ai-agent*",
+      "createdAt": "2026-05-05T20:09:58Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/geneontology/go-ontology/issues/31882#issuecomment-4382638709",
+      "viewerDidAuthor": false
+    }
+  ],
+  "title": "Obsolete: GO:0097711  ciliary basal body-plasma membrane docking Biological Process",
+  "url": "https://github.com/geneontology/go-ontology/issues/31882"
+}
