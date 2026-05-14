@@ -1,0 +1,59 @@
+{
+  "body": "This term has no enzyme xref: \n\nid: GO:0043713\nname: (R)-2-hydroxyisocaproate dehydrogenase activity\nnamespace: molecular_function\ndef: \"Catalysis of the reaction: 2-oxoisocaproate + NADH + H+ = (R)-2-hydroxyisocaproate + NAD+.\" [GOC:jl, PMID:16957230]\nis_a: GO:0016616 ! oxidoreductase activity, acting on the CH-OH group of donors, NAD or NADP as acceptor\n\n\nBut \"(R)-2-hydroxyisocaproate dehydrogenase\" is a synonym of EC:1.1.1.345 D-2-hydroxyacid dehydrogenase (NAD(+)), which equates with this GO term:\n\nid: GO:0140175\nname: (2R)-2-hydroxyacid dehydrogenase (NAD+) activity\nnamespace: molecular_function\ndef: \"Catalysis of the reaction: a (2R)-2-hydroxycarboxylate + NAD+ = a 2-oxocarboxylate + NADH + H+.\" [RHEA:35643]\nxref: EC:1.1.1.345 {source=\"skos:exactMatch\"}\nxref: RHEA:10052 {source=\"skos:narrowMatch\"}\nxref: RHEA:35643 {source=\"skos:exactMatch\"}\nxref: RHEA:57408 {source=\"skos:narrowMatch\"}\nxref: RHEA:70327 {source=\"skos:narrowMatch\"}\nxref: RHEA:86067 {source=\"skos:narrowMatch\"}\nxref: RHEA:86071 {source=\"skos:narrowMatch\"}\nis_a: GO:0016616 ! oxidoreductase activity, acting on the CH-OH group of donors, NAD or NADP as acceptor\nproperty_value: term_tracker_item \"https://github.com/geneontology/go-ontology/issues/30138\" xsd:anyURI\n\nAlso, a search of CHEBI with '(R)-2-hydroxyisocaproate' returns:\nCHEBI:55534 - (R)-2-hydroxy-4-methylpentanoic acid\n\nAnd one of the narrowMatch RHEA xrefs is:\nRHEA:10052\n(2R)-hydroxy-4-methylpentanoate + NAD(+) = 4-methyl-2-oxopentanoate + NADH + H(+)\n\nand (2R)-hydroxy-4-methylpentanoate (CHEBI:55535) is the conjugate base of (R)-2-hydroxy-4-methylpentanoic acid (CHEBI:55534).\n\n\nSo....I think GO:0043713 (R)-2-hydroxyisocaproate dehydrogenase activity should be obsoleted and replaced by GO:0140175 (2R)-2-hydroxyacid dehydrogenase (NAD+) activity\n\nGO:0043713 (R)-2-hydroxyisocaproate dehydrogenase activity has 0 annotations anyway.",
+  "comments": [
+    {
+      "id": "IC_kwDOAkAHws8AAAABAn3fSg",
+      "author": {
+        "login": "raymond91125"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Dear all, \n\nThe proposal has been made to obsolete GO:0043713 (R)-2-hydroxyisocaproate dehydrogenase activity.\n\n* The reason for obsoletion is that this term is equivalent to GO:0140175 (2R)-2-hydroxyacid dehydrogenase (NAD+) activity.\n\nThere are no experimental annotations to this term.\nThere are X InterPro2GO/UniRule/UniProtKW mappings to this term. \nThis term is not present in any subset.\n\nThis term is being replaced by GO:0140175 (2R)-2-hydroxyacid dehydrogenase (NAD+) activity\n\nIf obsolete term has a 'consider' term:  (optional)\nAnnotations can be transferred to [suggested GO term(s)] \n\nAny comments can be  added to the issue: [link to GitHub ticket in the go-ontology tracker]. \nUnless objections are received by [DATE], we will assume that you agree to this change.\n\nThanks, \n",
+      "createdAt": "2026-04-28T15:34:45Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/geneontology/go-ontology/issues/31966#issuecomment-4336770890",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOAkAHws8AAAABAn4Mfg",
+      "author": {
+        "login": "raymond91125"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "@dragon-ai-agent please obsolete GO:0043713 (R)-2-hydroxyisocaproate dehydrogenase activity.",
+      "createdAt": "2026-04-28T15:36:15Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "EYES",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/geneontology/go-ontology/issues/31966#issuecomment-4336782462",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOAkAHws8AAAABAn4YLg",
+      "author": {
+        "login": "dragon-ai-agent"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "🤖 Working on it...\n\nFollow along: [View workflow run](https://github.com/geneontology/go-ontology/actions/runs/25062447162)\n\n*— @dragon-ai-agent*",
+      "createdAt": "2026-04-28T15:36:39Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/geneontology/go-ontology/issues/31966#issuecomment-4336785454",
+      "viewerDidAuthor": false
+    }
+  ],
+  "title": "Obsolete GO:0043713 (R)-2-hydroxyisocaproate dehydrogenase activity",
+  "url": "https://github.com/geneontology/go-ontology/issues/31966"
+}
