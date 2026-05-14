@@ -1,0 +1,109 @@
+## Summary
+
+This PR addresses issue #25870 regarding EC:1.13.11.37 xref mapping for two GO terms representing different stages of the same catalytic reaction.
+
+## Changes Made
+
+### 1. Obsoleted GO:0018581 (hydroxyquinol 1,2-dioxygenase activity)
+
+**Reason for obsoletion:** This term represented only the first enzymatic step of a two-step reaction (benzene-1,2,4-triol → 3-hydroxy-cis,cis-muconate). The second step is a non-enzymatic conversion to maleylacetate. The complete reaction is more accurately represented by GO:0047074.
+
+**Obsoletion details:**
+- Changed name to "obsolete hydroxyquinol 1,2-dioxygenase activity"
+- Prefixed definition with "OBSOLETE."
+- Removed all xrefs (EC:1.13.11.37, MetaCyc:RXN-17556, RHEA:19441, UM-BBD_reactionID:r0232)
+- Removed is_a relationship to GO:0016702
+- Added `is_obsolete: true`
+- Added `replaced_by: GO:0047074`
+- Added comment explaining the reason for obsoletion
+- Retained term_tracker_items for provenance
+
+**Impact analysis:**
+- No experimental annotations to this term (confirmed in issue #25870)
+- No other terms in the ontology reference GO:0018581
+- Low-risk obsoletion with direct replacement
+
+### 2. Renamed GO:0047074
+
+**Name change:** "4-hydroxycatechol 1,2-dioxygenase activity" → "hydroxyquinol 1,2-dioxygenase activity"
+
+**Rationale:** The new name matches the accepted EC:1.13.11.37 name. This term represents the complete reaction (enzymatic + non-enzymatic conversion) from benzene-1,2,4-triol to maleylacetate, which is exactly what EC:1.13.11.37 describes.
+
+**Additional changes:**
+- Added old name "4-hydroxycatechol 1,2-dioxygenase activity" as EXACT synonym
+- Definition already correctly describes the complete reaction and matches EC
+- EC:1.13.11.37 xref already has `skos:exactMatch` mapping (correct)
+- All other xrefs and relationships retained
+
+## Verification
+
+### MetaCyc xrefs status:
+- GO:0018581 previously had MetaCyc:RXN-17556 (correct replacement for obsolete HYDROXYQUINOL-12-DIOXYGENASE-RXN) - now removed as part of obsoletion
+- GO:0047074 has MetaCyc:RXN-10137 (R308-RXN appears to have been previously removed)
+- All MetaCyc xref updates from issue comments appear to have been addressed
+
+### EC xref mapping:
+- GO:0047074 now has EC:1.13.11.37 with `skos:exactMatch` ✓
+- This correctly reflects that GO:0047074 represents the exact reaction described by EC:1.13.11.37
+
+## Checklist
+
+- [x] PLAN: Issue analyzed, intent clear, plan created
+- [x] PRE-VALIDATION: Ontology structure verified before changes
+- [x] RESEARCH: Background information confirmed (EC:1.13.11.37, RHEA terms)
+- [x] TERM-SEARCH: Relevant terms found using obo-grep.pl
+- [x] DESIGN-PATTERNS: N/A - obsoletion and rename only, no new logical axioms
+- [x] EDITS: Proper checkout/checkin procedure followed
+  - [x] Used obo-checkout.pl to extract terms to terms/ folder
+  - [x] Edited individual term files
+  - [x] Used obo-checkin.pl to integrate changes back into go-edit.obo
+- [x] RELATIONSHIPS: N/A - no new relationships added
+  - [x] GO:0018581 relationships removed as per obsoletion guidelines
+  - [x] GO:0047074 relationships unchanged
+- [x] SPECIALIZED-EDITS: /term-obsoletion skill guidelines followed
+  - [x] Obsolete term has no logical axioms (is_a, intersection_of removed)
+  - [x] Name prefixed with "obsolete"
+  - [x] Definition prefixed with "OBSOLETE."
+  - [x] All xrefs removed from obsolete term
+  - [x] is_obsolete: true added
+  - [x] replaced_by: GO:0047074 added
+  - [x] Comment explaining obsoletion reason added
+  - [x] No synonyms retained on obsolete term
+  - [x] Namespace retained for historical provenance
+  - [x] Impact analysis confirmed no annotations or ontology references
+- [x] METADATA: Appropriate for this change
+  - [x] No created_by/creation_date added (only editing existing terms, not creating new ones)
+  - [x] Original term_tracker_items retained
+  - [x] All terms have proper namespace (molecular_function)
+- [x] AUTOMATED-VALIDATION: Changes validated
+  - [x] Git diff reviewed - changes are clean and targeted
+  - [x] No unintended modifications to other terms
+- [x] REFERENCE-VALIDATION: N/A - no new references introduced
+- [x] CHANGES-COMMITTED:
+  - [x] RELEVANT-FILES: Only src/ontology/go-edit.obo modified (correct)
+  - [x] ACCURACY: Changes are biologically correct - GO:0018581 was indeed a sub-reaction
+  - [x] ISSUE-ALIGNMENT: Changes fully address issue #25870 requirements
+  - [x] Detailed commit message with Co-Authored-By signature
+  
+## Technical Details
+
+**Files modified:**
+- `src/ontology/go-edit.obo`
+
+**Lines changed:**
+- GO:0018581 at line ~138332: Converted to obsolete term
+- GO:0047074 at line ~291739: Renamed and synonym added
+
+**Git commit:** f562925
+
+## Notes
+
+This change aligns GO's representation with the EC classification system and eliminates redundancy between terms representing partial vs. complete reactions. The obsoletion has minimal downstream impact due to the lack of annotations to GO:0018581.
+
+---
+🤖 **Generated by claude agent**
+- Runtime: `claude`
+- Model: `claude-sonnet-4-5-20250929`
+- Agent config: `ai4curation/go-ontology-agent-config@v9:.`
+- Iteration: `1`
+- Run: [View workflow run](https://github.com/ai4curation/eval-ont-agent-go/actions/runs/25847201917)
