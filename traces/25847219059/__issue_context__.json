@@ -1,0 +1,328 @@
+{
+  "body": "Please provide as much information as you can: \n\n* **Suggested term label:**\n Terreic acid biosynthetic process\n+ve regulation of terreic acid biosynthetic process\n\n* **Definition (free text)**\n\n The chemical reactions and pathways resulting in the formation of terreic acid. \n\n* **Reference, in format PMID:#######**\n(PMID: [25265334](https://pubmed.ncbi.nlm.nih.gov/25265334/))\n\n* **Gene product name and ID to be annotated to this term**\nbiosynthetic pathway: Q0CJ62 Q0CJ60 Q0CJ58 Q0CJ57 Q0CJ54 Q0CJ59\n+ve regulation: Q0CJ56\n\n* **Parent term(s)**\nbiosynthetic pathway: \nGO:0019748 secondary metabolite biosynthetic process\n+ve reg:\nGO:1900376 regulation of secondary metabolite biosynthetic process\n\nthe authors say that terreic acid is a  \"a quinone epoxide\" so there might be other suitable parents?\n\n\n",
+  "comments": [
+    {
+      "id": "IC_kwDOAkAHws7grfDP",
+      "author": {
+        "login": "ValWood"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "CHEBI:156546",
+      "createdAt": "2026-01-19T17:34:31Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/geneontology/go-ontology/issues/31114#issuecomment-3769495759",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOAkAHws7grkR-",
+      "author": {
+        "login": "ValWood"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "I can add \n\n'biosynthetic process'\n and ('has primary output' some 'terreic acid')\n\nbut I'm not sure how to get 'terreic acid' to be recognized. This should then locate any missing parents.",
+      "createdAt": "2026-01-19T17:42:07Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/geneontology/go-ontology/issues/31114#issuecomment-3769517182",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOAkAHws7g9EbT",
+      "author": {
+        "login": "ValWood"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "How do I get CHEBI:156546 to be recognized for logical derf?",
+      "createdAt": "2026-01-20T17:30:25Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/geneontology/go-ontology/issues/31114#issuecomment-3774105299",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOAkAHws7g9VRV",
+      "author": {
+        "login": "balhoff"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "@ValWood I added [terreate](https://www.ebi.ac.uk/chebi/CHEBI:233617) in #31385. That seems to be the pH 7.3 version. Once that is merged I can build a new CHEBI import.",
+      "createdAt": "2026-01-20T17:47:06Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/geneontology/go-ontology/issues/31114#issuecomment-3774174293",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOAkAHws7g-28n",
+      "author": {
+        "login": "balhoff"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "@ValWood you can look for the term now.",
+      "createdAt": "2026-01-20T19:27:08Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/geneontology/go-ontology/issues/31114#issuecomment-3774574375",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOAkAHws7rFUMs",
+      "author": {
+        "login": "ValWood"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "I added this, but I just found\nGO:0140880  terrein biosynthetic process\nhttps://github.com/geneontology/go-ontology/issues/23601\n\n@Antonialock  how are these related?  AI says  terrein is an intermediate in terreic acid biosynthesis.\nAny insight? I wonder if we really need both terms if they describe the same pathway?\n\n\n\n",
+      "createdAt": "2026-02-23T10:52:34Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/geneontology/go-ontology/issues/31114#issuecomment-3944039212",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOAkAHws7rHsrp",
+      "author": {
+        "login": "Antonialock"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "i think this looks ok\n\nit was a while since I looked at this but claude output:\nTerrein and terreic acid are both secondary metabolites produced by Aspergillus terreus (and some related fungi), but they are distinct compounds with different biosynthetic origins.\n\n<img width=\"716\" height=\"346\" alt=\"Image\" src=\"https://github.com/user-attachments/assets/0a5ce089-f398-4574-bef1-3158ce42f6c6\" />\n\nSo despite both being polyketides from the same organism, they arise from distinct gene clusters, use different PKS enzymes, proceed through different intermediates, and yield structurally unrelated end products. The terreic acid pathway is more thoroughly characterized at the molecular level, while the terrein pathway was discovered more recently and still has some gaps",
+      "createdAt": "2026-02-23T13:02:12Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/geneontology/go-ontology/issues/31114#issuecomment-3944663785",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOAkAHws7rJEpG",
+      "author": {
+        "login": "Antonialock"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "the genes are definitely different!",
+      "createdAt": "2026-02-23T14:15:54Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/geneontology/go-ontology/issues/31114#issuecomment-3945024070",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOAkAHws8AAAABAw_AzA",
+      "author": {
+        "login": "ValWood"
+      },
+      "authorAssociation": "MEMBER",
+      "body": " @dragon-ai-agent  please implement  new term request \"terreic acid biosynthetic process\" as previously (I closed the previous pull request due to a conflict)",
+      "createdAt": "2026-04-29T18:14:08Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "EYES",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/geneontology/go-ontology/issues/31114#issuecomment-4346331340",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOAkAHws8AAAABAw_OQQ",
+      "author": {
+        "login": "dragon-ai-agent"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "🤖 Working on it...\n\nFollow along: [View workflow run](https://github.com/geneontology/go-ontology/actions/runs/25125987501)\n\n*— @dragon-ai-agent*",
+      "createdAt": "2026-04-29T18:14:36Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/geneontology/go-ontology/issues/31114#issuecomment-4346334785",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOAkAHws8AAAABAxHEIA",
+      "author": {
+        "login": "dragon-ai-agent"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "@ValWood — both terms requested in this issue are already in the ontology (added in #31612), but with `terreate` as the primary label and `terreic acid` as a RELATED synonym. PR #31374 was closed because of ID conflicts during that period.\n\nI've opened PR #32014 to rename them to the originally-requested labels:\n\n- **GO:0180067** `terreate biosynthetic process` → **`terreic acid biosynthetic process`**\n- **GO:0180069** `positive regulation of terreate biosynthetic process` → **`positive regulation of terreic acid biosynthetic process`**\n\nThe `terreate` forms become RELATED synonyms. The logical definition still uses `CHEBI:233617 ! terreate` (the pH 7.3 form) — this matches the GO chemical-entity convention of biologist-friendly label + pH 7.3 CHEBI in the logical def (cf. the L-histidine exemplar). No new IDs were minted; this is a rename, so `created_by`/`creation_date` are unchanged.\n\n`make travis_build` passes cleanly.\n\nIf you'd prefer the labels stay as `terreate ...` (i.e. the chemistry name), let me know and I'll close the PR. Otherwise this should close out the original request.\n\n---\n🤖 **Generated by @dragon-ai-agent**\n- Model: `claude-opus-4-7`\n- Agent harness: claude-code\n- Triggered by: @ValWood\n- Run: [View workflow run](https://github.com/geneontology/go-ontology/actions/runs/25125987501)",
+      "createdAt": "2026-04-29T18:32:12Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/geneontology/go-ontology/issues/31114#issuecomment-4346463264",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOAkAHws8AAAABAxLSIQ",
+      "author": {
+        "login": "ValWood"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "@Antonialock  please check if this is correct?\n",
+      "createdAt": "2026-04-29T18:40:29Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/geneontology/go-ontology/issues/31114#issuecomment-4346532385",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOAkAHws8AAAABA0dYUw",
+      "author": {
+        "login": "ValWood"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "@Antonialock  this was in the pull request but this doesn't align with your comments above?\n\nThe terms were originally requested in https://github.com/geneontology/go-ontology/issues/31114 with the labels terreic acid biosynthetic process and positive regulation of terreic acid biosynthetic process. They were added in PR https://github.com/geneontology/go-ontology/pull/31612 but used terreate (the pH 7.3 form) as the primary label and terreic acid as a related synonym. The previous attempt to rename was in PR https://github.com/geneontology/go-ontology/pull/31374 which was closed due to ID conflicts.\n\nThis rename brings the labels in line with the GO chemical-entity convention, which uses biologist-friendly labels in term names while retaining the pH 7.3 form CHEBI ID (here CHEBI:233617 ! terreate) in the logical definition. See the exemplar in .claude/skills/chemical-entity/SKILL.md: L-histidine transmembrane transporter activity uses the biologist label even though the logical definition references CHEBI:57595 ! L-histidine zwitterion.\n\nChanges\nLabels swapped (terreate → terreic acid in both term names).\nSynonyms swapped: terreate biosynthetic process and positive regulation of terreate biosynthetic process are now RELATED synonyms.\nLogical definitions and asserted is_a relationships unchanged. The pH 7.3 form CHEBI:233617 ! terreate remains the chemical referenced in the logical def.\nDefinition of GO:0180069 brought into line with the standard 'positive regulation' phrasing (\"Any process that activates or increases the frequency, rate or extent of terreic acid biosynthetic process.\").\nDefinitions still cite PMID:25265334.\ncreated_by, creation_date, term_tracker_item left untouched (these are existing terms).\n\n",
+      "createdAt": "2026-04-30T05:41:47Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/geneontology/go-ontology/issues/31114#issuecomment-4349974611",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOAkAHws8AAAABA1oShA",
+      "author": {
+        "login": "Antonialock"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Thanks Val, I think the changes look good as long as it is ok for the primary name not to match the logical def exactly?",
+      "createdAt": "2026-04-30T09:15:55Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/geneontology/go-ontology/issues/31114#issuecomment-4351201924",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOAkAHws8AAAABA2JzAA",
+      "author": {
+        "login": "ValWood"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "@pgaudet ",
+      "createdAt": "2026-04-30T10:39:26Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/geneontology/go-ontology/issues/31114#issuecomment-4351750912",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOAkAHws8AAAABBIjURw",
+      "author": {
+        "login": "pgaudet"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Sure, you can swap the label and the synonym. \n\n@ValWood It's weird that in the created:by you have `PomBase:vw` - can you change it back to `vw`? \n\nThanks, Pascale",
+      "createdAt": "2026-05-04T12:30:04Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/geneontology/go-ontology/issues/31114#issuecomment-4371043399",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOAkAHws8AAAABBOhcBg",
+      "author": {
+        "login": "ValWood"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "@dragon-ai-agent please fix PomBase:vw to GOC:vw",
+      "createdAt": "2026-05-05T07:28:06Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "EYES",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/geneontology/go-ontology/issues/31114#issuecomment-4377304070",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOAkAHws8AAAABBOhnAw",
+      "author": {
+        "login": "dragon-ai-agent"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "🤖 Working on it...\n\nFollow along: [View workflow run](https://github.com/geneontology/go-ontology/actions/runs/25363493346)\n\n*— @dragon-ai-agent*",
+      "createdAt": "2026-05-05T07:28:30Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/geneontology/go-ontology/issues/31114#issuecomment-4377306883",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOAkAHws8AAAABBOiygg",
+      "author": {
+        "login": "ValWood"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "@dragon-ai-agent please switch the primary name GO:0180067 terreate biosynthetic process and synonym terreic acid biosynthetic process for  GO:0180067  and the regulation children",
+      "createdAt": "2026-05-05T07:31:27Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "EYES",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/geneontology/go-ontology/issues/31114#issuecomment-4377326210",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOAkAHws8AAAABBOi70Q",
+      "author": {
+        "login": "dragon-ai-agent"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "🤖 Working on it...\n\nFollow along: [View workflow run](https://github.com/geneontology/go-ontology/actions/runs/25363619029)\n\n*— @dragon-ai-agent*",
+      "createdAt": "2026-05-05T07:31:50Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/geneontology/go-ontology/issues/31114#issuecomment-4377328593",
+      "viewerDidAuthor": false
+    }
+  ],
+  "title": "NTR: Terreic acid biosynthetic process",
+  "url": "https://github.com/geneontology/go-ontology/issues/31114"
+}
