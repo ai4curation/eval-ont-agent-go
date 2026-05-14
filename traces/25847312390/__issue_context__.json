@@ -1,0 +1,6 @@
+{
+  "body": "There is currently this tree:\n\n```\ndiamine oxidase activity [EC:1.4.3.22 {source=\"skos:broadMatch\"}]\n   |__histamine oxidase activity [EC:1.4.3.22 {source=\"skos:broadMatch\"}]\n   |__putrescine oxidase activity [EC:1.4.3.10 {source=\"skos:exactMatch\"}]\n   |__protein-lysine 6-oxidase activity [EC:1.4.3.13 {source=\"skos:exactMatch\"}]\n```\n\nEC:1.4.3.22 is:\nReaction catalysed: histamine + O2 + H2O = imidazole-4-acetaldehyde + H2O2 + NH4(+)\nComments: A group of enzymes that oxidize diamines, such as histamine, and also some primary monoamines but have little or no activity toward secondary and tertiary amines.\n\nAlso, protein-lysine 6-oxidase activity is not a 'diamine oxidase activity'.\n\nSo:\n- [x] Remove  EC:1.4.3.22 {source=\"skos:broadMatch\"} from 'histamine oxidase activity' and leave as broadMatch on parent 'diamine oxidase activity'\n- [x] change parent of protein-lysine 6-oxidase activity to 'GO:0016641 oxidoreductase activity, acting on the CH-NH2 group of donors, oxygen as acceptor' (=EC:1.4.3.-)",
+  "comments": [],
+  "title": "GO:0052597 diamine oxidase activity terms",
+  "url": "https://github.com/geneontology/go-ontology/issues/31964"
+}
