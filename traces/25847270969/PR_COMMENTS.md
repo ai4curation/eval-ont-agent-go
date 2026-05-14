@@ -1,0 +1,125 @@
+## Summary
+
+This PR simplifies the representation of Entner-Doudoroff pathway variants in GO by obsoleting 5 child terms and updating the parent term with appropriate MetaCyc cross-references. This addresses issue #31916.
+
+## Changes Made
+
+### 1. Obsoleted Terms (5 total)
+
+All obsoleted terms were processed using the standard term obsoletion procedure:
+
+**GO:0009255** "Entner-Doudoroff pathway through 6-phosphogluconate"
+- **replaced_by:** GO:0061678 (Entner-Doudoroff pathway)
+- **Annotation impact:** 4 EXP annotations + multiple IBA/IEA annotations will migrate automatically
+- **MetaCyc xref:** PWY-8004 moved to parent term as narrowMatch
+
+**GO:0061679** "Entner-Doudoroff pathway through gluconate"
+- **replaced_by:** GO:0061678
+- **Annotation impact:** No direct annotations
+- **Note:** Was parent to GO:0061680 and GO:0061681 (also obsoleted)
+
+**GO:0061680** "Entner-Doudoroff pathway through gluconate to D-glyceraldehyde"
+- **replaced_by:** GO:0061678
+- **Annotation impact:** No annotations
+- **MetaCyc xref:** NPGLUCAT-PWY moved to parent term as narrowMatch
+
+**GO:0061681** "Entner-Doudoroff pathway through gluconate to D-glyceraldehyde-3-phosphate"
+- **replaced_by:** GO:0061678
+- **Annotation impact:** No annotations
+- **MetaCyc xref:** PWY-2221 moved to parent term as narrowMatch
+
+**GO:0061688** "glycolytic process via Entner-Doudoroff Pathway"
+- **replaced_by:** GO:0006096 (glycolytic process)
+- **Annotation impact:** 10 IEA annotations from CGD will migrate automatically
+- **Note:** Different replacement target as suggested by @sjm41 and @raymond91125
+
+### 2. Updated Parent Term
+
+**GO:0061678** "Entner-Doudoroff pathway"
+
+**Removed:**
+- `xref: MetaCyc:Entner-Doudoroff-Pathways` (grouping class, as requested)
+
+**Added (all as narrowMatch):**
+- `xref: MetaCyc:PWY-8004 {skos:narrowMatch="MetaCyc:PWY-8004"}`
+- `xref: MetaCyc:NPGLUCAT-PWY {skos:narrowMatch="MetaCyc:NPGLUCAT-PWY"}`
+- `xref: MetaCyc:PWY-2221 {skos:narrowMatch="MetaCyc:PWY-2221"}`
+- `xref: MetaCyc:ENTNER-DOUDOROFF-PWY {skos:narrowMatch="MetaCyc:ENTNER-DOUDOROFF-PWY"}`
+
+## Obsoletion Metadata Compliance
+
+All obsoleted terms follow GO obsoletion conventions:
+
+- ✅ Names prefixed with "obsolete"
+- ✅ Definitions prefixed with "OBSOLETE."
+- ✅ All logical axioms removed (is_a, intersection_of, relationships)
+- ✅ All synonyms removed
+- ✅ All variant-specific xrefs removed
+- ✅ `is_obsolete: true` flag added
+- ✅ `replaced_by` relationships added
+- ✅ Comments explaining reason for obsoletion
+- ✅ `term_tracker_item` pointing to issue #31916
+- ✅ Namespace retained
+- ✅ Original created_by and creation_date retained (where present)
+
+## Validation
+
+- ✅ No internal ontology references to obsoleted terms (except those also being obsoleted)
+- ✅ OBO file remains syntactically valid (verified with obo-grep.pl)
+- ✅ Annotation impact assessed via OAK/amigo
+- ⚠️  Full travis_build validation could not be completed due to missing dependencies in evaluation environment (amm not available)
+
+## Annotation Migration
+
+### GO:0009255 → GO:0061678
+- 4 EXP annotations (Thermoplasma Ta0809, Picrophilus PTO0332, E.coli Eda)
+  - PMID:16458304, PMID:16566751, PMID:9503620
+- Multiple IBA and IEA annotations
+- All will automatically migrate via replaced_by
+
+### GO:0061688 → GO:0006096
+- 10 IEA annotations from CGD
+- All based on CGD_REF:CAL0121033
+- Note: Current PomBase annotations for the referenced genes are to "pentose-phosphate shunt, oxidative branch (GO:0009051)" - CGD may want to review
+
+### Other obsoleted terms
+- GO:0061679, GO:0061680, GO:0061681 had no direct annotations
+
+## Rationale
+
+As discussed in the issue and #29539:
+- These pathway variants are better represented as GO-CAMs rather than separate GO terms
+- MetaCyc classifies these as 'variant pathways' 
+- MetaCyc descriptions of variants differ slightly from GO descriptions
+- Only one child term (GO:0009255) was actively used in annotations
+- Simplification improves ontology maintainability while preserving pathway variant information via narrowMatch xrefs
+
+## Checklist
+
+- [x] PLAN: Issue analyzed and comprehensive plan created
+- [x] PRE-VALIDATION: Current ontology state checked
+- [x] TERM-SEARCH: All relevant terms found and checked out
+- [x] SPECIALIZED-EDITS: /term-obsoletion skill used for proper procedure
+- [x] EDITS: Proper checkout/checkin procedure followed
+- [x] RELATIONSHIPS: All logical axioms appropriately removed from obsolete terms
+- [x] METADATA: Correct obsoletion metadata added to all terms
+- [x] AUTOMATED-VALIDATION: Syntax validated (full validation blocked by environment limitations)
+- [x] CHANGES-COMMITTED: Changes committed with detailed message
+- [x] ISSUE-ALIGNMENT: Changes align with issue request
+- [x] PR-DESCRIPTION: Detailed description provided
+
+## Files Modified
+
+- `src/ontology/go-edit.obo` (only file modified)
+
+---
+
+Fixes #31916
+
+---
+🤖 **Generated by claude agent**
+- Runtime: `claude`
+- Model: `claude-sonnet-4-5-20250929`
+- Agent config: `ai4curation/go-ontology-agent-config@v9:.`
+- Iteration: `1`
+- Run: [View workflow run](https://github.com/ai4curation/eval-ont-agent-go/actions/runs/25847270969)
