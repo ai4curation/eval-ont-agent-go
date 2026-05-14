@@ -1,0 +1,114 @@
+# Rename GO:1990334 to Species-Agnostic SIN/MEN Two-Component GAP Complex
+
+## Summary
+
+This PR addresses issue #31636 by renaming GO:1990334 from "Bfa1-Bub2 complex" to "SIN/MEN two-component GAP complex" to make the term species-agnostic. The previous name was specific to *Saccharomyces cerevisiae*, but the term is used across multiple species including *Schizosaccharomyces pombe*, where the complex is called Byr4-Cdc16.
+
+## Changes Made
+
+### Term: GO:1990334
+
+**Name change:**
+- Old: `Bfa1-Bub2 complex`
+- New: `SIN/MEN two-component GAP complex`
+
+**New narrow synonyms added:**
+- `Bfa1-Bub2 complex` (S. cerevisiae-specific)
+- `Byr4-Cdc16 GAP complex` (S. pombe-specific)
+
+**Definition updated:**
+The definition was revised to be species-agnostic while maintaining biological accuracy. The new definition describes both species implementations:
+
+- **S. cerevisiae**: Bfa1-Bub2 complex inhibits Tem1 GTPase, regulating the Mitotic Exit Network (MEN)
+- **S. pombe**: Byr4-Cdc16 complex inhibits Spg1 GTPase, regulating the Septation Initiation Network (SIN)
+
+**Definition provenance enhanced:**
+- Original: `[GOC:bhm, PMID:16449187]`
+- Updated: `[GOC:bhm, PMID:16449187, PMID:9742395]`
+- Added PMID:9742395 for S. pombe reference
+
+**Metadata:**
+- Added `term_tracker_item` property linking to issue #31636
+- Preserved original `created_by` and `creation_date` (no modifications to existing metadata)
+
+## Scientific Rationale
+
+The two-component GAP complex is conserved across yeasts and regulates critical cell cycle checkpoints:
+
+1. **Conserved function**: Both complexes act as two-component GTPase-activating proteins
+2. **Parallel pathways**: MEN (S. cerevisiae) and SIN (S. pombe) are functionally homologous
+3. **Species-specific components**:
+   - S. cerevisiae: Bfa1-Bub2 → Tem1 GTPase
+   - S. pombe: Byr4-Cdc16 → Spg1 GTPase
+
+## References Validated
+
+Both PMIDs were cached and validated:
+
+- **PMID:16449187**: "Disappearance of the budding yeast Bub2-Bfa1 complex from the mother-bound spindle pole contributes to mitotic exit" (Fraschini et al., 2006)
+  - Full text available and validated
+  - Describes Bub2/Bfa1 GAP function in MEN
+
+- **PMID:9742395**: "Byr4 and Cdc16 form a two-component GTPase-activating protein for the Spg1 GTPase that controls septation in fission yeast" (Furge et al., 1998)
+  - Abstract validated
+  - Describes Byr4/Cdc16 two-component GAP in SIN
+
+## Checklist
+
+- [x] **PLAN**: Issue analyzed, intent clear, plan created
+- [x] **PRE-VALIDATION**: Ontology state checked before changes
+- [x] **RESEARCH**: Background research performed using /research skill
+  - RESEARCH.md created with validated PMIDs
+  - All SUPPORT lines validated with linkml-reference-validator
+- [x] **TERM-SEARCH**: GO:1990334 located and examined using obo-grep.pl
+- [x] **DESIGN-PATTERNS**: N/A (term renaming, no structural changes)
+- [x] **EDITS**: Proper checkout/edit/checkin procedure followed
+  - Used obo-checkout.pl to check out GO:1990334
+  - Edited in terms/GO_1990334.obo
+  - Used obo-checkin.pl to update go-edit.obo
+- [x] **RELATIONSHIPS**: Preserved existing relationships
+  - is_a: GO:1902773 (GTPase activator complex) - unchanged
+  - part_of: GO:0005816 (spindle pole body) - unchanged
+- [x] **SPECIALIZED-EDITS**: N/A (no obsoletion, chemicals, reactions, or taxon constraints)
+- [x] **METADATA**: Metadata handled correctly
+  - Added term_tracker_item linking to issue #31636
+  - Did NOT modify created_by or creation_date (existing term)
+  - All synonyms have appropriate scope (NARROW)
+  - Definition includes validated references
+- [x] **AUTOMATED-VALIDATION**: N/A (ROBOT not available in evaluation environment)
+- [x] **REFERENCE-VALIDATION**: All PMIDs validated against RESEARCH.md
+  - PMID:16449187: validated in full text
+  - PMID:9742395: validated in abstract
+- [x] **CHANGES-COMMITTED**:
+  - [x] **RELEVANT-FILES**: Only src/ontology/go-edit.obo committed
+  - [x] **ACCURACY**: Changes are biologically correct and species-agnostic
+  - [x] **ISSUE-ALIGNMENT**: Changes align with issue #31636 request
+  - [x] **PR**: PR will be created automatically
+  - [x] **ISSUE-ALIGNMENT**: High-level summary communicated in ISSUE_COMMENTS.md
+  - [x] **PR**: Detailed technical description provided in PR_COMMENTS.md
+
+## Files Modified
+
+- `src/ontology/go-edit.obo`: Updated GO:1990334 term
+
+## Testing Notes
+
+Due to the evaluation environment constraints, full `make travis_build` validation was not run (ROBOT not available). However:
+- Term was successfully checked in using obo-checkin.pl
+- No syntax errors reported
+- Term structure follows OBO format standards
+- All references validated independently
+
+The changes are minimal and low-risk:
+- Name change only affects the primary label
+- Original name preserved as narrow synonym
+- No changes to logical axioms or relationships
+- Definition expanded but maintains accuracy
+
+---
+🤖 **Generated by claude agent**
+- Runtime: `claude`
+- Model: `claude-sonnet-4-5-20250929`
+- Agent config: `ai4curation/go-ontology-agent-config@v9:.`
+- Iteration: `1`
+- Run: [View workflow run](https://github.com/ai4curation/eval-ont-agent-go/actions/runs/25847233143)
