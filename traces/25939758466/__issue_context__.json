@@ -1,0 +1,89 @@
+{
+  "body": "Please provide as much information as you can: \n\n* **Suggested term label:**\np24 cargo receptor complex (Unfortunately this is the only name I can find)\n\n* **Definition (free text)**\n\nA cargo receptor complex localized to the Endoplasmic Reticulum (ER) exit sites, where it helps to select cargo for packaging into COPII vesicles.\n\n* **Reference, in format PMID:#######**\n\nPMID:32456004\nPMID:34647572\nPMID:27569046\n\n* **Gene product name and ID to be annotated to this term**\n\nSystematic ID   Gene name       pombe Product description     Budding yeast orthologs Human orthologs\nSPBC16E9.09c    erp5    COPII vesicle coat component Erp5/Erp6/Erp1     ERP1,ERP5,ERP6  TMED4,TMED9\nSPCC24B10.17    emp24   COPII-coated vesicle component Emp24    EMP24   TMED2\nSPAC17A5.08     erp2    COPII-coated vesicle component Erp2/3/4 ERP2,ERP3,ERP4  TMED3\nSPAC23H4.03c    erv25   COPII-coated vesicle component Erv25    ERV25   TMED10\n\n* **Parent term(s)**\n\nGO:0062137   cargo receptor complex\n\n* **Children terms (if applicable)** Should any existing terms that should be moved underneath this new proposed term?\n\n\n* **Synonyms (please specify, EXACT, BROAD, NARROW or RELATED)**\n\n* **Cross-references**\n* For enzymes, please provide RHEA and/or EC numbers. \n* Can also provide MetaCyc, KEGG, Wikipedia, and other links.\n\n* **Any other information**\n",
+  "comments": [
+    {
+      "id": "IC_kwDOAkAHws7glgvw",
+      "author": {
+        "login": "ValWood"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "\nThe p24 cargo receptor complex is a conserved hetero-oligomeric complexes (often tetrameric), cycling ER–Golgi protein complex that selectively recruits secretory cargo, especially GPI-anchored proteins, into COPII vesicles and helps maintain early secretory pathway organization. A functional p24 complex typically contains one member of each subfamily of p24 proteins, alpha, beta, gamma and delta.\n\ndef synthesised form\nhttps://pubmed.ncbi.nlm.nih.gov/19566487/\nand\nhttps://pubmed.ncbi.nlm.nih.gov/26224213/",
+      "createdAt": "2026-01-19T11:47:03Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/geneontology/go-ontology/issues/31295#issuecomment-3767929840",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOAkAHws7ltomT",
+      "author": {
+        "login": "ValWood"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "I'm not going to add this yet. ",
+      "createdAt": "2026-02-05T14:13:56Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/geneontology/go-ontology/issues/31295#issuecomment-3853945235",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOAkAHws756CHC",
+      "author": {
+        "login": "ValWood"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "We do actually need this because it can't be decomposed. The entire complex has \"cargo receptor activity\"\n\n\nAnterograde (ER→Golgi): The p24 complex acts as a cargo receptor, packaging GPI-anchored proteins like Gas1p into COPII vesicles for forward transport.\n(this is the role I want to annotate in http://noctua.geneontology.org/workbench/noctua-visual-pathway-editor/?model_id=gomodel%3A693b3c0900004859\nI had to use \"cargo receptor complex\" but this is non specific, it has the child\"[GO:0062136](https://www.ebi.ac.uk/QuickGO/term/GO:0062136)    low-density lipoprotein receptor complex\"\n\np24 complex itself needs to be recycled back to the ER via COPI vesicles so it can pick up more cargo. The p24 proteins are assembled into heteromeric complexes that continuously cycle between ER and Golgi compartments. [PubMed Central](https://pmc.ncbi.nlm.nih.gov/articles/PMC2265561/)\nThe p24 complex also has a role in  COPI retrograde vesicle formation [PubMed Central](https://pmc.ncbi.nlm.nih.gov/articles/PMC2265561/),  p24 proteins are actively involved in generating the  vesicles that carry them back to the ER.",
+      "createdAt": "2026-04-06T14:19:49Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/geneontology/go-ontology/issues/31295#issuecomment-4192739778",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOAkAHws8AAAABBbBJwg",
+      "author": {
+        "login": "ValWood"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "@dragon-ai-agent  please add this complex term\n",
+      "createdAt": "2026-05-06T17:18:57Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "EYES",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/geneontology/go-ontology/issues/31295#issuecomment-4390406594",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOAkAHws8AAAABBbBXHw",
+      "author": {
+        "login": "dragon-ai-agent"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "🤖 Working on it...\n\nFollow along: [View workflow run](https://github.com/geneontology/go-ontology/actions/runs/25450290860)\n\n*— @dragon-ai-agent*",
+      "createdAt": "2026-05-06T17:19:28Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/geneontology/go-ontology/issues/31295#issuecomment-4390410015",
+      "viewerDidAuthor": false
+    }
+  ],
+  "title": "NTR: p24 cargo receptor complex",
+  "url": "https://github.com/geneontology/go-ontology/issues/31295"
+}
