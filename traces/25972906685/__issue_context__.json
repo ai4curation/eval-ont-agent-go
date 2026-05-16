@@ -1,0 +1,178 @@
+{
+  "body": "Please provide as much information as you can: \n\n* **Suggested term label:**\n\nvesicle membrane tethering activity\n\n* **Definition (free text)**\n\nMF vesicle membrane tethering activity\nA membrane-membrane adaptor activity that provides the first point of contact and physically bridges between the vesicle membrane and its target before they are in close apposition prior to vesicle docking and fusion.\n\n\n* **Reference, in format PMID:#######**\n\nPMID:19887069\n\n* **Gene product name and ID to be annotated to this term**\n\npombe\nuso1\ngrp1\nrud3\nsec3\nexo70\nsec15\ndrp1/sec39\n\n\n* **Parent term(s)**\n\nGO:0140177 membrane-membrane adaptor activity\nextend def to include \"vesicle\" \n\nThe binding activity of a molecule that brings together two membranes, either via membrane lipid binding or by interacting with a membrane protein, to establish or maintain the localization of the protein, protein complex or organelle.\n\n\n\n\n* **Any other information**\n",
+  "comments": [
+    {
+      "id": "IC_kwDOAkAHws78saEF",
+      "author": {
+        "login": "raymond91125"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "@dragon-ai-agent please create a new term vesicle membrane tethering activity. In addition to PMID:19887069 that focuses on ER-Golgi membrane traffic, include a review article that covers synaptic vesicle transport and targeting.",
+      "createdAt": "2026-04-13T20:43:11Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "EYES",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/geneontology/go-ontology/issues/31863#issuecomment-4239499525",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOAkAHws78sasQ",
+      "author": {
+        "login": "dragon-ai-agent"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "🤖 Working on it...\n\nFollow along: [View workflow run](https://github.com/geneontology/go-ontology/actions/runs/24365885165)\n\n*— @dragon-ai-agent*",
+      "createdAt": "2026-04-13T20:43:35Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/geneontology/go-ontology/issues/31863#issuecomment-4239502096",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOAkAHws78u0xA",
+      "author": {
+        "login": "dragon-ai-agent"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "🤖 Working on it...\n\nFollow along: [View workflow run](https://github.com/geneontology/go-ontology/actions/runs/24365885165)\n\n*— @dragon-ai-agent*",
+      "createdAt": "2026-04-13T22:55:48Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/geneontology/go-ontology/issues/31863#issuecomment-4240133184",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOAkAHws78vX3o",
+      "author": {
+        "login": "raymond91125"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "@dragon-ai-agent please create a new term vesicle membrane tethering activity. In addition to PMID:19887069 that focuses on ER-Golgi membrane traffic, include a general article that also covers synaptic vesicle transport and targeting.",
+      "createdAt": "2026-04-13T23:34:07Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "EYES",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/geneontology/go-ontology/issues/31863#issuecomment-4240276968",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOAkAHws78vYUl",
+      "author": {
+        "login": "dragon-ai-agent"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "🤖 Working on it...\n\nFollow along: [View workflow run](https://github.com/geneontology/go-ontology/actions/runs/24372402903)\n\n*— @dragon-ai-agent*",
+      "createdAt": "2026-04-13T23:34:34Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/geneontology/go-ontology/issues/31863#issuecomment-4240278821",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOAkAHws78vmB1",
+      "author": {
+        "login": "dragon-ai-agent"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Created new term **vesicle membrane tethering activity** (GO:7770062) as a child of [GO:0140177 membrane-membrane adaptor activity](https://www.ebi.ac.uk/QuickGO/term/GO:0140177).\n\n**Definition:** A membrane-membrane adaptor activity that provides the first point of contact and physically bridges the vesicle membrane and its target membrane prior to vesicle docking and fusion.\n\n**References:**\n- `PMID:19887069` — Sztul & Lupashin 2009, *FEBS Lett*, \"Role of vesicle tethering factors in the ER-Golgi membrane traffic\" (as requested)\n- `PMID:19575650` — Yu & Hughson 2010, *Annu Rev Cell Dev Biol*, \"Tethering factors as organizers of intracellular vesicular traffic\" — a broad review covering tethering factors across intracellular trafficking pathways, including the plasma-membrane exocyst and CATCHR-family complexes (Munc13 has a CATCHR/MUN-domain fold and is a key synaptic vesicle tethering factor)\n\nA note on the second reference: you asked for an article that \"also covers synaptic vesicle transport and targeting.\" Yu & Hughson 2010 is a general review that includes synaptic-relevant tethers (exocyst, CATCHR/Munc13) within its broader scope. If you'd prefer a more synapse-focused companion reference, I'd suggest `PMID:23164531` (Hallermann & Silver 2013, *Trends Neurosci*, \"Sustaining rapid vesicular release at active zones: potential roles for vesicle tethering\") or `PMID:22794257` (Südhof 2012, *Neuron*, \"The presynaptic active zone\"). Happy to swap or add — just let me know.\n\nSynonyms added:\n- `vesicle membrane tether activity` (EXACT)\n- `vesicle tethering activity` (EXACT)\n\nPR: geneontology/go-ontology#31895\n\n---\n🤖 **Generated by @dragon-ai-agent**\n- Model: `claude-opus-4-6`\n- Agent harness: claude-code\n- Triggered by: @raymond91125\n- Run: [View workflow run](https://github.com/geneontology/go-ontology/actions/runs/24372402903)",
+      "createdAt": "2026-04-13T23:49:27Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/geneontology/go-ontology/issues/31863#issuecomment-4240334965",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOAkAHws78vuWI",
+      "author": {
+        "login": "raymond91125"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "@dragon-ai-agent please extend the definition of GO:0140177 membrane-membrane adaptor activity to include vesicle. \"The binding activity of a molecule that brings together two membranes, either via membrane lipid binding or by interacting with a membrane protein, to establish or maintain the localization of the protein, protein complex, vesicle or organelle.\"",
+      "createdAt": "2026-04-13T23:58:45Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "EYES",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/geneontology/go-ontology/issues/31863#issuecomment-4240369032",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOAkAHws78vu4N",
+      "author": {
+        "login": "dragon-ai-agent"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "🤖 Working on it...\n\nFollow along: [View workflow run](https://github.com/geneontology/go-ontology/actions/runs/24373255989)\n\n*— @dragon-ai-agent*",
+      "createdAt": "2026-04-13T23:59:24Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/geneontology/go-ontology/issues/31863#issuecomment-4240371213",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOAkAHws78vzh7",
+      "author": {
+        "login": "dragon-ai-agent"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Done. Extended the definition of `GO:0140177 membrane-membrane adaptor activity` to include \"vesicle\" alongside protein, protein complex, and organelle:\n\n> The binding activity of a molecule that brings together two membranes, either via membrane lipid binding or by interacting with a membrane protein, to establish or maintain the localization of the protein, protein complex, vesicle or organelle.\n\nThe change has been added to the existing open PR #31895 for this issue (same branch as the new child term `GO:7770062 vesicle membrane tethering activity`). SPARQL-QC passes.\n\n---\n🤖 **Generated by @dragon-ai-agent**\n- Model: `claude-opus-4-6`\n- Agent harness: claude-code\n- Triggered by: @raymond91125\n- Run: [View workflow run](https://github.com/geneontology/go-ontology/actions/runs/24373255989)",
+      "createdAt": "2026-04-14T00:05:01Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/geneontology/go-ontology/issues/31863#issuecomment-4240390267",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOAkAHws79qkCy",
+      "author": {
+        "login": "raymond91125"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "[Term]\nid: GO:7770062\nname: vesicle membrane tethering activity\nnamespace: molecular_function\ndef: \"A membrane-membrane adaptor activity that provides the first point of contact and physically bridges the vesicle membrane and its target membrane prior to vesicle docking and fusion.\" [PMID:19575650, PMID:19887069]\nsynonym: \"vesicle membrane tether activity\" EXACT []\nsynonym: \"vesicle tethering activity\" EXACT []\nis_a: GO:0140177 ! membrane-membrane adaptor activity\nproperty_value: term_tracker_item \"https://github.com/geneontology/go-ontology/issues/31863\" xsd:anyURI\ncreated_by: dragon-ai-agent\ncreation_date: 2026-04-13T23:43:55Z",
+      "createdAt": "2026-04-15T21:45:03Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/geneontology/go-ontology/issues/31863#issuecomment-4255793330",
+      "viewerDidAuthor": false
+    }
+  ],
+  "title": "NTR: MF vesicle membrane tethering activity",
+  "url": "https://github.com/geneontology/go-ontology/issues/31863"
+}
