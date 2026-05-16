@@ -1,0 +1,44 @@
+{
+  "body": "\nGO:1990334   Bfa1-Bub2 complex \n\nwould be better called\nSIN/MEN two-component GAP complex\n\nnarrow synonym  Byr4-Cdc16 GAP complex\nnarrow_synonym  Bfa1-Bub2 complex\n\n\n\nAlso revise the definition accordingly\nA protein complex that acts as a two-component GTPase-activating protein for Tem1 GTPase, thus regulating a signal transduction cascade, called the mitotic exit network (MEN), which is required for mitotic exit and cytokinesis. Bub2/Bfa1 keeps Tem1 inactive until the spindle is properly oriented, thus inhibiting MEN activation. PMID:16449187\n\n",
+  "comments": [
+    {
+      "id": "IC_kwDOAkAHws7_FP3X",
+      "author": {
+        "login": "ValWood"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "@dragon-ai-agent  please change the term label of \nGO:1990334 Bfa1-Bub2 complex",
+      "createdAt": "2026-04-20T09:52:15Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "EYES",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/geneontology/go-ontology/issues/31636#issuecomment-4279565783",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOAkAHws7_FQcO",
+      "author": {
+        "login": "dragon-ai-agent"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "🤖 Working on it...\n\nFollow along: [View workflow run](https://github.com/geneontology/go-ontology/actions/runs/24660028429)\n\n*— @dragon-ai-agent*",
+      "createdAt": "2026-04-20T09:52:38Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/geneontology/go-ontology/issues/31636#issuecomment-4279568142",
+      "viewerDidAuthor": false
+    }
+  ],
+  "title": "rename GO:1990334   Bfa1-Bub2 complex to make is species agnostic",
+  "url": "https://github.com/geneontology/go-ontology/issues/31636"
+}
