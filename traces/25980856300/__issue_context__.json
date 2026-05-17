@@ -1,0 +1,44 @@
+{
+  "body": "\nGO:0045022  early endosome to late endosome transport\nDefinition (GO:0045022 GONUTS page)\nThe directed movement of substances, in membrane-bounded vesicles, from the early sorting endosomes to the late sorting endosomes; transport occurs along microtubules and can be experimentally blocked with microtubule-depolymerizing drugs. PMID:29980602\n\nNot always microtubule dependent (in fission yeast it's actin dependent)\n remove gloss:\ntransport occurs along microtubules and can be experimentally blocked with microtubule-depolymerizing drugs\n\n\n",
+  "comments": [
+    {
+      "id": "IC_kwDOAkAHws7_pQ90",
+      "author": {
+        "login": "ValWood"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "@dragon-ai-agent  please update definition ",
+      "createdAt": "2026-04-21T13:43:06Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "EYES",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/geneontology/go-ontology/issues/31923#issuecomment-4289007476",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOAkAHws7_pRnH",
+      "author": {
+        "login": "dragon-ai-agent"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "🤖 Working on it...\n\nFollow along: [View workflow run](https://github.com/geneontology/go-ontology/actions/runs/24725790991)\n\n*— @dragon-ai-agent*",
+      "createdAt": "2026-04-21T13:43:28Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/geneontology/go-ontology/issues/31923#issuecomment-4289010119",
+      "viewerDidAuthor": false
+    }
+  ],
+  "title": "Textual definition update: GO:0045022  early endosome to late endosome transport (minor)",
+  "url": "https://github.com/geneontology/go-ontology/issues/31923"
+}
