@@ -1,0 +1,388 @@
+{
+  "body": "Please provide as much information as you can: \n\n* **GO term ID label:**\nGO:0046544 development of secondary male sexual characteristics\n\n\n* * **never in taxon: **\n4751 fungi\n\n* **Supporting evidence if available (e.g PMID):**\n\nI think this can be updated from never in pombe/cerevisiae to never in fungi. I think it would be surprising to see a fungal protein annotated to secondary sex characteristic?\n",
+  "comments": [
+    {
+      "id": "IC_kwDOAkAHws7Ro1vK",
+      "author": {
+        "login": "Antonialock"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "actually, it's not propagated to fungi at the moment. I just saw the taxon constraint and thought it could be broadened.",
+      "createdAt": "2025-11-11T14:20:24Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/geneontology/go-ontology/issues/31051#issuecomment-3517144010",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOAkAHws7RpCW_",
+      "author": {
+        "login": "pgaudet"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Only in Metazoa? ",
+      "createdAt": "2025-11-11T14:32:02Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/geneontology/go-ontology/issues/31051#issuecomment-3517195711",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOAkAHws7RpUmn",
+      "author": {
+        "login": "Antonialock"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "It looks like it might be valid for plants?",
+      "createdAt": "2025-11-11T14:47:48Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/geneontology/go-ontology/issues/31051#issuecomment-3517270439",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOAkAHws7R3eur",
+      "author": {
+        "login": "pgaudet"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "I think plants have sexual characteristics (or sex-differentiation), but not secondary? \n\nhttps://www.sciencedirect.com/topics/veterinary-science-and-veterinary-medicine/secondary-sex-characteristic#:~:text=Secondary%20sex%20characteristics%20refer%20to,in%20body%20composition%20and%20structure.\n\n@tberardini what do you think ? \n\nWhatever we decide, the TC should be removed from ' GO:0046544 development of secondary male sexual characteristics' and be added to the parent instead: **GO:0045136 development of secondary sexual characteristics**\n\n\nThanks, Pascale",
+      "createdAt": "2025-11-12T09:34:52Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/geneontology/go-ontology/issues/31051#issuecomment-3520981931",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOAkAHws7R9mGO",
+      "author": {
+        "login": "Antonialock"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "So this is from wikipedia:\n\nMost [flowering plants](https://en.wikipedia.org/wiki/Flowering_plant) are [hermaphroditic](https://en.wikipedia.org/wiki/Hermaphroditic) but approximately 6% of species have separate males and females ([dioecy](https://en.wikipedia.org/wiki/Dioecy)).[[21]](https://en.wikipedia.org/wiki/Sexual_dimorphism#cite_note-Renner-1995-21) Sexual dimorphism is common in dioecious plants[[22]](https://en.wikipedia.org/wiki/Sexual_dimorphism#cite_note-22): 403  and [dioicous](https://en.wikipedia.org/wiki/Dioicy) species.[[23]](https://en.wikipedia.org/wiki/Sexual_dimorphism#cite_note-Ramawat-2016-23): 71\nhttps://en.wikipedia.org/wiki/Sexual_dimorphism\n\nI don't know if \"secondary sex characteristics\" in plants is obscure and not a consensus belief, but there are references to it in the literature:\n\"Gender-related differences in growth and concentration of secondary metabolites have been documented in dioecious plants. Males usually grow faster than females, whilst females allocate more resources to reproduction and chemical defences than males, hence their growth is reduced\" (2006 paper https://www.sciencedirect.com/science/article/pii/S1146609X05000937)\n(chemical defences and leaf size would be secondary characteristics?)\n\n",
+      "createdAt": "2025-11-12T15:38:51Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/geneontology/go-ontology/issues/31051#issuecomment-3522584974",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOAkAHws7R_o4Z",
+      "author": {
+        "login": "tberardini"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "\nFound this paper; [**Secondary sex characters in plants**](https://link.springer.com/article/10.1007/BF02860717)\n\nNo TC on the 'development of secondary sexual characteristics' please. The current GO definition (below) refers to 'sex hormone secretion' which could be modified to 'hormone secretion' to be more general as plant hormones like ethylene and auxin affect secondary sex characters (see [**Hormonal Regulation of Sex Expression in Plants**](https://www.sciencedirect.com/science/chapter/bookseries/pii/S0083672905720033))\n\n>  \tThe process whose specific outcome is the progression of the secondary sexual characteristics over time, from their formation to the mature structures. In humans, these include growth of axillary, chest, and pubic hair, voice changes, testicular/penile enlargement, breast development and menstrual periods. Development occurs in response to sex hormone secretion.",
+      "createdAt": "2025-11-12T17:39:49Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/geneontology/go-ontology/issues/31051#issuecomment-3523120665",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOAkAHws7STHOw",
+      "author": {
+        "login": "pgaudet"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Thanks @tberardini \n\nIt seems we should somehow split these terms, as underlying mechanisms should be unrelated in plants and animals. \n\nBut for now we can remove the TC on GO:0046544 development of secondary male sexual characteristics and add 'never in fungi' for development of secondary sexual characteristics'.\n",
+      "createdAt": "2025-11-13T15:04:27Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/geneontology/go-ontology/issues/31051#issuecomment-3528225712",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOAkAHws7St3sS",
+      "author": {
+        "login": "raymond91125"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "The TC on GO:0046544 development of secondary male sexual characteristics comes from inference thus is not easily removable. I added some missing relationships to GO:0045136 development of secondary sexual characteristics so that it now also has the same TC as GO:0046544. The specificity of TC comes from GO:0032501 multicellular organismal process. Specified in never_in_taxon.tsv\nGO:0032501      multicellular organismal process        NCBITaxon:4896  Schizosaccharomyces pombe            \nGO:0032501      multicellular organismal process        NCBITaxon:4932  Saccharomyces cerevisiae             \nGO:0032501      multicellular organismal process        NCBITaxon:2     Bacteria        \nGO:0032501      multicellular organismal process        NCBITaxon:2157  Archaea \n\nDo we want make GO:0032501 multicellular organismal process never_in_taxon Fungi?",
+      "createdAt": "2025-11-15T01:02:32Z",
+      "includesCreatedEdit": true,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/geneontology/go-ontology/issues/31051#issuecomment-3535239954",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOAkAHws7TCLkK",
+      "author": {
+        "login": "pgaudet"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "I dont think we can do that ? ",
+      "createdAt": "2025-11-17T08:37:28Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/geneontology/go-ontology/issues/31051#issuecomment-3540564234",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOAkAHws7TLTi0",
+      "author": {
+        "login": "raymond91125"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Should we close this ticket then?",
+      "createdAt": "2025-11-17T17:01:52Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/geneontology/go-ontology/issues/31051#issuecomment-3542956212",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOAkAHws7TnkPR",
+      "author": {
+        "login": "cmungall"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "The conservative thing to do is add \"sensu metazoa\" to the label and add the TC (and remove the whackamole TCs that thereby become redundant). This is completely safe as the only annotations are in vertebrates (and mostly mammals). I think the direction we should go in is more specificity, not more vague fuzzy groupings, especially if we can't commit to populating.\n\nIt's tempting to go further. It's a pretty terrible grouping or target for direct annotation as @pgaudet says (the subclasses are fine). And it's very confusing to users as all of the obvious genes we'd expect to see are not present. But may not be worth the churn to make any major changes.",
+      "createdAt": "2025-11-19T02:17:03Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/geneontology/go-ontology/issues/31051#issuecomment-3550364625",
+      "viewerDidAuthor": true
+    },
+    {
+      "id": "IC_kwDOAkAHws7Tpc9O",
+      "author": {
+        "login": "raymond91125"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "@cmungall  What do you mean by \"(and remove the whackamole TCs that thereby become redundant)\"? Remove the taxon constraints on GO:0032501 multicellular organismal process?\nI thought we discourage using \"sensu\". Is that not the case?",
+      "createdAt": "2025-11-19T05:22:00Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/geneontology/go-ontology/issues/31051#issuecomment-3550859086",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOAkAHws7TqPyg",
+      "author": {
+        "login": "pgaudet"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "@raymond91125 \n\nWe have used similar phrases: (although, not exactly 'sensu') \n[plant organ development](http://purl.obolibrary.org/obo/GO_0099402) versus [animal organ development](http://purl.obolibrary.org/obo/GO_0048513)\n\nSo we could change these terms to 'development of animal secondary sexual characteristics' (& male & female)\n\n@cmungall would that work ? ",
+      "createdAt": "2025-11-19T06:50:48Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/geneontology/go-ontology/issues/31051#issuecomment-3551067296",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOAkAHws7TzgM_",
+      "author": {
+        "login": "cmungall"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "To me the advantage of the sensu nomenclature is that it clearly serves as a kind of editorial disambiguation note with zero ontological commitment. If we start saying things like \"animal secondary sexual characteristics\" it makes it sound like this is an actual grouping or even a homologous characteristic.\n\nIf we are going to keep the grouping IMO mammalian is more meaningful, we'd just have to get rid of these problematic annotations\nhttps://amigo.geneontology.org/amigo/reference/PMID:34440752\n\n[whackamole](https://www.yourdictionary.com/whack-a-mole) -- I think of all of these hyper-specific TCs that have been made my individual MODs to prevent propagation in their species as like a game of whackamole, we need to keep adding more and more if GO is to be broadly useful outside MODs, when all we need to do is fix the problem at source.",
+      "createdAt": "2025-11-19T16:00:50Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/geneontology/go-ontology/issues/31051#issuecomment-3553493823",
+      "viewerDidAuthor": true
+    },
+    {
+      "id": "IC_kwDOAkAHws769f9p",
+      "author": {
+        "login": "raymond91125"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "@dragon-ai-agent please review all the comments and make suggestions to a solution.",
+      "createdAt": "2026-04-08T23:38:16Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "EYES",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/geneontology/go-ontology/issues/31051#issuecomment-4210425705",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOAkAHws769gXt",
+      "author": {
+        "login": "dragon-ai-agent"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "🤖 Working on it...\n\nFollow along: [View workflow run](https://github.com/geneontology/go-ontology/actions/runs/24164310730)\n\n*— @dragon-ai-agent*",
+      "createdAt": "2026-04-08T23:38:39Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/geneontology/go-ontology/issues/31051#issuecomment-4210427373",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOAkAHws769kGl",
+      "author": {
+        "login": "dragon-ai-agent"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "After reviewing the full discussion, here is my analysis of the options and a suggested path forward.\n\n## Summary of the discussion\n\nThe original request was to broaden the never_in_taxon on GO:0046544 from S. pombe/S. cerevisiae to all Fungi. The discussion surfaced several deeper issues:\n\n1. The inferred TC on GO:0046544 comes from GO:0032501 (multicellular organismal process), not from the term itself — so it can't simply be \"removed\" from GO:0046544.\n2. Plants do have secondary sex characteristics (documented in the literature — @tberardini cited relevant papers), so an only_in_taxon Metazoa on the parent GO:0045136 would be scientifically appropriate while a blanket restriction at higher levels would not.\n3. Making GO:0032501 never_in_taxon Fungi would be incorrect — many fungi are genuinely multicellular organisms.\n4. The current definitions are heavily human-centric and reference \"sex hormone secretion\" specifically.\n\n## Current state\n\n- **GO:0045136** \"development of secondary sexual characteristics\" — no explicit TC\n- **GO:0046544** \"development of secondary male sexual characteristics\" — child of above; no explicit TC\n- **GO:0046543** \"development of secondary female sexual characteristics\" — child of above; no explicit TC\n- **GO:0042695** \"thelarche\" — child of GO:0046543\n- Inferred TCs come via the is_a hierarchy through GO:0032501 (never in S. pombe, S. cerevisiae, Bacteria, Archaea)\n\n## Options\n\n### Option A: \"sensu Metazoa\" + only_in_taxon Metazoa (recommended — aligns with @cmungall)\n\n- Rename the three terms with a \", sensu Metazoa\" suffix (e.g., \"development of secondary sexual characteristics, sensu Metazoa\")\n- Add `only_in_taxon Metazoa` on GO:0045136 (propagates to children)\n- Keep the original names as EXACT synonyms for backward compatibility / searchability\n- Update definitions: change \"sex hormone secretion\" to \"hormone secretion\" per @tberardini's suggestion, and soften the human-specific examples (e.g., \"In mammals, these include...\")\n\n**Pros:** Clean, conservative, zero ontological commitment per @cmungall. All existing annotations remain valid (they're all in vertebrates). The only_in_taxon at the parent level eliminates the need for whack-a-mole TCs on child terms. Leaves room for future plant-specific terms without implying homology.\n\n**Cons:** \"sensu\" is not currently used in any active GO term names (all existing sensu-containing terms are obsolete), so this would be reviving a convention. Though @cmungall explicitly endorses it for this use case as editorial disambiguation.\n\n### Option B: \"animal\" prefix (à la @pgaudet)\n\n- Rename to \"development of animal secondary sexual characteristics\" etc.\n- Follows existing precedent: \"animal organ development\" (GO:0048513) / \"plant organ development\" (GO:0099402)\n- Same TC addition as Option A\n\n**Pros:** Follows an existing naming pattern in GO.\n\n**Cons:** @cmungall noted this implies an actual ontological grouping or homologous characteristic, which is misleading. Secondary sexual characteristics in vertebrates vs. invertebrates are not necessarily homologous processes.\n\n### Option C: Narrow to Mammalia\n\n- Add only_in_taxon Mammalia\n- Would need to handle non-mammalian annotations (e.g., zebrafish annotations from PMID:34440752 flagged by @cmungall)\n\n**Pros:** More precise — all current annotations are in mammals.\n\n**Cons:** More disruptive; requires annotation migration. Secondary sexual characteristics do exist in non-mammalian Metazoa (e.g., plumage in birds, coloration in fish), so this may be over-restrictive biologically.\n\n### Option D: Minimal — just add never_in_taxon Fungi on parent\n\n- Add `never_in_taxon Fungi` on GO:0045136\n- No renaming\n\n**Pros:** Directly addresses the original request with minimal changes.\n\n**Cons:** Perpetuates the whack-a-mole problem @cmungall described. Doesn't address the overly human-centric definitions. Other non-metazoan taxa would still need individual TCs.\n\n## Recommendation\n\nI'd suggest **Option A** as the best balance of correctness, conservatism, and clean design. It:\n\n- Solves the original problem (fungi excluded via only_in_taxon Metazoa)\n- Avoids whack-a-mole TCs\n- Makes no strong ontological claims beyond what the annotations support\n- Keeps all existing annotations valid\n- Leaves room for future plant-specific terms if needed\n\nThe key decision point for the team is whether \"sensu Metazoa\" (zero ontological commitment, @cmungall's preference) or \"animal\" (@pgaudet's precedent-based suggestion) is the right naming convention. I'd defer to the editors on this.\n\nIf you'd like me to proceed with implementing any of these options, let me know which direction the team prefers and I'll prepare the changes.\n\n---\n🤖 **Generated by @dragon-ai-agent**\n- Model: `claude-opus-4-6`\n- Agent harness: claude-code\n- Triggered by: @raymond91125\n- Run: [View workflow run](https://github.com/geneontology/go-ontology/actions/runs/24164310730)",
+      "createdAt": "2026-04-08T23:42:32Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/geneontology/go-ontology/issues/31051#issuecomment-4210442661",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOAkAHws7690nY",
+      "author": {
+        "login": "raymond91125"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "@pgaudet Is renaming GO:0045136 to \"development of secondary sexual characteristics, sensu metazoa\", (option A), an acceptable solution? Otherwise, I think we should close this ticket as not planned. ",
+      "createdAt": "2026-04-09T00:02:16Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/geneontology/go-ontology/issues/31051#issuecomment-4210510296",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOAkAHws8AAAABBMupgQ",
+      "author": {
+        "login": "raymond91125"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "@dragon-ai-agent please implement option A.",
+      "createdAt": "2026-05-04T23:51:14Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "EYES",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/geneontology/go-ontology/issues/31051#issuecomment-4375423361",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOAkAHws8AAAABBMuz9A",
+      "author": {
+        "login": "dragon-ai-agent"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "🤖 Working on it...\n\nFollow along: [View workflow run](https://github.com/geneontology/go-ontology/actions/runs/25349956274)\n\n*— @dragon-ai-agent*",
+      "createdAt": "2026-05-04T23:51:35Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/geneontology/go-ontology/issues/31051#issuecomment-4375426036",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOAkAHws8AAAABBMy9vg",
+      "author": {
+        "login": "dragon-ai-agent"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Implemented Option A in PR #32027.\n\n## Summary of changes\n\nRenamed the three terms with a `, sensu Metazoa` suffix and added `only_in_taxon Metazoa` on the parent term:\n\n| ID | New name |\n|---|---|\n| GO:0045136 | development of secondary sexual characteristics, sensu Metazoa |\n| GO:0046543 | development of secondary female sexual characteristics, sensu Metazoa |\n| GO:0046544 | development of secondary male sexual characteristics, sensu Metazoa |\n\nOriginal labels are preserved as EXACT synonyms so existing lookups continue to resolve. The `only_in_taxon Metazoa` constraint at the parent level propagates to the male/female children, replacing the inferred per-species `never_in_taxon` constraints that came via `GO:0032501` (multicellular organismal process). Fungi are now excluded as @Antonialock originally requested, and so are bacteria, archaea, plants, and other non-metazoan groups — without the whack-a-mole TC problem @cmungall flagged.\n\nDefinitions were lightly softened: \"In [male/female] humans, these include...\" -> \"In [male/female] mammals, examples include...\" to match the new scope. GO:0042695 (thelarche, mammary-specific) was left as-is since it's already implicitly scoped via inheritance.\n\n`make travis_build` passes (all SPARQL rules: 0 violations).\n\nPlease review the PR and let me know if any adjustments are needed — in particular, the choice of `sensu Metazoa` vs. `animal` (per @pgaudet's earlier suggestion) is a curator call.\n\n---\n🤖 **Generated by @dragon-ai-agent**\n- Model: `claude-opus-4-7`\n- Agent harness: claude-code\n- Triggered by: @raymond91125\n- Run: [View workflow run](https://github.com/geneontology/go-ontology/actions/runs/25349956274)",
+      "createdAt": "2026-05-05T00:04:49Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/geneontology/go-ontology/issues/31051#issuecomment-4375494078",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOAkAHws8AAAABBRAvJQ",
+      "author": {
+        "login": "pgaudet"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "Hi, \n\nJust for consistency: We had renamed 'anatomical structure development' to 'animal organ development' - see https://github.com/geneontology/go-ontology/issues/25943\n\n\nShould we not use \n\n\nGO:0045136 development of animal secondary sexual characteristics\nGO:0046543 | development of animal secondary female sexual characteristics\nGO:0046544 | development of animal secondary male sexual characteristics\n\ninstead of sensu Metazoa ? \n\n",
+      "createdAt": "2026-05-05T13:52:34Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/geneontology/go-ontology/issues/31051#issuecomment-4379914021",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOAkAHws8AAAABBUxlwA",
+      "author": {
+        "login": "raymond91125"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "@dragon-ai-agent please follow the last comment by pgaudet, revise\nGO:0045136\tdevelopment of secondary sexual characteristics, sensu Metazoa\nGO:0046543\tdevelopment of secondary female sexual characteristics, sensu Metazoa\nGO:0046544\tdevelopment of secondary male sexual characteristics, sensu Metazoa\nto\nGO:0045136 development of animal secondary sexual characteristics\nGO:0046543 | development of animal secondary female sexual characteristics\nGO:0046544 | development of animal secondary male sexual characteristics\n",
+      "createdAt": "2026-05-05T23:20:09Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [
+        {
+          "content": "EYES",
+          "users": {
+            "totalCount": 1
+          }
+        }
+      ],
+      "url": "https://github.com/geneontology/go-ontology/issues/31051#issuecomment-4383860160",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOAkAHws8AAAABBUx0uQ",
+      "author": {
+        "login": "dragon-ai-agent"
+      },
+      "authorAssociation": "MEMBER",
+      "body": "🤖 Working on it...\n\nFollow along: [View workflow run](https://github.com/geneontology/go-ontology/actions/runs/25407656513)\n\n*— @dragon-ai-agent*",
+      "createdAt": "2026-05-05T23:20:40Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/geneontology/go-ontology/issues/31051#issuecomment-4383863993",
+      "viewerDidAuthor": false
+    }
+  ],
+  "title": "Taxon constraint: GO:0046544 development of secondary male sexual characteristics",
+  "url": "https://github.com/geneontology/go-ontology/issues/31051"
+}
